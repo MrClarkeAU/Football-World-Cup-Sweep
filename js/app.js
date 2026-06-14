@@ -19,7 +19,10 @@ const FLAGS = {
 };
 const flag = (n) => FLAGS[n] || "🏳️";
 const initials = (n) => n.trim().slice(0, 2).toUpperCase();
-const $ = (s) => document.querySelector(s);
+// Null-safe: if an element is missing (e.g. a stale cached HTML/JS mismatch),
+// degrade gracefully instead of throwing and white-screening the whole page.
+const NULL_EL = { set innerHTML(_) {}, get innerHTML() { return ""; }, addEventListener() {} };
+const $ = (s) => document.querySelector(s) || NULL_EL;
 
 async function load() {
   try {
