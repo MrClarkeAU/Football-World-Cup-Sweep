@@ -144,13 +144,13 @@
         linear-gradient(180deg, var(--pitch-2), var(--pitch));
       box-shadow:var(--shadow);
     }
-    .prize__row{ display:flex; align-items:center; gap:16px; }
+    .prize__row{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; }
     .prize__cup{ font-size:clamp(40px,11vw,58px); line-height:1; flex:none;
       filter:drop-shadow(0 8px 18px rgba(244,193,75,.45)); }
     .prize__txt h3{ font-family:'Archivo'; font-weight:900; font-size:clamp(17px,4.4vw,21px);
       letter-spacing:-.01em; color:var(--gold); text-transform:uppercase; }
-    .prize__txt p{ color:var(--sage); font-size:14px; margin-top:4px; max-width:48ch; }
-    .prize__meta{ display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; }
+    .prize__txt p{ color:var(--sage); font-size:14px; margin-top:4px; max-width:48ch; margin-left:auto; margin-right:auto; }
+    .prize__meta{ display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; justify-content:center; }
     .chip{ font-size:12px; font-weight:700; color:var(--chalk);
       background:var(--pitch-3); border:1px solid var(--line); border-radius:999px; padding:6px 12px; }
     .chip b{ color:var(--live); }
