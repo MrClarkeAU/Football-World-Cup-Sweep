@@ -20,13 +20,13 @@ GitHub Pages only serves static files, so there's no live backend. Instead:
  └─────────────────────┘                   │  • apply our scoring     │
           │ commits                        │  • write the JSON        │
           ▼                                └──────────────────────────┘
- data/sweep_standings.json  ───▶  index.html + js/app.js  ───▶  📱 the lads
-        (the "database")            (reads the JSON, renders)
+ data/sweep_standings.json  ───────▶  index.html  ───────▶  📱 the lads
+        (the "database")          (reads the JSON, renders)
 ```
 
 | File | Job |
 |------|-----|
-| `index.html`, `css/styles.css`, `js/app.js` | The dashboard. Reads `data/sweep_standings.json` and renders it. |
+| `index.html` | The dashboard — self-contained (HTML + CSS + JS). Reads `data/sweep_standings.json` and renders it. |
 | `data/sweep_standings.json` | The "database" — the only thing that changes during the tournament. |
 | `scripts/config.js` | **Edit this** to change players, teams, scoring, or aliases. |
 | `scripts/update_scores.js` | Fetches results from football-data.org and rebuilds the JSON. |

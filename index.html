@@ -1,70 +1,647 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0b0f14" />
-  <title>The Geezer's World Cup Sweep 🏆</title>
-  <meta name="description" content="Live World Cup 2026 sweepstake leaderboard for the lads." />
+  <meta name="theme-color" content="#0a1410" />
+  <title>The Geezer's World Cup Sweep</title>
+  <meta name="description" content="Live World Cup 2026 sweepstake leaderboard. Six lads, forty-eight nations, one trophy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
+  <style>
+    /* =========================================================
+       DESIGN TOKENS — floodlit pitch under the lights
+       ========================================================= */
+    :root{
+      --pitch:      #0a1410;   /* deep midnight pitch — base */
+      --pitch-2:    #0f1d17;   /* raised panel */
+      --pitch-3:    #14271e;   /* hover / inner panel */
+      --line:       rgba(167,201,186,.12); /* hairline pitch markings */
+      --chalk:      #f2f6f3;   /* floodlight white */
+      --sage:       #8fab9f;   /* secondary, green-tinted grey */
+      --sage-dim:   #5f7a6e;
+      --gold:       #f4c14b;   /* the prize. leader only. */
+      --gold-deep:  #c9982f;
+      --live:       #34e29a;   /* alive / live / positive */
+      --clay:       #e0614c;   /* eliminated / spoon */
+
+      --r-lg: 20px; --r-md: 14px; --r-sm: 10px;
+      --pad: clamp(16px, 4vw, 22px);
+      --maxw: 760px;
+
+      --shadow: 0 18px 40px -22px rgba(0,0,0,.8);
+      --ring: 0 0 0 2px var(--pitch), 0 0 0 4px var(--gold);
+    }
+
+    *{ box-sizing:border-box; margin:0; }
+    html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+    body{
+      font-family:'Archivo', system-ui, sans-serif;
+      background:var(--pitch);
+      color:var(--chalk);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      min-height:100dvh;
+    }
+    /* faint pitch markings + floodlight glow behind everything */
+    body::before{
+      content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+      background:
+        radial-gradient(60% 38% at 50% -6%, rgba(52,226,154,.10), transparent 70%),
+        radial-gradient(50% 30% at 50% 0%, rgba(244,193,75,.07), transparent 70%);
+    }
+    body::after{
+      content:""; position:fixed; left:50%; top:clamp(160px,30vh,300px); z-index:0;
+      width:min(560px,84vw); aspect-ratio:1; transform:translateX(-50%);
+      border:1px solid var(--line); border-radius:50%;
+      box-shadow:0 0 0 1px transparent;
+      -webkit-mask:linear-gradient(#000,transparent 78%);
+              mask:linear-gradient(#000,transparent 78%);
+      pointer-events:none;
+    }
+    main, .topbar{ position:relative; z-index:1; }
+
+    a{ color:inherit; }
+    ::selection{ background:var(--gold); color:#1a1305; }
+
+    /* =========================================================
+       TOP BAR — always-on status while scrolling
+       ========================================================= */
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:11px var(--pad);
+      padding-top:max(11px, env(safe-area-inset-top));
+      background:color-mix(in srgb, var(--pitch) 78%, transparent);
+      backdrop-filter:blur(14px) saturate(1.2);
+      -webkit-backdrop-filter:blur(14px) saturate(1.2);
+      border-bottom:1px solid var(--line);
+    }
+    .brand{ display:flex; align-items:center; gap:9px; font-weight:800; letter-spacing:-.02em; font-size:15px; }
+    .brand .cup{ font-size:18px; filter:drop-shadow(0 2px 6px rgba(244,193,75,.5)); }
+    .brand b{ color:var(--gold); }
+    .live{
+      display:inline-flex; align-items:center; gap:7px;
+      font-size:11.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+      color:var(--sage); padding:5px 11px 5px 9px;
+      background:var(--pitch-2); border:1px solid var(--line); border-radius:999px;
+      white-space:nowrap;
+    }
+    .live .dot{ width:8px; height:8px; border-radius:50%; background:var(--live);
+      box-shadow:0 0 0 0 rgba(52,226,154,.7); animation:pulse 2s infinite; }
+    @keyframes pulse{ 70%{ box-shadow:0 0 0 7px rgba(52,226,154,0); } 100%{ box-shadow:0 0 0 0 rgba(52,226,154,0); } }
+
+    /* =========================================================
+       HERO — lead with the stakes, not a vanity number
+       ========================================================= */
+    .hero{ max-width:var(--maxw); margin:0 auto; padding:clamp(30px,8vw,64px) var(--pad) clamp(20px,5vw,30px); text-align:center; }
+    .eyebrow{ font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--sage-dim); }
+    .hero h1{
+      font-family:'Anton', sans-serif; font-weight:400;
+      font-size:clamp(46px, 15vw, 104px); line-height:.92; letter-spacing:.005em;
+      text-transform:uppercase; margin:.18em 0 .12em;
+      text-wrap:balance;
+    }
+    .hero h1 .lo{ color:var(--sage); display:block; font-size:.42em; letter-spacing:.04em; }
+    .hero h1 .hi{ color:var(--chalk); }
+    .hero h1 .gold{
+      background:linear-gradient(180deg, #ffe39a, var(--gold) 55%, var(--gold-deep));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 8px 30px rgba(244,193,75,.25);
+    }
+    .stakes{
+      max-width:46ch; margin:14px auto 0; color:var(--sage);
+      font-size:clamp(15px,3.6vw,17px); text-wrap:pretty;
+    }
+    .stakes b{ color:var(--chalk); font-weight:700; }
+
+    /* =========================================================
+       SECTION HEADINGS
+       ========================================================= */
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 var(--pad) 60px; }
+    .shead{ display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+      margin:clamp(30px,7vw,46px) 0 14px; }
+    .shead h2{
+      font-family:'Archivo', sans-serif; font-weight:900; letter-spacing:-.02em;
+      font-size:clamp(20px,5vw,26px); text-transform:uppercase;
+      display:flex; align-items:center; gap:10px;
+    }
+    .shead h2::before{ content:""; width:9px; height:9px; border-radius:2px; background:var(--gold); transform:rotate(45deg); flex:none; }
+    .shead .hint{ font-size:12.5px; color:var(--sage-dim); font-weight:600; text-align:right; }
+
+    /* =========================================================
+       PRIZE BANNER
+       ========================================================= */
+    .prize{
+      position:relative; overflow:hidden;
+      border:1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+      border-radius:var(--r-lg); padding:clamp(18px,5vw,26px);
+      background:
+        radial-gradient(120% 140% at 0% 0%, rgba(244,193,75,.16), transparent 55%),
+        linear-gradient(180deg, var(--pitch-2), var(--pitch));
+      box-shadow:var(--shadow);
+    }
+    .prize__row{ display:flex; align-items:center; gap:16px; }
+    .prize__cup{ font-size:clamp(40px,11vw,58px); line-height:1; flex:none;
+      filter:drop-shadow(0 8px 18px rgba(244,193,75,.45)); }
+    .prize__txt h3{ font-family:'Archivo'; font-weight:900; font-size:clamp(17px,4.4vw,21px);
+      letter-spacing:-.01em; color:var(--gold); text-transform:uppercase; }
+    .prize__txt p{ color:var(--sage); font-size:14px; margin-top:4px; max-width:48ch; }
+    .prize__meta{ display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; }
+    .chip{ font-size:12px; font-weight:700; color:var(--chalk);
+      background:var(--pitch-3); border:1px solid var(--line); border-radius:999px; padding:6px 12px; }
+    .chip b{ color:var(--live); }
+
+    /* =========================================================
+       PODIUM — real stepped plinths
+       ========================================================= */
+    .podium{ display:grid; grid-template-columns:1fr 1.15fr 1fr; align-items:end; gap:clamp(8px,2.6vw,16px); }
+    .plinth{ position:relative; text-align:center; }
+    .plinth__face{ display:flex; flex-direction:column; align-items:center; gap:3px; margin-bottom:10px; }
+    .plinth__flags{ font-size:13px; letter-spacing:1px; line-height:1; opacity:.9; height:15px; overflow:hidden; }
+    .plinth__name{ font-weight:800; font-size:clamp(13px,3.6vw,16px); letter-spacing:-.01em; }
+    .plinth__pts{ font-family:'Anton'; font-size:clamp(20px,6vw,30px); line-height:1; }
+    .plinth__step{
+      border-radius:12px 12px 4px 4px; border:1px solid var(--line); border-bottom:none;
+      display:flex; align-items:flex-start; justify-content:center; padding-top:9px;
+      font-family:'Anton'; font-size:clamp(26px,8vw,40px); color:var(--pitch);
+      background:linear-gradient(180deg, var(--pitch-3), var(--pitch-2));
+      transform-origin:bottom; animation:rise .7s cubic-bezier(.2,.8,.2,1) both;
+    }
+    @keyframes rise{ from{ transform:scaleY(.2); opacity:0; } to{ transform:scaleY(1); opacity:1; } }
+    .plinth--1 .plinth__step{ height:118px; background:linear-gradient(180deg,#ffe39a,var(--gold) 60%,var(--gold-deep)); color:#241a04; animation-delay:.15s; }
+    .plinth--2 .plinth__step{ height:90px; background:linear-gradient(180deg,#e9eef0,#aeb9bd 60%,#7f8b8f); color:#1b2024; }
+    .plinth--3 .plinth__step{ height:70px; background:linear-gradient(180deg,#e6a571,#c47b3e 60%,#9a5b27); color:#241204; }
+    .plinth--1 .plinth__pts{ color:var(--gold); }
+
+    /* =========================================================
+       LEADERBOARD — broadcast scoreboard rows
+       ========================================================= */
+    .board{ display:flex; flex-direction:column; gap:8px; }
+    .row{ border:1px solid var(--line); border-radius:var(--r-md); overflow:hidden;
+      background:var(--pitch-2); animation:slideup .5s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes slideup{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:translateY(0); } }
+    .row__btn{
+      width:100%; border:0; background:none; color:inherit; cursor:pointer; text-align:left;
+      display:grid; grid-template-columns:34px 1fr auto; align-items:center;
+      gap:12px; padding:13px 15px; font:inherit;
+    }
+    .row__btn:focus-visible{ outline:none; box-shadow:inset 0 0 0 2px var(--gold); border-radius:var(--r-md); }
+    .row__rank{ font-family:'Anton'; font-size:24px; line-height:1; color:var(--sage-dim); text-align:center; }
+    .row__id{ min-width:0; }
+    .row__name{ font-weight:800; letter-spacing:-.01em; font-size:16px; display:flex; align-items:center; gap:8px; }
+    .row__squad{ margin-top:5px; font-size:13px; letter-spacing:1.5px; line-height:1; }
+    .row__squad .out{ filter:grayscale(1) brightness(.6); opacity:.5; }
+    .row__right{ text-align:right; display:flex; align-items:center; gap:12px; }
+    .row__alive{ font-size:11px; font-weight:700; color:var(--sage); white-space:nowrap; }
+    .row__alive b{ color:var(--live); font-family:'Anton'; font-weight:400; font-size:15px; }
+    .row__pts{ font-family:'Anton'; font-size:30px; line-height:.9; min-width:48px; text-align:right; }
+    .row__pts small{ display:block; font-family:'Archivo'; font-size:9px; font-weight:700; letter-spacing:.12em; color:var(--sage-dim); }
+    .row__chev{ color:var(--sage-dim); transition:transform .25s; font-size:13px; }
+    .row[open] .row__chev{ transform:rotate(180deg); }
+
+    .row--lead{ border-color:color-mix(in srgb, var(--gold) 55%, transparent);
+      background:linear-gradient(100deg, rgba(244,193,75,.12), var(--pitch-2) 45%); }
+    .row--lead .row__rank{ color:var(--gold); }
+    .row--lead .row__pts{ color:var(--gold); }
+    .crown{ font-size:13px; filter:drop-shadow(0 2px 5px rgba(244,193,75,.6)); }
+
+    .row__teams{ display:grid; grid-template-columns:repeat(auto-fill,minmax(118px,1fr)); gap:6px;
+      padding:0 15px 15px; }
+    .team{ display:flex; align-items:center; gap:7px; font-size:13px; font-weight:600;
+      padding:7px 9px; border-radius:var(--r-sm); background:var(--pitch); border:1px solid var(--line); }
+    .team .fl{ font-size:15px; flex:none; }
+    .team.is-out{ color:var(--sage-dim); }
+    .team.is-out .fl{ filter:grayscale(1) brightness(.6); }
+    .team.is-out .nm{ text-decoration:line-through; text-decoration-color:var(--clay); }
+    .team .st{ margin-left:auto; font-size:9px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .team .st.in{ color:var(--live); } .team .st.out{ color:var(--clay); }
+    .team.is-champ{ border-color:var(--gold); background:color-mix(in srgb,var(--gold) 12%,var(--pitch)); }
+    .team.is-champ .st{ color:var(--gold); }
+
+    /* =========================================================
+       WOODEN SPOON
+       ========================================================= */
+    .spoon{ display:flex; align-items:center; gap:14px; margin-top:14px;
+      border:1px dashed color-mix(in srgb, var(--clay) 45%, transparent); border-radius:var(--r-md);
+      padding:14px 16px; background:color-mix(in srgb, var(--clay) 7%, var(--pitch-2)); }
+    .spoon__ico{ font-size:30px; flex:none; }
+    .spoon__txt b{ color:var(--clay); font-weight:800; }
+    .spoon__txt span{ display:block; font-size:13px; color:var(--sage); margin-top:2px; }
+    .spoon__pts{ margin-left:auto; font-family:'Anton'; font-size:28px; color:var(--clay); }
+
+    /* =========================================================
+       FEEDS — fixtures & results
+       ========================================================= */
+    .feed{ display:flex; flex-direction:column; gap:8px; }
+    .match{ display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px;
+      border:1px solid var(--line); border-radius:var(--r-md); background:var(--pitch-2); padding:13px 15px; }
+    .match__main{ min-width:0; }
+    .match__teams{ display:flex; align-items:center; gap:8px; font-weight:700; font-size:15px; flex-wrap:wrap; }
+    .match__teams .fl{ font-size:17px; }
+    .match__teams .vs{ color:var(--sage-dim); font-weight:600; font-size:12px; padding:0 2px; }
+    .match__meta{ font-size:11.5px; color:var(--sage-dim); margin-top:6px; font-weight:600;
+      display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .stage{ color:var(--gold); }
+    .owners{ display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+    .owner{ font-size:11px; font-weight:700; padding:3px 8px; border-radius:999px;
+      background:var(--pitch-3); border:1px solid var(--line); color:var(--sage); }
+    .match__right{ text-align:right; flex:none; }
+    .score{ font-family:'Anton'; font-size:26px; line-height:1; }
+    .score .pen{ display:block; font-family:'Archivo'; font-size:10px; font-weight:700; color:var(--sage-dim); margin-top:2px; }
+    .ko{ font-family:'Anton'; font-size:20px; line-height:1; color:var(--chalk); }
+    .ko small{ display:block; font-family:'Archivo'; font-size:9px; font-weight:700; letter-spacing:.1em; color:var(--sage-dim); margin-top:2px; }
+    .ko .livenow{ color:var(--live); }
+    .pts-tag{ font-size:11px; font-weight:800; color:var(--live); }
+
+    /* =========================================================
+       HOW IT WORKS
+       ========================================================= */
+    .explainer{ border:1px solid var(--line); border-radius:var(--r-md); background:var(--pitch-2); overflow:hidden; }
+    .explainer summary{ list-style:none; cursor:pointer; padding:15px 16px; font-weight:800; font-size:15px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px; }
+    .explainer summary::-webkit-details-marker{ display:none; }
+    .explainer summary:focus-visible{ outline:none; box-shadow:inset 0 0 0 2px var(--gold); }
+    .explainer .twist{ color:var(--sage-dim); transition:transform .25s; }
+    .explainer[open] .twist{ transform:rotate(180deg); }
+    .explainer .body{ padding:0 16px 16px; }
+    .explainer .lead{ color:var(--sage); font-size:14.5px; max-width:60ch; }
+    .explainer .lead b{ color:var(--chalk); }
+    .scoring{ display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:8px; margin-top:14px; }
+    .score-card{ border:1px solid var(--line); border-radius:var(--r-sm); padding:11px 12px; background:var(--pitch); }
+    .score-card .v{ font-family:'Anton'; font-size:24px; line-height:1; color:var(--gold); }
+    .score-card .v.prizev{ color:var(--live); font-size:18px; }
+    .score-card .k{ font-size:12px; color:var(--sage); margin-top:4px; font-weight:600; }
+
+    /* empty / error states */
+    .empty{ border:1px dashed var(--line); border-radius:var(--r-md); background:var(--pitch-2);
+      padding:22px 16px; text-align:center; color:var(--sage-dim); font-size:13.5px; }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    .footer{ margin-top:40px; padding-top:20px; border-top:1px solid var(--line);
+      color:var(--sage-dim); font-size:12.5px; text-align:center; }
+    .footer .upd{ color:var(--sage); font-weight:700; margin-bottom:4px; }
+
+    @media (max-width:420px){
+      .row__teams{ grid-template-columns:1fr 1fr; }
+      .row__alive{ display:none; }
+      .row__btn{ gap:9px; grid-template-columns:28px 1fr auto; padding:12px; }
+    }
+    @media (prefers-reduced-motion:reduce){
+      *{ animation:none !important; transition:none !important; scroll-behavior:auto; }
+      .live .dot{ animation:none; }
+    }
+  </style>
 </head>
 <body>
+  <div class="topbar">
+    <span class="brand"><span class="cup">🏆</span> The Geezer's <b>Sweep</b></span>
+    <span class="live" id="topstatus"><span class="dot"></span> Loading…</span>
+  </div>
+
   <header class="hero">
-    <h1>The Geezer's <span class="ball">⚽</span> World Cup Sweep</h1>
-    <p class="sub">FIFA World Cup 2026 · 6 lads · 48 nations</p>
-    <div class="status-pill" id="status"><span class="dot"></span> Loading…</div>
+    <p class="eyebrow">FIFA World Cup 2026 · USA · Canada · Mexico</p>
+    <h1>
+      <span class="lo">The Geezer's</span>
+      <span class="hi">World Cup</span>
+      <span class="gold">Sweep</span>
+    </h1>
+    <p class="stakes">
+      Six lads. Forty-eight nations. One trophy that matters.
+      <b>Whoever owns the nation that lifts the cup takes the lot</b> — the points below are just
+      ammunition for the group chat.
+    </p>
   </header>
 
   <main class="wrap">
-    <!-- The actual objective (auto-upgrades to a champion banner when won) -->
     <section id="prize"></section>
 
-    <!-- Podium -->
-    <div class="section-head"><h2>Podium</h2><span class="hint">top 3 by points</span></div>
+    <div class="shead"><h2>Podium</h2><span class="hint">top three on points</span></div>
     <section class="podium" id="podium"></section>
 
-    <!-- Full leaderboard -->
-    <div class="section-head"><h2>Leaderboard</h2><span class="hint">tap a name for their teams</span></div>
-    <section class="board" id="board">
-      <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
-    </section>
+    <div class="shead"><h2>Leaderboard</h2><span class="hint">tap a name for their nations</span></div>
+    <section class="board" id="board"></section>
 
-    <!-- Wooden spoon -->
     <section id="spoon"></section>
 
-    <!-- Upcoming fixtures -->
-    <div class="section-head"><h2>Next Up</h2><span class="hint">kick-off in AWST (Perth)</span></div>
+    <div class="shead"><h2>Next Up</h2><span class="hint">kick-off in AWST (Perth)</span></div>
     <section class="feed" id="upcoming"></section>
 
-    <!-- Recent results -->
-    <div class="section-head"><h2>Latest Results</h2><span class="hint">times AWST</span></div>
+    <div class="shead"><h2>Latest Results</h2><span class="hint">times AWST</span></div>
     <section class="feed" id="feed"></section>
 
-    <!-- How it works -->
-    <div class="section-head"><h2>How It Works</h2></div>
+    <div class="shead"><h2>How It Works</h2></div>
     <details class="explainer" id="explainer">
       <summary>The points, the prize &amp; the rules <span class="twist">▾</span></summary>
       <div class="body">
         <p class="lead">
-          The points below are <b>just for the banter</b> — a running tally so there's
-          something to argue about in the group chat from the very first kick-off.
-          <b>The real winner is the last team standing:</b> whoever owns the nation that
-          actually <b>wins the World Cup</b> takes the sweep. Everything else is bragging rights. 🍻
+          The points are <b>just for the banter</b> — a running tally so there's something to argue about
+          from the first kick-off. <b>The real winner is the last nation standing:</b> own the team that
+          actually wins the World Cup and the sweep is yours. Everything else is bragging rights. 🍻
         </p>
-        <div class="scoring-grid" id="scoring-grid"></div>
+        <div class="scoring" id="scoring"></div>
       </div>
     </details>
 
     <footer class="footer">
-      <div id="updated-foot"></div>
-      Auto-updates every couple of hours. Leave it open — it refreshes itself. No reloading, ya animals.
+      <div class="upd" id="updated">—</div>
+      Auto-updates through the tournament. Leave it open — it refreshes itself. No reloading, ya animals.
     </footer>
   </main>
 
-  <script src="js/app.js?v=3"></script>
+  <script>
+  /* ===========================================================
+     THE GEEZER'S SWEEP — live frontend
+     Reads data/sweep_standings.json (written by the GitHub Action)
+     and renders the broadcast-style dashboard. Vanilla JS.
+     =========================================================== */
+
+  // Flag emojis by our canonical team name (data carries names, not flags).
+  const FLAGS = {
+    "Germany":"🇩🇪","Brazil":"🇧🇷","Austria":"🇦🇹","South Africa":"🇿🇦","Belgium":"🇧🇪","Cape Verde":"🇨🇻","Japan":"🇯🇵","Haiti":"🇭🇹",
+    "South Korea":"🇰🇷","Argentina":"🇦🇷","DR Congo":"🇨🇩","Czech Republic":"🇨🇿","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","Curacao":"🇨🇼","Colombia":"🇨🇴","Ghana":"🇬🇭",
+    "Sweden":"🇸🇪","France":"🇫🇷","Turkey":"🇹🇷","Qatar":"🇶🇦","Paraguay":"🇵🇾","Netherlands":"🇳🇱","Tunisia":"🇹🇳","New Zealand":"🇳🇿",
+    "Uruguay":"🇺🇾","Portugal":"🇵🇹","Switzerland":"🇨🇭","Canada":"🇨🇦","Norway":"🇳🇴","Algeria":"🇩🇿","Ecuador":"🇪🇨","Iraq":"🇮🇶",
+    "Saudi Arabia":"🇸🇦","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","USA":"🇺🇸","Mexico":"🇲🇽","Australia":"🇦🇺","Panama":"🇵🇦","Croatia":"🇭🇷","Senegal":"🇸🇳",
+    "Cote d'Ivoire":"🇨🇮","Spain":"🇪🇸","Morocco":"🇲🇦","Egypt":"🇪🇬","Iran":"🇮🇷","Uzbekistan":"🇺🇿","Jordan":"🇯🇴","Bosnia":"🇧🇦"
+  };
+  const flag = n => FLAGS[n] || "🏳️";
+  const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const byId = id => document.getElementById(id);
+  let firstLoad = true;
+
+  /* ---------- time helpers (always Perth / AWST) ---------- */
+  function awst(iso){
+    if(!iso) return "";
+    const d = new Date(iso);
+    const day = d.toLocaleDateString('en-GB',{ timeZone:'Australia/Perth', weekday:'short', day:'numeric', month:'short' });
+    const time = d.toLocaleTimeString('en-GB',{ timeZone:'Australia/Perth', hour:'numeric', minute:'2-digit', hour12:true }).replace(' ','').toLowerCase();
+    return `${day} · ${time}`;
+  }
+  function fmtKO(iso){
+    return new Date(iso).toLocaleTimeString('en-GB',{ hour:'numeric', minute:'2-digit', hour12:true, timeZone:'Australia/Perth' }).replace(' ','').toLowerCase();
+  }
+
+  /* ---------- load + render loop ---------- */
+  async function load(){
+    try{
+      const res = await fetch(`data/sweep_standings.json?t=${Date.now()}`);
+      if(!res.ok) throw new Error(res.status);
+      render(await res.json());
+      firstLoad = false;
+    }catch(e){
+      const b = byId('board');
+      if(b) b.innerHTML = `<div class="empty">Couldn't load the standings yet.<br><small>${e}</small></div>`;
+    }
+  }
+
+  function render(data){
+    const participants = data.participants || [];
+    const lads = participants.map(p => ({
+      name: p.name,
+      pts: p.totalPoints,
+      teams: p.teams.map(t => ({
+        name: t.name, flag: flag(t.name),
+        status: t.stage === 'winner' ? 'champ' : (t.eliminated ? 'out' : 'in')
+      }))
+    }));
+    const ranked = lads.slice().sort((a,b) => b.pts - a.pts);
+    const alive = l => l.teams.filter(t => t.status !== 'out').length;
+
+    // who owns which nation (from the real allocations in the data)
+    const ownerOf = {};
+    participants.forEach(p => p.teams.forEach(t => ownerOf[t.name.toLowerCase()] = p.name));
+
+    // champion (a team that reached "winner")
+    let champion = null;
+    participants.forEach(p => p.teams.forEach(t => { if(t.stage === 'winner') champion = { owner:p.name, name:t.name, flag:flag(t.name) }; }));
+
+    const teamsLeft = ranked.reduce((s,l) => s + alive(l), 0);
+    const stage = (data.upcomingMatches && data.upcomingMatches[0] && data.upcomingMatches[0].stage)
+               || (data.recentMatches && data.recentMatches[0] && data.recentMatches[0].stage)
+               || "Group Stage";
+
+    renderStatus(stage, teamsLeft, champion);
+    renderPrize(champion, teamsLeft, ranked, alive, stage);
+    renderPodium(ranked, alive);
+    renderBoard(ranked, alive, champion);
+    renderSpoon(ranked, alive, champion);
+    renderUpcoming(data.upcomingMatches || [], ownerOf);
+    renderResults(data.recentMatches || [], ownerOf);
+    renderScoring(data.scoring || {});
+    renderUpdated(data.lastUpdated, data.live);
+
+    countUp(firstLoad && !reduce);
+    tickCountdowns();
+  }
+
+  function renderStatus(stage, left, champion){
+    const el = byId('topstatus');
+    if(!el) return;
+    el.innerHTML = champion
+      ? `<span class="dot"></span> 🏆 ${champion.owner} wins it`
+      : `<span class="dot"></span> ${stage} · ${left} left`;
+  }
+
+  function renderPrize(champion, teamsLeft, ranked, alive, stage){
+    const el = byId('prize'); if(!el) return;
+    if(champion){
+      el.innerHTML = `<div class="prize"><div class="prize__row">
+        <div class="prize__cup">🏆</div>
+        <div class="prize__txt">
+          <h3>${champion.owner} wins the sweep</h3>
+          <p>${champion.flag} ${champion.name} are world champions — the last nation standing. Drinks are on everyone else. 🍻</p>
+        </div></div></div>`;
+    } else {
+      const ladsAlive = ranked.filter(l => alive(l) > 0).length;
+      el.innerHTML = `<div class="prize">
+        <div class="prize__row">
+          <div class="prize__cup">🏆</div>
+          <div class="prize__txt">
+            <h3>The Prize is up for grabs</h3>
+            <p>No champion yet. Own the last nation standing and it's all yours — points won't save you.</p>
+          </div>
+        </div>
+        <div class="prize__meta">
+          <span class="chip"><b>${teamsLeft}</b> nations left</span>
+          <span class="chip"><b>${ladsAlive}</b> lads still alive</span>
+          <span class="chip">Stage · ${stage}</span>
+        </div></div>`;
+    }
+  }
+
+  function renderPodium(ranked, alive){
+    const el = byId('podium'); if(!el) return;
+    const order = [ranked[1], ranked[0], ranked[2]];
+    const place = [2,1,3];
+    el.innerHTML = order.map((l,i) => {
+      if(!l) return `<div class="plinth plinth--${place[i]}"><div class="plinth__step">${place[i]}</div></div>`;
+      const flags = l.teams.filter(t => t.status !== 'out').map(t => t.flag).join('') || '—';
+      return `<div class="plinth plinth--${place[i]}">
+        <div class="plinth__face">
+          <div class="plinth__flags">${flags}</div>
+          <div class="plinth__name">${l.name}</div>
+          <div class="plinth__pts" data-count="${l.pts}">0</div>
+        </div>
+        <div class="plinth__step">${place[i]}</div>
+      </div>`;
+    }).join('');
+  }
+
+  function renderBoard(ranked, alive, champion){
+    const el = byId('board'); if(!el) return;
+    el.innerHTML = ranked.map((l,i) => {
+      const lead = i === 0;
+      const isChamp = champion && champion.owner === l.name;
+      const squad = l.teams.map(t => `<span class="${t.status==='out'?'out':''}">${t.flag}</span>`).join('');
+      const teams = l.teams.map(t => {
+        const out = t.status === 'out', champ = t.status === 'champ';
+        const label = champ ? 'Champs' : out ? 'Out' : 'Alive';
+        return `<div class="team ${out?'is-out':''} ${champ?'is-champ':''}">
+          <span class="fl">${t.flag}</span><span class="nm">${t.name}</span>
+          <span class="st ${out?'out':'in'}">${label}</span></div>`;
+      }).join('');
+      const crown = isChamp ? '<span class="crown">🏆</span>' : (lead ? '<span class="crown">👑</span>' : '');
+      return `<details class="row ${lead?'row--lead':''}" style="animation-delay:${i*60}ms">
+        <summary class="row__btn">
+          <span class="row__rank">${i+1}</span>
+          <span class="row__id">
+            <span class="row__name">${l.name} ${crown}</span>
+            <span class="row__squad">${squad}</span>
+          </span>
+          <span class="row__right">
+            <span class="row__alive"><b>${alive(l)}</b>/${l.teams.length} alive</span>
+            <span class="row__pts" data-count="${l.pts}">0<small>PTS</small></span>
+            <span class="row__chev">▾</span>
+          </span>
+        </summary>
+        <div class="row__teams">${teams}</div>
+      </details>`;
+    }).join('');
+    el.querySelectorAll('summary').forEach(s => s.setAttribute('role','button'));
+  }
+
+  function renderSpoon(ranked, alive, champion){
+    const el = byId('spoon'); if(!el) return;
+    const last = ranked[ranked.length-1];
+    if(!last || (champion && champion.owner === last.name)){ el.innerHTML = ''; return; }
+    const n = alive(last);
+    el.innerHTML = `<div class="spoon">
+      <div class="spoon__ico">🥄</div>
+      <div class="spoon__txt"><b>Wooden Spoon — ${last.name}</b>
+        <span>${n ? `Propping up the table with ${n} nation${n===1?'':'s'} left. Chin up, son.` : 'All nations wiped out. Grim. 💀'}</span></div>
+      <div class="spoon__pts">${last.pts}</div>
+    </div>`;
+  }
+
+  function ownerChips(home, away, ownerOf){
+    const owners = [ownerOf[(home||'').toLowerCase()], ownerOf[(away||'').toLowerCase()]].filter(Boolean);
+    if(!owners.length) return '';
+    return `<div class="owners">${owners.map(o => `<span class="owner">${o}'s</span>`).join('')}</div>`;
+  }
+
+  function renderUpcoming(matches, ownerOf){
+    const el = byId('upcoming'); if(!el) return;
+    if(!matches.length){ el.innerHTML = `<div class="empty">No fixtures scheduled right now — check back soon. 📅</div>`; return; }
+    el.innerHTML = matches.map(m => `
+      <div class="match">
+        <div class="match__main">
+          <div class="match__teams">
+            <span class="fl">${flag(m.home)}</span> ${m.home}
+            <span class="vs">v</span>
+            <span class="fl">${flag(m.away)}</span> ${m.away}
+          </div>
+          <div class="match__meta"><span class="stage">${m.stage||''}</span> · <span class="cd" data-iso="${m.date}">—</span></div>
+          ${ownerChips(m.home, m.away, ownerOf)}
+        </div>
+        <div class="match__right">
+          <div class="ko">${m.live ? '<span class="livenow">LIVE</span>' : fmtKO(m.date)}<small>AWST</small></div>
+        </div>
+      </div>`).join('');
+  }
+
+  function renderResults(matches, ownerOf){
+    const el = byId('feed'); if(!el) return;
+    if(!matches.length){ el.innerHTML = `<div class="empty">No matches yet — this lights up the second the first ball's kicked. ⚽</div>`; return; }
+    el.innerHTML = matches.map(m => `
+      <div class="match">
+        <div class="match__main">
+          <div class="match__teams">
+            <span class="fl">${flag(m.home)}</span> ${m.home}
+            <span class="vs">${m.homeGoals}–${m.awayGoals}</span>
+            <span class="fl">${flag(m.away)}</span> ${m.away}
+          </div>
+          <div class="match__meta"><span class="stage">${m.stage||''}</span> · ${awst(m.date)} AWST</div>
+          ${ownerChips(m.home, m.away, ownerOf)}
+        </div>
+        <div class="match__right">
+          <div class="score">${m.homeGoals}–${m.awayGoals}</div>
+        </div>
+      </div>`).join('');
+  }
+
+  function renderScoring(s){
+    const el = byId('scoring'); if(!el) return;
+    const items = [
+      { v:`${s.groupWin ?? 3}`, k:'Group-stage win' },
+      { v:`${s.groupDraw ?? 1}`, k:'Group-stage draw' },
+      { v:`+${s.goalBonus ?? 1}`, k:'Per goal scored' },
+      { v:`+${s.reachR32 ?? 5}`, k:'Reach Round of 32' },
+      { v:`+${s.reachR16 ?? 8}`, k:'Reach Round of 16' },
+      { v:`+${s.reachQF ?? 12}`, k:'Reach Quarter-final' },
+      { v:`+${s.reachSF ?? 16}`, k:'Reach Semi-final' },
+      { v:`+${s.reachFinal ?? 18}`, k:'Reach the Final' },
+      { v:'WIN', k:'Own the champions → take the sweep', prize:true }
+    ];
+    el.innerHTML = items.map(i => `<div class="score-card">
+      <div class="v ${i.prize?'prizev':''}">${i.v}</div>
+      <div class="k">${i.k}</div></div>`).join('');
+  }
+
+  function renderUpdated(iso, live){
+    const el = byId('updated'); if(!el) return;
+    el.textContent = iso
+      ? `${live ? 'Live' : 'Pre-tournament'} · updated ${new Date(iso).toLocaleString('en-GB',{ day:'numeric', month:'short', hour:'2-digit', minute:'2-digit', timeZone:'Australia/Perth' })} AWST`
+      : '—';
+  }
+
+  /* ---------- countdowns + count-up numerals ---------- */
+  function tickCountdowns(){
+    const now = Date.now();
+    document.querySelectorAll('.cd').forEach(el => {
+      const t = new Date(el.dataset.iso).getTime() - now;
+      if(t <= 0){ el.textContent = 'kicking off'; return; }
+      const d = Math.floor(t/864e5), h = Math.floor(t%864e5/36e5), m = Math.floor(t%36e5/6e4);
+      el.textContent = d>0 ? `in ${d}d ${h}h` : h>0 ? `in ${h}h ${m}m` : `in ${m}m`;
+    });
+  }
+  function countUp(animate){
+    document.querySelectorAll('[data-count]').forEach(el => {
+      const target = +el.dataset.count;
+      const small = el.querySelector('small');
+      const setVal = v => {
+        if(el.firstChild && el.firstChild.nodeType === 3) el.firstChild.nodeValue = v;
+        else el.textContent = v;
+        if(small && !el.contains(small)) el.appendChild(small);
+      };
+      if(!animate){ setVal(target); return; }
+      const start = performance.now(), dur = 900 + Math.random()*300;
+      requestAnimationFrame(function frame(t){
+        const p = Math.min(1,(t-start)/dur), e = 1-Math.pow(1-p,3);
+        setVal(Math.round(target*e));
+        if(p<1) requestAnimationFrame(frame);
+      });
+    });
+  }
+
+  load();
+  setInterval(load, 90 * 1000);     // self-refresh while open
+  setInterval(tickCountdowns, 30000); // live countdown ticking
+  </script>
 </body>
 </html>
