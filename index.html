@@ -209,8 +209,7 @@
     .row--lead .row__pts{ color:var(--gold); }
     .crown{ font-size:13px; filter:drop-shadow(0 2px 5px rgba(244,193,75,.6)); }
 
-    .row__teams{ display:grid; grid-template-columns:repeat(auto-fill,minmax(118px,1fr)); gap:6px;
-      padding:0 15px 15px; }
+    .row__teams{ padding:0 15px 15px; overflow-x:auto; }
     .team{ display:flex; align-items:center; gap:7px; font-size:13px; font-weight:600;
       padding:7px 9px; border-radius:var(--r-sm); background:var(--pitch); border:1px solid var(--line); }
     .team .fl{ font-size:15px; flex:none; }
@@ -221,6 +220,27 @@
     .team .st.in{ color:var(--live); } .team .st.out{ color:var(--clay); }
     .team.is-champ{ border-color:var(--gold); background:color-mix(in srgb,var(--gold) 12%,var(--pitch)); }
     .team.is-champ .st{ color:var(--gold); }
+
+    /* per-nation stats table (inside each lad's drawer) */
+    .stats{ width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+    .stats th{ font-size:9px; letter-spacing:.06em; text-transform:uppercase; color:var(--sage-dim);
+      font-weight:800; padding:5px 4px; border-bottom:1px solid var(--line); text-align:center; }
+    .stats th.nat{ text-align:left; }
+    .stats td{ padding:8px 4px; border-bottom:1px solid var(--line); text-align:center;
+      font-weight:700; font-size:12.5px; color:var(--sage); }
+    .stats tr:last-child td{ border-bottom:0; }
+    .stats td.nat{ text-align:left; color:var(--chalk); white-space:nowrap; }
+    .stats td.nat .fl{ font-size:15px; margin-right:6px; }
+    .stats td.gf{ color:var(--live); }
+    .stats td.p{ font-family:'Anton'; font-size:16px; color:var(--gold); }
+    .stats tr.is-out td{ color:var(--sage-dim); }
+    .stats tr.is-out td.gf{ color:var(--sage-dim); }
+    .stats tr.is-out .nm{ text-decoration:line-through; text-decoration-color:var(--clay); }
+    .stats tr.is-out td.p{ color:var(--sage-dim); }
+    .stats tr.is-champ td.p{ color:var(--gold); }
+    .stg{ display:inline-block; margin-left:6px; font-size:9px; font-weight:800;
+      letter-spacing:.05em; text-transform:uppercase; color:var(--live); vertical-align:middle; }
+    .stg.out{ color:var(--clay); }
 
     /* =========================================================
        WOODEN SPOON
@@ -371,6 +391,7 @@
     "Cote d'Ivoire":"🇨🇮","Spain":"🇪🇸","Morocco":"🇲🇦","Egypt":"🇪🇬","Iran":"🇮🇷","Uzbekistan":"🇺🇿","Jordan":"🇯🇴","Bosnia":"🇧🇦"
   };
   const flag = n => FLAGS[n] || "🏳️";
+  const shortStage = s => ({ r32:'R32', r16:'R16', qf:'QF', sf:'SF', final:'Final', winner:'🏆 Champs' }[s] || '');
   const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
   const byId = id => document.getElementById(id);
   let firstLoad = true;
@@ -407,7 +428,9 @@
       pts: p.totalPoints,
       teams: p.teams.map(t => ({
         name: t.name, flag: flag(t.name),
-        status: t.stage === 'winner' ? 'champ' : (t.eliminated ? 'out' : 'in')
+        status: t.stage === 'winner' ? 'champ' : (t.eliminated ? 'out' : 'in'),
+        played: t.played || 0, wins: t.wins || 0, draws: t.draws || 0, losses: t.losses || 0,
+        gf: t.goalsFor || 0, pts: t.points || 0, stage: t.stage
       }))
     }));
     const ranked = lads.slice().sort((a,b) => b.pts - a.pts);
@@ -499,13 +522,19 @@
       const lead = i === 0;
       const isChamp = champion && champion.owner === l.name;
       const squad = l.teams.map(t => `<span class="${t.status==='out'?'out':''}">${t.flag}</span>`).join('');
-      const teams = l.teams.map(t => {
+      const rows = l.teams.slice().sort((a,b) => b.pts - a.pts).map(t => {
         const out = t.status === 'out', champ = t.status === 'champ';
-        const label = champ ? 'Champs' : out ? 'Out' : 'Alive';
-        return `<div class="team ${out?'is-out':''} ${champ?'is-champ':''}">
-          <span class="fl">${t.flag}</span><span class="nm">${t.name}</span>
-          <span class="st ${out?'out':'in'}">${label}</span></div>`;
+        const stg = shortStage(t.stage);
+        const tag = stg ? `<span class="stg ${out?'out':''}">${stg}</span>` : '';
+        return `<tr class="${out?'is-out':''} ${champ?'is-champ':''}">
+          <td class="nat"><span class="fl">${t.flag}</span><span class="nm">${t.name}</span>${tag}</td>
+          <td>${t.played}</td><td>${t.wins}</td><td>${t.draws}</td><td>${t.losses}</td>
+          <td class="gf">${t.gf}</td><td class="p">${t.pts}</td>
+        </tr>`;
       }).join('');
+      const teams = `<table class="stats">
+        <thead><tr><th class="nat">Nation</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>Pts</th></tr></thead>
+        <tbody>${rows}</tbody></table>`;
       const crown = isChamp ? '<span class="crown">🏆</span>' : (lead ? '<span class="crown">👑</span>' : '');
       return `<details class="row ${lead?'row--lead':''}" style="animation-delay:${i*60}ms">
         <summary class="row__btn">
