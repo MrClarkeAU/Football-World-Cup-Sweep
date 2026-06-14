@@ -88,6 +88,9 @@ const TEAM_ALIASES = {
   "bosnia": "Bosnia",
   "curacao": "Curacao",
   "curaçao": "Curacao",
+  "ir iran": "Iran",
+  "iran islamic republic": "Iran",
+  "united states of america": "USA",
 };
 
 // Strip accents so "Côte d'Ivoire" matches "Cote d'Ivoire", etc.

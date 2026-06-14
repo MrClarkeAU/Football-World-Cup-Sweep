@@ -141,12 +141,15 @@ async function main() {
   console.log(`  ${matches.length} matches returned.`);
 
   const finished = [];
+  const unmatched = new Set(); // fixture teams that match NO participant (spelling check)
   for (const m of matches) {
     const stage = mapStage(m.stage || "");
     const homeName = canonicalTeamName(m.homeTeam?.name);
     const awayName = canonicalTeamName(m.awayTeam?.name);
     const home = findTeam(players, homeName);
     const away = findTeam(players, awayName);
+    if (homeName && !home) unmatched.add(homeName);
+    if (awayName && !away) unmatched.add(awayName);
 
     // Appearing in a match = at least reached that stage.
     const reachKey = stage === "third" ? "sf" : stage;
@@ -193,8 +196,18 @@ async function main() {
     player.totalPoints = player.teams.reduce((sum, t) => sum + scoreTeam(t), 0);
   }
 
+  const unmatchedList = [...unmatched].sort();
+  if (unmatchedList.length) {
+    console.warn(`⚠  ${unmatchedList.length} fixture team(s) matched NO participant ` +
+                 `(possible spelling mismatch or not on the sheet):`);
+    unmatchedList.forEach((n) => console.warn(`     • ${n}`));
+    console.warn(`   If any of these IS one of our teams, add an alias in scripts/config.js.`);
+  } else {
+    console.log("✓ Every fixture team matched a participant — no spelling issues.");
+  }
+
   buildRecentFeed(finished, recentMatches);
-  return writeOutput(players, recentMatches, { live: true });
+  return writeOutput(players, recentMatches, { live: true, unmatched: unmatchedList });
 }
 
 // Knockout loser is out; champion never is.
@@ -234,7 +247,7 @@ function buildRecentFeed(finished, out) {
   }
 }
 
-function writeOutput(playersObj, recentMatches, { live }) {
+function writeOutput(playersObj, recentMatches, { live, unmatched = [] }) {
   const participants = Object.values(playersObj).map((p) => {
     const allEliminated = p.teams.every((t) => t.eliminated) &&
                           !p.teams.some((t) => t.stage === "winner");
@@ -263,6 +276,7 @@ function writeOutput(playersObj, recentMatches, { live }) {
     lastUpdated: new Date().toISOString(),
     live,
     source: "football-data.org",
+    unmatchedTeams: unmatched,
     scoring: SCORING,
     participants,
     recentMatches,
