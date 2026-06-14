@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0e14" />
+  <meta name="theme-color" content="#0b0f14" />
   <title>The Lads' World Cup Sweep 🏆</title>
   <meta name="description" content="Live World Cup 2026 sweepstake leaderboard for the lads." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,36 +14,50 @@
 </head>
 <body>
   <header class="hero">
-    <span class="badge">⚽ Sweepstake Central</span>
-    <h1>The Lads' World Cup Sweep</h1>
-    <p>FIFA World Cup 2026 · 6 lads · 48 nations · 1 wooden spoon</p>
-    <div class="updated" id="updated">
-      <span class="dot"></span> Loading the latest carnage…
-    </div>
+    <h1>The Lads' <span class="ball">⚽</span> World Cup Sweep</h1>
+    <p class="sub">FIFA World Cup 2026 · 6 lads · 48 nations</p>
+    <div class="status-pill" id="status"><span class="dot"></span> Loading…</div>
   </header>
 
   <main class="wrap">
+    <!-- The actual objective (auto-upgrades to a champion banner when won) -->
+    <section id="prize"></section>
+
     <!-- Podium -->
-    <div class="section-title">🏅 The Podium</div>
+    <div class="section-head"><h2>Podium</h2><span class="hint">top 3 by points</span></div>
     <section class="podium" id="podium"></section>
 
-    <!-- Wooden spoon -->
-    <div class="section-title">🥄 Currently Holding the Spoon</div>
-    <section id="spoon"></section>
-
     <!-- Full leaderboard -->
-    <div class="section-title">📊 Full Leaderboard <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:11px;color:var(--muted)">(tap a name for their teams)</span></div>
+    <div class="section-head"><h2>Leaderboard</h2><span class="hint">tap a name for their teams</span></div>
     <section class="board" id="board">
       <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
     </section>
 
+    <!-- Wooden spoon -->
+    <section id="spoon"></section>
+
     <!-- Recent results -->
-    <div class="section-title">⚡ Latest Results</div>
+    <div class="section-head"><h2>Latest Results</h2></div>
     <section class="feed" id="feed"></section>
 
+    <!-- How it works -->
+    <div class="section-head"><h2>How It Works</h2></div>
+    <details class="explainer" id="explainer">
+      <summary>The points, the prize &amp; the rules <span class="twist">▾</span></summary>
+      <div class="body">
+        <p class="lead">
+          The points below are <b>just for the banter</b> — a running tally so there's
+          something to argue about in the group chat from the very first kick-off.
+          <b>The real winner is the last team standing:</b> whoever owns the nation that
+          actually <b>wins the World Cup</b> takes the sweep. Everything else is bragging rights. 🍻
+        </p>
+        <div class="scoring-grid" id="scoring-grid"></div>
+      </div>
+    </details>
+
     <footer class="footer">
-      <div class="rules" id="rules"></div>
-      <p style="margin-top:16px">Auto-updates every couple of hours during the tournament. No refreshing required, ya animals.</p>
+      <div id="updated-foot"></div>
+      Auto-updates every couple of hours. Leave it open — it refreshes itself. No reloading, ya animals.
     </footer>
   </main>
 
