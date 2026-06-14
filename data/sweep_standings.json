@@ -1,8 +1,9 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-14T12:22:46.384Z",
+  "lastUpdated": "2026-06-14T12:41:04.464Z",
   "live": true,
   "source": "football-data.org",
+  "unmatchedTeams": [],
   "scoring": {
     "groupWin": 3,
     "groupDraw": 1,
@@ -718,6 +719,106 @@
       "stage": "Group Stage",
       "date": "2026-06-11T19:00:00Z",
       "scorers": []
+    }
+  ],
+  "upcomingMatches": [
+    {
+      "home": "Germany",
+      "away": "Curacao",
+      "stage": "Group Stage",
+      "date": "2026-06-14T17:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Netherlands",
+      "away": "Japan",
+      "stage": "Group Stage",
+      "date": "2026-06-14T20:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Cote d'Ivoire",
+      "away": "Ecuador",
+      "stage": "Group Stage",
+      "date": "2026-06-14T23:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Sweden",
+      "away": "Tunisia",
+      "stage": "Group Stage",
+      "date": "2026-06-15T02:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Spain",
+      "away": "Cape Verde",
+      "stage": "Group Stage",
+      "date": "2026-06-15T16:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Belgium",
+      "away": "Egypt",
+      "stage": "Group Stage",
+      "date": "2026-06-15T19:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "stage": "Group Stage",
+      "date": "2026-06-15T22:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Iran",
+      "away": "New Zealand",
+      "stage": "Group Stage",
+      "date": "2026-06-16T01:00:00Z",
+      "live": false
+    },
+    {
+      "home": "France",
+      "away": "Senegal",
+      "stage": "Group Stage",
+      "date": "2026-06-16T19:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Iraq",
+      "away": "Norway",
+      "stage": "Group Stage",
+      "date": "2026-06-16T22:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Argentina",
+      "away": "Algeria",
+      "stage": "Group Stage",
+      "date": "2026-06-17T01:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Austria",
+      "away": "Jordan",
+      "stage": "Group Stage",
+      "date": "2026-06-17T04:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Portugal",
+      "away": "DR Congo",
+      "stage": "Group Stage",
+      "date": "2026-06-17T17:00:00Z",
+      "live": false
+    },
+    {
+      "home": "England",
+      "away": "Croatia",
+      "stage": "Group Stage",
+      "date": "2026-06-17T20:00:00Z",
+      "live": false
     }
   ]
 }
