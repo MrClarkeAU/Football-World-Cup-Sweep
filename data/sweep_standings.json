@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-14T14:07:56.192Z",
+  "lastUpdated": "2026-06-14T17:22:17.366Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -727,7 +727,7 @@
       "away": "Curacao",
       "stage": "Group Stage",
       "date": "2026-06-14T17:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Netherlands",
