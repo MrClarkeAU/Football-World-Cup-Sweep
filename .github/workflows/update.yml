@@ -50,12 +50,12 @@ jobs:
         if: steps.window.outputs.run == 'true'
         env:
           # 🔐 Injected from your repo secret — NEVER hardcoded in the script.
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: |
           # Fail loudly (red X) if the secret is missing/empty, instead of
           # silently writing a zeroed board and going green.
-          if [ -z "$API_FOOTBALL_KEY" ]; then
-            echo "::error::API_FOOTBALL_KEY is missing or empty. Add a REPOSITORY secret named exactly API_FOOTBALL_KEY under Settings → Secrets and variables → Actions → Secrets."
+          if [ -z "$FOOTBALL_DATA_API_KEY" ]; then
+            echo "::error::FOOTBALL_DATA_API_KEY is missing or empty. Add a REPOSITORY secret named exactly FOOTBALL_DATA_API_KEY under Settings → Secrets and variables → Actions → Secrets."
             exit 1
           fi
           node scripts/update_scores.js

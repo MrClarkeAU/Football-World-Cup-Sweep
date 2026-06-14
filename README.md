@@ -16,7 +16,7 @@ GitHub Pages only serves static files, so there's no live backend. Instead:
 ```
  ┌─────────────────────┐   every 2 hrs    ┌──────────────────────────┐
  │  GitHub Action       │ ───────────────▶ │ scripts/update_scores.js │
- │  (.github/workflows) │                  │  • fetch API-Football    │
+ │  (.github/workflows) │                  │  • fetch football-data   │
  └─────────────────────┘                   │  • apply our scoring     │
           │ commits                        │  • write the JSON        │
           ▼                                └──────────────────────────┘
@@ -29,7 +29,7 @@ GitHub Pages only serves static files, so there's no live backend. Instead:
 | `index.html`, `css/styles.css`, `js/app.js` | The dashboard. Reads `data/sweep_standings.json` and renders it. |
 | `data/sweep_standings.json` | The "database" — the only thing that changes during the tournament. |
 | `scripts/config.js` | **Edit this** to change players, teams, scoring, or aliases. |
-| `scripts/update_scores.js` | Fetches results from API-Football and rebuilds the JSON. |
+| `scripts/update_scores.js` | Fetches results from football-data.org and rebuilds the JSON. |
 | `.github/workflows/update.yml` | Runs the script on a schedule and commits the result. |
 
 ---
@@ -67,22 +67,24 @@ To change these, edit `PARTICIPANTS` in [`scripts/config.js`](scripts/config.js)
 
 ## 🚀 Setup — get it live in ~10 minutes
 
-### 1. Get an API-Football key (free tier works)
-1. Sign up at **<https://www.api-football.com/>** (or via RapidAPI's API-Football).
-2. From the dashboard, copy your **API key**. The free plan gives 100 req/day —
-   the active-window guard + 2-hourly schedule keeps you comfortably under it.
+### 1. Get a football-data.org token (free)
+1. Sign up at **<https://www.football-data.org/client/register>**.
+2. Copy the **API token** they email you. The free tier covers the World Cup
+   (10 req/min) — the 2-hourly schedule sits miles under that. Scores are
+   slightly delayed and per-match goal scorers aren't included on the free
+   tier; everything else (standings, points, eliminations) is full.
 
-### 2. Save the key as a GitHub Secret 🔐 (the important bit)
-The key is **never** written into the code. The Action injects it at runtime.
+### 2. Save the token as a GitHub Secret 🔐 (the important bit)
+The token is **never** written into the code. The Action injects it at runtime.
 
 1. Push this repo to GitHub (see step 4) if you haven't already.
 2. Go to your repo on GitHub → **Settings**.
-3. In the left sidebar: **Secrets and variables → Actions**.
-4. Click **New repository secret**.
-5. **Name:** `API_FOOTBALL_KEY`  ← must be exactly this.
-6. **Secret:** paste your API key.
+3. In the left sidebar: **Secrets and variables → Actions** (the **Secrets** tab).
+4. Click **New repository secret** (a *repository* secret, not an *environment* one).
+5. **Name:** `FOOTBALL_DATA_API_KEY`  ← must be exactly this.
+6. **Secret:** paste your token.
 7. Click **Add secret**. Done — the workflow reads it via
-   `${{ secrets.API_FOOTBALL_KEY }}`.
+   `${{ secrets.FOOTBALL_DATA_API_KEY }}`.
 
 ### 3. Turn on GitHub Pages
 1. Repo → **Settings → Pages**.
@@ -112,8 +114,8 @@ git push -u origin main
 # Regenerate a clean zeroed board (no key needed):
 npm run seed
 
-# Pull live data locally (uses your key for this run only):
-API_FOOTBALL_KEY=your_key_here npm run update
+# Pull live data locally (uses your token for this run only):
+FOOTBALL_DATA_API_KEY=your_token_here npm run update
 
 # Preview the site at http://localhost:8080
 npm run serve
@@ -124,10 +126,11 @@ npm run serve
 ## ⚙️ Tweaks & troubleshooting
 
 - **Change scoring / players / teams:** edit `scripts/config.js` only.
-- **Wrong league/season:** API-Football league id `1` = World Cup; season `2026`.
+- **Wrong competition:** football-data.org competition code `WC` = World Cup.
   Adjust `TOURNAMENT` in `config.js` if needed.
-- **A team shows 0 / never matches:** API-Football may spell it differently.
+- **A team shows 0 / never matches:** football-data.org may spell it differently.
   Add an entry to `TEAM_ALIASES` in `config.js` (maps *their* spelling → *ours*).
+  Accents are already ignored automatically.
 - **Saving API calls:** the workflow only calls the API between `TOURNAMENT_START`
   and `TOURNAMENT_END` (set in `.github/workflows/update.yml`). Widen/narrow as needed.
 - **Run more/less often:** change the `cron` in the workflow (it's in **UTC**).

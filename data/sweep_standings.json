@@ -1,8 +1,8 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "season": 2026,
-  "lastUpdated": "2026-06-14T11:44:37.755Z",
+  "lastUpdated": "2026-06-14T11:54:28.266Z",
   "live": false,
+  "source": "football-data.org",
   "scoring": {
     "groupWin": 3,
     "groupDraw": 1,

@@ -5,19 +5,19 @@
  *  Edit THIS file to change anything about the comp. The update script and
  *  the seed generator both read from here, so you only ever change it once.
  *
- *  - Tournament/league/season -> which competition we pull from API-Football.
+ *  - Tournament -> which competition we pull from football-data.org.
  *  - SCORING -> tweak to match your exact house rules.
  *  - PARTICIPANTS -> who drew which teams (taken from the pink sheet).
- *  - TEAM_ALIASES -> maps our spellings to whatever API-Football calls them.
+ *  - TEAM_ALIASES -> maps our spellings to whatever football-data.org uses.
  * ============================================================================
  */
 
 // --- Which competition to pull -------------------------------------------
-// API-Football league id 1 = FIFA World Cup. Season is the tournament year.
+// Data source: football-data.org v4 (free tier covers the World Cup).
+// "WC" is football-data.org's competition code for the FIFA World Cup.
 const TOURNAMENT = {
   name: "FIFA World Cup 2026",
-  leagueId: 1,
-  season: 2026,
+  competitionCode: "WC",
 };
 
 // --- Scoring rules --------------------------------------------------------
@@ -61,7 +61,7 @@ const PARTICIPANT_TAGLINES = {
 };
 
 // --- Name normalisation ---------------------------------------------------
-// API-Football doesn't always spell countries the way we do. Map THEIR name
+// football-data.org doesn't always spell countries the way we do. Map THEIR name
 // (lower-cased) to OUR name so results match the right participant's team.
 const TEAM_ALIASES = {
   "korea republic": "South Korea",
@@ -89,10 +89,15 @@ const TEAM_ALIASES = {
   "curaçao": "Curacao",
 };
 
+// Strip accents so "Côte d'Ivoire" matches "Cote d'Ivoire", etc.
+function stripAccents(s) {
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
+
 // Resolve any incoming team name to our canonical spelling.
 function canonicalTeamName(apiName) {
   if (!apiName) return null;
-  const key = apiName.trim().toLowerCase();
+  const key = stripAccents(apiName.trim().toLowerCase());
   return TEAM_ALIASES[key] || apiName.trim();
 }
 
