@@ -1,0 +1,67 @@
+name: Update Sweep Standings
+
+# Pulls the latest World Cup data and commits the refreshed standings JSON.
+on:
+  # Every 2 hours. GitHub cron is UTC. The "active window" guard below stops
+  # it burning your API quota outside the tournament dates.
+  schedule:
+    - cron: "0 */2 * * *"
+  # Let you trigger a refresh by hand from the Actions tab any time.
+  workflow_dispatch:
+
+# Never run two updates at once (avoids commit races on the data file).
+concurrency:
+  group: update-standings
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # needed to commit the refreshed JSON back to the repo
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      # 🗓️  Only actually hit the API between these dates (inclusive, UTC).
+      #     Adjust to your tournament window.
+      TOURNAMENT_START: "2026-06-11"
+      TOURNAMENT_END:   "2026-07-20"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Active-window guard
+        id: window
+        run: |
+          today=$(date -u +%F)
+          if [[ "$today" < "$TOURNAMENT_START" || "$today" > "$TOURNAMENT_END" ]]; then
+            echo "Outside tournament window ($TOURNAMENT_START → $TOURNAMENT_END). Skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Node
+        if: steps.window.outputs.run == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch results & rebuild standings
+        if: steps.window.outputs.run == 'true'
+        env:
+          # 🔐 Injected from your repo secret — NEVER hardcoded in the script.
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: node scripts/update_scores.js
+
+      - name: Commit & push if changed
+        if: steps.window.outputs.run == 'true'
+        run: |
+          git config user.name  "sweep-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/sweep_standings.json; then
+            echo "No change in standings — nothing to commit."
+          else
+            git add data/sweep_standings.json
+            git commit -m "🤖 Update sweep standings ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push
+          fi

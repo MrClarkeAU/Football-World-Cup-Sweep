@@ -1,0 +1,14 @@
+{
+  "name": "football-world-cup-sweep",
+  "version": "1.0.0",
+  "description": "Self-updating World Cup 2026 sweepstake tracker for the lads. Static site + GitHub Actions.",
+  "private": true,
+  "scripts": {
+    "update": "node scripts/update_scores.js",
+    "seed": "node scripts/update_scores.js",
+    "serve": "node -e \"const http=require('http'),fs=require('fs'),p=require('path');http.createServer((q,r)=>{let f=p.join('.',q.url==='/'?'index.html':q.url.split('?')[0]);fs.readFile(f,(e,d)=>{if(e){r.writeHead(404);return r.end()}const t={'.html':'text/html','.css':'text/css','.js':'text/javascript','.json':'application/json'}[p.extname(f)]||'text/plain';r.writeHead(200,{'content-type':t});r.end(d)})}).listen(8080,()=>console.log('http://localhost:8080'))\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
