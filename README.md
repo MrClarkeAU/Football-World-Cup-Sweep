@@ -1,4 +1,4 @@
-# 🏆 The Geezer's World Cup Sweep
+# 🏆 The Geezers' World Cup Sweep
 
 A self-updating **FIFA World Cup 2026 sweepstake tracker** — a slick, dark,
 mobile-first dashboard hosted **free on GitHub Pages**. A GitHub Action quietly
