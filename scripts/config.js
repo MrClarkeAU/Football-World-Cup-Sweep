@@ -84,6 +84,7 @@ const TEAM_ALIASES = {
   "turkey": "Turkey",
   "bosnia and herzegovina": "Bosnia",
   "bosnia & herzegovina": "Bosnia",
+  "bosnia-herzegovina": "Bosnia",
   "bosnia": "Bosnia",
   "curacao": "Curacao",
   "curaçao": "Curacao",
