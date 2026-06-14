@@ -35,6 +35,16 @@ async function load() {
   }
 }
 
+// Format a UTC timestamp as Western Australia (Perth, UTC+8) local time,
+// regardless of where the viewer actually is.
+function awst(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  const day = d.toLocaleDateString("en-AU", { timeZone: "Australia/Perth", weekday: "short", day: "numeric", month: "short" });
+  const time = d.toLocaleTimeString("en-AU", { timeZone: "Australia/Perth", hour: "numeric", minute: "2-digit" });
+  return `${day} · ${time}`;
+}
+
 function timeAgo(iso) {
   const d = (Date.now() - new Date(iso)) / 1000;
   if (d < 60) return "just now";
@@ -56,6 +66,7 @@ function render(data) {
   renderPodium(players);
   renderBoard(players, champion);
   renderSpoon(players, champion);
+  renderUpcoming(data.upcomingMatches || []);
   renderFeed(data.recentMatches || []);
   renderScoring(data.scoring || {});
 
@@ -178,6 +189,23 @@ function renderSpoon(players, champion) {
     </div>`;
 }
 
+// ---- Upcoming fixtures ----
+function renderUpcoming(matches) {
+  if (!matches.length) {
+    $("#upcoming").innerHTML = `<div class="empty">No fixtures scheduled right now — check back soon. 📅</div>`;
+    return;
+  }
+  $("#upcoming").innerHTML = matches.map((m) => `
+    <div class="match">
+      <div class="top">
+        <div class="side"><span class="flag">${flag(m.home)}</span><span class="tn">${m.home}</span></div>
+        <div class="score ${m.live ? "live" : "vs"}">${m.live ? "LIVE" : "vs"}</div>
+        <div class="side away"><span class="tn">${m.away}</span><span class="flag">${flag(m.away)}</span></div>
+      </div>
+      <div class="meta"><span>${m.stage || ""}</span><span class="kick">${awst(m.date)} AWST</span></div>
+    </div>`).join("");
+}
+
 // ---- Results feed ----
 function renderFeed(matches) {
   if (!matches.length) {
@@ -191,7 +219,7 @@ function renderFeed(matches) {
         <div class="score num">${m.homeGoals} – ${m.awayGoals}</div>
         <div class="side away"><span class="tn">${m.away}</span><span class="flag">${flag(m.away)}</span></div>
       </div>
-      <div class="meta"><span>${m.stage || ""}</span><span>${m.date ? new Date(m.date).toLocaleDateString() : ""}</span></div>
+      <div class="meta"><span>${m.stage || ""}</span><span>${awst(m.date)} AWST</span></div>
     </div>`).join("");
 }
 

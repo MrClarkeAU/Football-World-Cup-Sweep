@@ -202,7 +202,10 @@ body {
 .match .side .flag { font-size: 19px; }
 .match .side .tn { font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .match .score { font-weight: 800; font-size: 17px; background: var(--surface-2); border: 1px solid var(--hair); border-radius: 10px; padding: 3px 12px; white-space: nowrap; }
-.match .meta { display: flex; justify-content: space-between; margin-top: 9px; font-size: 11px; color: var(--faint); }
+.match .score.vs { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 1px; }
+.match .score.live { font-size: 12px; font-weight: 800; color: var(--danger); letter-spacing: 1px; }
+.match .meta { display: flex; justify-content: space-between; margin-top: 9px; font-size: 11px; color: var(--faint); gap: 10px; }
+.match .meta .kick { color: var(--accent); font-weight: 600; }
 
 /* ---------- Explainer ---------- */
 .explainer { background: var(--surface); border: 1px solid var(--hair); border-radius: var(--r); overflow: hidden; }

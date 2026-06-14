@@ -141,6 +141,7 @@ async function main() {
   console.log(`  ${matches.length} matches returned.`);
 
   const finished = [];
+  const upcoming = [];         // not-yet-played fixtures (for the schedule)
   const unmatched = new Set(); // fixture teams that match NO participant (spelling check)
   for (const m of matches) {
     const stage = mapStage(m.stage || "");
@@ -156,7 +157,18 @@ async function main() {
     if (home) promote(home, reachKey);
     if (away) promote(away, reachKey);
 
-    if (m.status !== "FINISHED") continue;
+    if (m.status !== "FINISHED") {
+      if (["SCHEDULED", "TIMED", "IN_PLAY", "PAUSED"].includes(m.status)) {
+        upcoming.push({
+          home: homeName || "TBC",
+          away: awayName || "TBC",
+          stage: STAGE_LABEL[stage] || "",
+          date: m.utcDate,
+          live: m.status === "IN_PLAY" || m.status === "PAUSED",
+        });
+      }
+      continue;
+    }
 
     const hg = m.score?.fullTime?.home ?? 0;
     const ag = m.score?.fullTime?.away ?? 0;
@@ -207,7 +219,10 @@ async function main() {
   }
 
   buildRecentFeed(finished, recentMatches);
-  return writeOutput(players, recentMatches, { live: true, unmatched: unmatchedList });
+  const nextUp = upcoming
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 14);
+  return writeOutput(players, recentMatches, { live: true, unmatched: unmatchedList, upcoming: nextUp });
 }
 
 // Knockout loser is out; champion never is.
@@ -247,7 +262,7 @@ function buildRecentFeed(finished, out) {
   }
 }
 
-function writeOutput(playersObj, recentMatches, { live, unmatched = [] }) {
+function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [] }) {
   const participants = Object.values(playersObj).map((p) => {
     const allEliminated = p.teams.every((t) => t.eliminated) &&
                           !p.teams.some((t) => t.stage === "winner");
@@ -280,6 +295,7 @@ function writeOutput(playersObj, recentMatches, { live, unmatched = [] }) {
     scoring: SCORING,
     participants,
     recentMatches,
+    upcomingMatches: upcoming,
   };
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
