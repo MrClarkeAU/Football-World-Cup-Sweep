@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-15T04:41:37.550Z",
+  "lastUpdated": "2026-06-15T12:20:21.724Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -119,7 +119,9 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 1
+      "rank": 1,
+      "prevRank": 1,
+      "prevPoints": 17
     },
     {
       "name": "Clarkey",
@@ -224,7 +226,9 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 2
+      "rank": 2,
+      "prevRank": 2,
+      "prevPoints": 15
     },
     {
       "name": "Andre",
@@ -329,7 +333,9 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 3
+      "rank": 3,
+      "prevRank": 3,
+      "prevPoints": 15
     },
     {
       "name": "Ben",
@@ -434,7 +440,9 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 4
+      "rank": 4,
+      "prevRank": 4,
+      "prevPoints": 11
     },
     {
       "name": "Ray",
@@ -539,7 +547,9 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 5
+      "rank": 5,
+      "prevRank": 5,
+      "prevPoints": 8
     },
     {
       "name": "Gonz",
@@ -644,7 +654,9 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 6
+      "rank": 6,
+      "prevRank": 6,
+      "prevPoints": 4
     }
   ],
   "recentMatches": [
