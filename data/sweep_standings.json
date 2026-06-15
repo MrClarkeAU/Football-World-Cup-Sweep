@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-15T12:20:21.724Z",
+  "lastUpdated": "2026-06-15T18:30:42.535Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -126,7 +126,7 @@
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 15,
+      "totalPoints": 16,
       "allEliminated": false,
       "teams": [
         {
@@ -191,14 +191,14 @@
         },
         {
           "name": "Cape Verde",
-          "played": 0,
+          "played": 1,
           "wins": 0,
-          "draws": 0,
+          "draws": 1,
           "losses": 0,
           "goalsFor": 0,
           "stage": "group",
           "eliminated": false,
-          "points": 0,
+          "points": 1,
           "stageLabel": "Group Stage"
         },
         {
@@ -447,7 +447,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 8,
+      "totalPoints": 9,
       "allEliminated": false,
       "teams": [
         {
@@ -464,14 +464,14 @@
         },
         {
           "name": "Spain",
-          "played": 0,
+          "played": 1,
           "wins": 0,
-          "draws": 0,
+          "draws": 1,
           "losses": 0,
           "goalsFor": 0,
           "stage": "group",
           "eliminated": false,
-          "points": 0,
+          "points": 1,
           "stageLabel": "Group Stage"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Spain",
+      "away": "Cape Verde",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "stage": "Group Stage",
+      "date": "2026-06-15T16:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Sweden",
       "away": "Tunisia",
       "homeGoals": 5,
@@ -758,25 +767,9 @@
       "stage": "Group Stage",
       "date": "2026-06-12T02:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Mexico",
-      "away": "South Africa",
-      "homeGoals": 2,
-      "awayGoals": 0,
-      "stage": "Group Stage",
-      "date": "2026-06-11T19:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Spain",
-      "away": "Cape Verde",
-      "stage": "Group Stage",
-      "date": "2026-06-15T16:00:00Z",
-      "live": false
-    },
     {
       "home": "Belgium",
       "away": "Egypt",
@@ -866,6 +859,13 @@
       "away": "Bosnia",
       "stage": "Group Stage",
       "date": "2026-06-18T19:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Canada",
+      "away": "Qatar",
+      "stage": "Group Stage",
+      "date": "2026-06-18T22:00:00Z",
       "live": false
     }
   ]
