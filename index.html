@@ -243,6 +243,35 @@
     .stg.out{ color:var(--clay); }
 
     /* =========================================================
+       ENGAGEMENT EXTRAS — movers, clashes, stat attack, confetti
+       ========================================================= */
+    .mover{ font-size:11px; font-weight:800; margin-left:4px; vertical-align:middle; }
+    .mover.up{ color:var(--live); }
+    .mover.down{ color:var(--clay); }
+    .row__gap{ display:block; font-size:11px; color:var(--sage-dim); margin-top:6px; font-weight:600; }
+    .row__gap.lead{ color:var(--gold); }
+
+    .clashbadge{ font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+      padding:2px 8px; border-radius:999px; white-space:nowrap; }
+    .clashbadge.six{ color:var(--gold); background:color-mix(in srgb,var(--gold) 14%,transparent);
+      border:1px solid color-mix(in srgb,var(--gold) 40%,transparent); }
+    .clashbadge.civil{ color:var(--live); background:color-mix(in srgb,var(--live) 12%,transparent);
+      border:1px solid color-mix(in srgb,var(--live) 40%,transparent); }
+    .match.is-clash{ border-color:color-mix(in srgb,var(--gold) 32%,var(--line)); }
+
+    .highlights{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .hl{ border:1px solid var(--line); border-radius:var(--r-md); background:var(--pitch-2); padding:14px 15px; }
+    .hl .lbl{ font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--sage-dim); }
+    .hl .big{ font-family:'Anton'; font-size:clamp(20px,5.5vw,28px); line-height:1; margin-top:7px; }
+    .hl .sub{ font-size:12.5px; color:var(--sage); margin-top:6px; font-weight:600; }
+    .hl.boot .big{ color:var(--live); }
+    .hl.rotd .big{ color:var(--gold); }
+
+    #confetti{ position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:60; }
+
+    @media (max-width:420px){ .highlights{ grid-template-columns:1fr; } }
+
+    /* =========================================================
        WOODEN SPOON
        ========================================================= */
     .spoon{ display:flex; align-items:center; gap:14px; margin-top:14px;
@@ -349,6 +378,9 @@
 
     <section id="spoon"></section>
 
+    <div class="shead"><h2>Stat Attack</h2><span class="hint">goals &amp; thrashings</span></div>
+    <section class="highlights" id="highlights"></section>
+
     <div class="shead"><h2>Next Up</h2><span class="hint">kick-off in AWST (Perth)</span></div>
     <section class="feed" id="upcoming"></section>
 
@@ -395,6 +427,7 @@
   const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
   const byId = id => document.getElementById(id);
   let firstLoad = true;
+  let celebrated = false;
 
   /* ---------- time helpers (always Perth / AWST) ---------- */
   function awst(iso){
@@ -426,6 +459,7 @@
     const lads = participants.map(p => ({
       name: p.name,
       pts: p.totalPoints,
+      prevRank: (p.prevRank ?? null),
       teams: p.teams.map(t => ({
         name: t.name, flag: flag(t.name),
         status: t.stage === 'winner' ? 'champ' : (t.eliminated ? 'out' : 'in'),
@@ -449,16 +483,21 @@
                || (data.recentMatches && data.recentMatches[0] && data.recentMatches[0].stage)
                || "Group Stage";
 
+    const rankOf = {};
+    ranked.forEach((l, i) => rankOf[l.name] = i + 1);
+
     renderStatus(stage, teamsLeft, champion);
     renderPrize(champion, teamsLeft, ranked, alive, stage);
     renderPodium(ranked, alive);
     renderBoard(ranked, alive, champion);
     renderSpoon(ranked, alive, champion);
-    renderUpcoming(data.upcomingMatches || [], ownerOf);
+    renderUpcoming(data.upcomingMatches || [], ownerOf, rankOf);
     renderResults(data.recentMatches || [], ownerOf);
+    renderHighlights(ranked, data.recentMatches || []);
     renderScoring(data.scoring || {});
     renderUpdated(data.lastUpdated, data.live);
 
+    if(champion && !celebrated){ celebrated = true; celebrate(); }
     countUp(firstLoad && !reduce);
     tickCountdowns();
   }
@@ -536,12 +575,27 @@
         <thead><tr><th class="nat">Nation</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>Pts</th></tr></thead>
         <tbody>${rows}</tbody></table>`;
       const crown = isChamp ? '<span class="crown">🏆</span>' : (lead ? '<span class="crown">👑</span>' : '');
+      let mover = '';
+      if(l.prevRank){
+        const dz = l.prevRank - (i+1);
+        if(dz > 0) mover = `<span class="mover up">▲${dz}</span>`;
+        else if(dz < 0) mover = `<span class="mover down">▼${-dz}</span>`;
+      }
+      let gap;
+      if(i === 0){
+        const sec = ranked[1], by = sec ? l.pts - sec.pts : 0;
+        gap = sec ? `<span class="row__gap lead">Leading by ${by} pt${by===1?'':'s'}</span>` : '';
+      } else {
+        const b = ranked[0].pts - l.pts;
+        gap = `<span class="row__gap">${b} pt${b===1?'':'s'} behind the leader</span>`;
+      }
       return `<details class="row ${lead?'row--lead':''}" style="animation-delay:${i*60}ms">
         <summary class="row__btn">
           <span class="row__rank">${i+1}</span>
           <span class="row__id">
-            <span class="row__name">${l.name} ${crown}</span>
+            <span class="row__name">${l.name} ${crown}${mover}</span>
             <span class="row__squad">${squad}</span>
+            ${gap}
           </span>
           <span class="row__right">
             <span class="row__alive"><b>${alive(l)}</b>/${l.teams.length} alive</span>
@@ -574,24 +628,32 @@
     return `<div class="owners">${owners.map(o => `<span class="owner">${o}'s</span>`).join('')}</div>`;
   }
 
-  function renderUpcoming(matches, ownerOf){
+  function renderUpcoming(matches, ownerOf, rankOf){
     const el = byId('upcoming'); if(!el) return;
     if(!matches.length){ el.innerHTML = `<div class="empty">No fixtures scheduled right now — check back soon. 📅</div>`; return; }
-    el.innerHTML = matches.map(m => `
-      <div class="match">
+    el.innerHTML = matches.map(m => {
+      const oh = ownerOf[(m.home||'').toLowerCase()], oa = ownerOf[(m.away||'').toLowerCase()];
+      let badge = '', clash = '';
+      if(oh && oa && oh === oa){
+        badge = `<span class="clashbadge civil">⚔️ ${oh} can't lose</span>`; clash = 'is-clash';
+      } else if(oh && oa && rankOf && rankOf[oh] <= 3 && rankOf[oa] <= 3){
+        badge = `<span class="clashbadge six">🔥 Six-pointer</span>`; clash = 'is-clash';
+      }
+      return `
+      <div class="match ${clash}">
         <div class="match__main">
           <div class="match__teams">
             <span class="fl">${flag(m.home)}</span> ${m.home}
             <span class="vs">v</span>
             <span class="fl">${flag(m.away)}</span> ${m.away}
           </div>
-          <div class="match__meta"><span class="stage">${m.stage||''}</span> · <span class="cd" data-iso="${m.date}">—</span></div>
+          <div class="match__meta"><span class="stage">${m.stage||''}</span> · <span class="cd" data-iso="${m.date}">—</span> ${badge}</div>
           ${ownerChips(m.home, m.away, ownerOf)}
         </div>
         <div class="match__right">
           <div class="ko">${m.live ? '<span class="livenow">LIVE</span>' : fmtKO(m.date)}<small>AWST</small></div>
         </div>
-      </div>`).join('');
+      </div>`; }).join('');
   }
 
   function renderResults(matches, ownerOf){
@@ -612,6 +674,62 @@
           <div class="score">${m.homeGoals}–${m.awayGoals}</div>
         </div>
       </div>`).join('');
+  }
+
+  function renderHighlights(lads, results){
+    const el = byId('highlights'); if(!el) return;
+    // Golden Boot: the lad whose nations have banged in the most goals.
+    let boot = null;
+    lads.forEach(l => {
+      const g = l.teams.reduce((s,t) => s + t.gf, 0);
+      if(!boot || g > boot.goals) boot = { name:l.name, goals:g };
+    });
+    // Result of the Day: biggest winning margin (tie-break: most goals).
+    let rotd = null;
+    (results||[]).forEach(m => {
+      const margin = Math.abs(m.homeGoals - m.awayGoals), total = m.homeGoals + m.awayGoals;
+      if(!rotd || margin > rotd.margin || (margin === rotd.margin && total > rotd.total))
+        rotd = { ...m, margin, total };
+    });
+    const bootCard = `<div class="hl boot">
+      <div class="lbl">⚽ Golden Boot</div>
+      <div class="big">${boot && boot.goals > 0 ? boot.name : '—'}</div>
+      <div class="sub">${boot && boot.goals > 0 ? boot.goals + ' goals from their nations' : 'No goals yet'}</div></div>`;
+    const rotdCard = rotd
+      ? `<div class="hl rotd">
+          <div class="lbl">🔥 Result of the Day</div>
+          <div class="big">${rotd.homeGoals}–${rotd.awayGoals}</div>
+          <div class="sub">${flag(rotd.home)} ${rotd.home} v ${rotd.away} ${flag(rotd.away)}</div></div>`
+      : `<div class="hl rotd"><div class="lbl">🔥 Result of the Day</div><div class="big">—</div><div class="sub">No results yet</div></div>`;
+    el.innerHTML = bootCard + rotdCard;
+  }
+
+  /* ---------- champion confetti (no external libs, respects reduced-motion) ---------- */
+  function celebrate(){
+    if(reduce) return;
+    let cv = document.getElementById('confetti');
+    if(!cv){ cv = document.createElement('canvas'); cv.id = 'confetti'; document.body.appendChild(cv); }
+    const ctx = cv.getContext('2d');
+    cv.width = innerWidth; cv.height = innerHeight;
+    const colors = ['#f4c14b','#34e29a','#ffffff','#e0614c','#8fab9f'];
+    const parts = [];
+    for(let i=0;i<170;i++) parts.push({
+      x: Math.random()*cv.width, y: -20 - Math.random()*cv.height*0.6,
+      r: 4 + Math.random()*5, c: colors[i%colors.length],
+      vx: -2 + Math.random()*4, vy: 2 + Math.random()*4,
+      rot: Math.random()*6, vr: -0.2 + Math.random()*0.4
+    });
+    const start = performance.now(), dur = 4500;
+    (function frame(t){
+      ctx.clearRect(0,0,cv.width,cv.height);
+      parts.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.vy += 0.045; p.rot += p.vr;
+        ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.c; ctx.fillRect(-p.r/2, -p.r/2, p.r, p.r*0.6); ctx.restore();
+      });
+      if(t - start < dur) requestAnimationFrame(frame);
+      else ctx.clearRect(0,0,cv.width,cv.height);
+    })(start);
   }
 
   function renderScoring(s){
@@ -671,6 +789,7 @@
   load();
   setInterval(load, 90 * 1000);     // self-refresh while open
   setInterval(tickCountdowns, 30000); // live countdown ticking
+  if(location.search.includes('celebrate')) setTimeout(celebrate, 500); // preview the final confetti
   </script>
 </body>
 </html>

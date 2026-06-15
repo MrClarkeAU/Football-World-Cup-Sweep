@@ -263,6 +263,13 @@ function buildRecentFeed(finished, out) {
 }
 
 function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [] }) {
+  // Remember the PREVIOUS run's standings so the page can show movers (↑/↓).
+  const prev = {};
+  try {
+    const old = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf8"));
+    (old.participants || []).forEach((p) => { prev[p.name] = { rank: p.rank, points: p.totalPoints }; });
+  } catch (e) { /* first run / no existing file */ }
+
   const participants = Object.values(playersObj).map((p) => {
     const allEliminated = p.teams.every((t) => t.eliminated) &&
                           !p.teams.some((t) => t.stage === "winner");
@@ -284,7 +291,12 @@ function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming
     const bg = b.teams.reduce((s, t) => s + t.goalsFor, 0);
     return bg - ag;
   });
-  participants.forEach((p, i) => (p.rank = i + 1));
+  participants.forEach((p, i) => {
+    p.rank = i + 1;
+    const pr = prev[p.name];
+    p.prevRank = pr ? pr.rank : null;
+    p.prevPoints = pr ? pr.points : null;
+  });
 
   const payload = {
     tournament: TOURNAMENT.name,
