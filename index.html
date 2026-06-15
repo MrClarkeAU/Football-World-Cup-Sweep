@@ -498,6 +498,7 @@
     renderUpdated(data.lastUpdated, data.live);
 
     if(champion && !celebrated){ celebrated = true; celebrate(); }
+    else if(firstLoad && !reduce && !champion){ podiumPop(); }
     countUp(firstLoad && !reduce);
     tickCountdowns();
   }
@@ -704,32 +705,61 @@
     el.innerHTML = bootCard + rotdCard;
   }
 
-  /* ---------- champion confetti (no external libs, respects reduced-motion) ---------- */
-  function celebrate(){
-    if(reduce) return;
+  /* ---------- confetti (no external libs, respects reduced-motion) ---------- */
+  const CONFETTI_COLORS = ['#f4c14b','#34e29a','#ffffff','#e0614c','#8fab9f'];
+  function confettiCanvas(){
     let cv = document.getElementById('confetti');
     if(!cv){ cv = document.createElement('canvas'); cv.id = 'confetti'; document.body.appendChild(cv); }
-    const ctx = cv.getContext('2d');
     cv.width = innerWidth; cv.height = innerHeight;
-    const colors = ['#f4c14b','#34e29a','#ffffff','#e0614c','#8fab9f'];
+    return cv;
+  }
+  // Big full-width "rain" — used when a champion is crowned.
+  function celebrate(){
+    if(reduce) return;
+    const cv = confettiCanvas(), ctx = cv.getContext('2d');
     const parts = [];
     for(let i=0;i<170;i++) parts.push({
-      x: Math.random()*cv.width, y: -20 - Math.random()*cv.height*0.6,
-      r: 4 + Math.random()*5, c: colors[i%colors.length],
-      vx: -2 + Math.random()*4, vy: 2 + Math.random()*4,
-      rot: Math.random()*6, vr: -0.2 + Math.random()*0.4
-    });
+      x:Math.random()*cv.width, y:-20-Math.random()*cv.height*0.6, r:4+Math.random()*5,
+      c:CONFETTI_COLORS[i%CONFETTI_COLORS.length], vx:-2+Math.random()*4, vy:2+Math.random()*4,
+      rot:Math.random()*6, vr:-0.2+Math.random()*0.4 });
     const start = performance.now(), dur = 4500;
     (function frame(t){
       ctx.clearRect(0,0,cv.width,cv.height);
-      parts.forEach(p => {
-        p.x += p.vx; p.y += p.vy; p.vy += 0.045; p.rot += p.vr;
-        ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot);
-        ctx.fillStyle = p.c; ctx.fillRect(-p.r/2, -p.r/2, p.r, p.r*0.6); ctx.restore();
-      });
-      if(t - start < dur) requestAnimationFrame(frame);
-      else ctx.clearRect(0,0,cv.width,cv.height);
+      parts.forEach(p => { p.x+=p.vx; p.y+=p.vy; p.vy+=0.045; p.rot+=p.vr;
+        ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot); ctx.fillStyle=p.c;
+        ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.6); ctx.restore(); });
+      if(t-start < dur) requestAnimationFrame(frame); else ctx.clearRect(0,0,cv.width,cv.height);
     })(start);
+  }
+  // Small celebratory burst radiating from a point (the leader's plinth).
+  function confettiBurst(ox, oy){
+    if(reduce) return;
+    const cv = confettiCanvas(), ctx = cv.getContext('2d');
+    const parts = [];
+    for(let i=0;i<90;i++){
+      const ang = -Math.PI/2 + (Math.random()-0.5)*Math.PI*0.95, spd = 4 + Math.random()*7;
+      parts.push({ x:ox, y:oy, r:4+Math.random()*4, c:CONFETTI_COLORS[i%CONFETTI_COLORS.length],
+        vx:Math.cos(ang)*spd, vy:Math.sin(ang)*spd, rot:Math.random()*6, vr:-0.3+Math.random()*0.6 });
+    }
+    const start = performance.now(), dur = 2200;
+    (function frame(t){
+      const el = t - start, a = Math.max(0, 1 - el/dur);
+      ctx.clearRect(0,0,cv.width,cv.height);
+      parts.forEach(p => { p.x+=p.vx; p.y+=p.vy; p.vy+=0.16; p.vx*=0.99; p.rot+=p.vr;
+        ctx.save(); ctx.globalAlpha=a; ctx.translate(p.x,p.y); ctx.rotate(p.rot); ctx.fillStyle=p.c;
+        ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.55); ctx.restore(); });
+      if(el < dur) requestAnimationFrame(frame); else ctx.clearRect(0,0,cv.width,cv.height);
+    })(start);
+  }
+  // Fire the little burst from the #1 plinth, synced with the podium rise.
+  function podiumPop(){
+    if(reduce) return;
+    setTimeout(() => {
+      const w = document.querySelector('.plinth--1');
+      let ox = innerWidth/2, oy = innerHeight*0.26;
+      if(w){ const r = w.getBoundingClientRect(); ox = r.left + r.width/2; oy = r.top + 10; }
+      confettiBurst(ox, oy);
+    }, 650);
   }
 
   function renderScoring(s){
