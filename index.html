@@ -435,6 +435,7 @@
   const byId = id => document.getElementById(id);
   let firstLoad = true;
   let celebrated = false;
+  let podiumObserved = false, podiumPopped = false;
 
   /* ---------- time helpers (always Perth / AWST) ---------- */
   function awst(iso){
@@ -505,7 +506,7 @@
     renderUpdated(data.lastUpdated, data.live);
 
     if(champion && !celebrated){ celebrated = true; celebrate(); }
-    else if(firstLoad && !reduce && !champion){ podiumPop(); }
+    setupPodiumPop(!!champion);
     countUp(firstLoad && !reduce);
     tickCountdowns();
   }
@@ -758,15 +759,29 @@
       if(el < dur) requestAnimationFrame(frame); else ctx.clearRect(0,0,cv.width,cv.height);
     })(start);
   }
-  // Fire the little burst from the #1 plinth, synced with the podium rise.
-  function podiumPop(){
-    if(reduce) return;
-    setTimeout(() => {
-      const w = document.querySelector('.plinth--1');
-      let ox = innerWidth/2, oy = innerHeight*0.26;
-      if(w){ const r = w.getBoundingClientRect(); ox = r.left + r.width/2; oy = r.top + 10; }
-      confettiBurst(ox, oy);
-    }, 650);
+  // Fire the little burst from the #1 plinth.
+  function firePodiumBurst(){
+    if(reduce || podiumPopped) return;
+    podiumPopped = true;
+    const w = document.querySelector('.plinth--1');
+    let ox = innerWidth/2, oy = innerHeight*0.3;
+    if(w){ const r = w.getBoundingClientRect(); ox = r.left + r.width/2; oy = r.top + 10; }
+    confettiBurst(ox, oy);
+  }
+  // Pop the confetti when the podium scrolls into view (so it's never missed),
+  // once per page load. Falls back to firing immediately if no observer support.
+  function setupPodiumPop(hasChampion){
+    if(reduce || podiumObserved || hasChampion) return; // champion gets the full rain instead
+    const el = byId('podium');
+    if(!el) return;
+    if(!('IntersectionObserver' in window)){ firePodiumBurst(); return; }
+    podiumObserved = true;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting && e.intersectionRatio >= 0.6){ firePodiumBurst(); io.disconnect(); }
+      });
+    }, { threshold: [0, 0.6, 1] });
+    io.observe(el);
   }
 
   function renderScoring(s){
