@@ -117,6 +117,8 @@
       font-size:clamp(15px,3.6vw,17px); text-wrap:pretty;
     }
     .stakes b{ color:var(--chalk); font-weight:700; }
+    .hero-emblem{ display:block; height:clamp(58px,15vw,84px); width:auto; margin:0 auto clamp(12px,3.5vw,20px);
+      filter:drop-shadow(0 6px 18px rgba(0,0,0,.55)); }
 
     /* =========================================================
        SECTION HEADINGS
@@ -335,6 +337,8 @@
     .footer{ margin-top:40px; padding-top:20px; border-top:1px solid var(--line);
       color:var(--sage-dim); font-size:12.5px; text-align:center; }
     .footer .upd{ color:var(--sage); font-weight:700; margin-bottom:4px; }
+    .foot-emblem{ display:block; height:30px; width:auto; opacity:.4; margin:0 auto 14px; }
+    .disclaimer{ max-width:44ch; margin:12px auto 0; font-size:11px; line-height:1.5; color:var(--sage-dim); }
 
     @media (max-width:420px){
       .row__teams{ grid-template-columns:1fr 1fr; }
@@ -354,6 +358,7 @@
   </div>
 
   <header class="hero">
+    <img class="hero-emblem" src="assets/fifa-emblem.svg" alt="FIFA World Cup 2026 emblem" width="84" height="101" />
     <p class="eyebrow">FIFA World Cup 2026 · USA · Canada · Mexico</p>
     <h1>
       <span class="lo">The Geezers'</span>
@@ -401,8 +406,10 @@
     </details>
 
     <footer class="footer">
+      <img class="foot-emblem" src="assets/fifa-emblem.svg" alt="" width="30" height="36" />
       <div class="upd" id="updated">—</div>
       Auto-updates through the tournament. Leave it open — it refreshes itself. No reloading, ya animals.
+      <div class="disclaimer">Unofficial fan sweepstake — not affiliated with, or endorsed by, FIFA. The FIFA World Cup 2026™ emblem is the property of FIFA.</div>
     </footer>
   </main>
 
