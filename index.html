@@ -64,6 +64,19 @@
     }
     main, .topbar{ position:relative; z-index:1; }
 
+    /* subtle scroll-reactive World Cup ball in the background */
+    #ball-bg{
+      position:fixed; top:44%; left:50%;
+      width:min(76vw,520px); height:min(76vw,520px);
+      transform:translate(-50%,-50%);
+      background:url('assets/ball.webp') center/contain no-repeat;
+      border-radius:50%;
+      opacity:.08; filter:blur(.4px);
+      z-index:0; pointer-events:none;
+      will-change:transform; backface-visibility:hidden;
+    }
+    @media (prefers-reduced-motion:reduce){ #ball-bg{ opacity:.05; } }
+
     a{ color:inherit; }
     ::selection{ background:var(--gold); color:#1a1305; }
 
@@ -353,6 +366,7 @@
   </style>
 </head>
 <body>
+  <div id="ball-bg" aria-hidden="true"></div>
   <div class="topbar">
     <span class="brand"><span class="cup">🏆</span> The Geezers' <b>Sweep</b></span>
     <span class="live" id="topstatus"><span class="dot"></span> Loading…</span>
@@ -847,6 +861,30 @@
   setInterval(load, 90 * 1000);     // self-refresh while open
   setInterval(tickCountdowns, 30000); // live countdown ticking
   if(location.search.includes('celebrate')) setTimeout(celebrate, 500); // preview the final confetti
+
+  /* ---------- subtle scroll-reactive background ball ---------- */
+  (function(){
+    const ball = byId('ball-bg');
+    if(!ball || reduce) return;            // stays static if reduced-motion
+    let angle = 0, vel = 0, scrollAccum = 0, lastY = window.scrollY || 0, running = true;
+    const IDLE = 0.05, FRICTION = 0.04, SCROLL_K = 0.022, MAXV = 6;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY || 0; scrollAccum += (y - lastY); lastY = y;
+    }, { passive:true });
+    document.addEventListener('visibilitychange', () => {
+      running = !document.hidden; if(running) requestAnimationFrame(tick);
+    });
+    function tick(){
+      if(!running) return;
+      vel += scrollAccum * SCROLL_K; scrollAccum = 0;   // scroll velocity → spin impulse
+      vel += (IDLE - vel) * FRICTION;                   // ease back to a gentle idle spin
+      vel = Math.max(-MAXV, Math.min(MAXV, vel));        // clamp
+      angle += vel;
+      ball.style.transform = `translate(-50%,-50%) rotate(${angle}deg)`;
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
   </script>
 </body>
 </html>
