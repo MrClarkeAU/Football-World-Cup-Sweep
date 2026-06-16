@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-16T16:58:21.054Z",
+  "lastUpdated": "2026-06-16T20:54:30.195Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -775,7 +775,7 @@
       "away": "Senegal",
       "stage": "Group Stage",
       "date": "2026-06-16T19:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Iraq",
