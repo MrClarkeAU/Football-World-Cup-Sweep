@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-16T03:28:04.178Z",
+  "lastUpdated": "2026-06-16T04:25:21.579Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 3,
-      "prevPoints": 15
+      "prevRank": 2,
+      "prevPoints": 18
     },
     {
       "name": "Clarkey",
@@ -334,13 +334,13 @@
         }
       ],
       "rank": 3,
-      "prevRank": 2,
+      "prevRank": 3,
       "prevPoints": 18
     },
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 13,
+      "totalPoints": 14,
       "allEliminated": false,
       "teams": [
         {
@@ -433,16 +433,16 @@
           "wins": 0,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 0,
+          "goalsFor": 1,
           "stage": "group",
           "eliminated": false,
-          "points": 1,
+          "points": 2,
           "stageLabel": "Group Stage"
         }
       ],
       "rank": 4,
-      "prevRank": 5,
-      "prevPoints": 11
+      "prevRank": 4,
+      "prevPoints": 13
     },
     {
       "name": "Ben",
@@ -548,13 +548,13 @@
         }
       ],
       "rank": 5,
-      "prevRank": 4,
+      "prevRank": 5,
       "prevPoints": 11
     },
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 5,
+      "totalPoints": 6,
       "allEliminated": false,
       "teams": [
         {
@@ -599,10 +599,10 @@
           "wins": 0,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 0,
+          "goalsFor": 1,
           "stage": "group",
           "eliminated": false,
-          "points": 1,
+          "points": 2,
           "stageLabel": "Group Stage"
         },
         {
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 6
+      "prevPoints": 5
     }
   ],
   "recentMatches": [
