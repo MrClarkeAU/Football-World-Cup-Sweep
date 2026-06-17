@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-17T18:21:20.135Z",
+  "lastUpdated": "2026-06-17T22:02:13.231Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -340,7 +340,7 @@
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 17,
+      "totalPoints": 19,
       "allEliminated": false,
       "teams": [
         {
@@ -369,14 +369,14 @@
         },
         {
           "name": "DR Congo",
-          "played": 0,
+          "played": 1,
           "wins": 0,
-          "draws": 0,
+          "draws": 1,
           "losses": 0,
-          "goalsFor": 0,
+          "goalsFor": 1,
           "stage": "group",
           "eliminated": false,
-          "points": 0,
+          "points": 2,
           "stageLabel": "Group Stage"
         },
         {
@@ -443,6 +443,113 @@
       "rank": 4,
       "prevRank": 4,
       "prevPoints": 17
+    },
+    {
+      "name": "Gonz",
+      "tagline": "Portugal + a prayer.",
+      "totalPoints": 16,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Uruguay",
+          "played": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Portugal",
+          "played": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Switzerland",
+          "played": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Canada",
+          "played": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Norway",
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 4,
+          "stage": "group",
+          "eliminated": false,
+          "points": 7,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Algeria",
+          "played": 1,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 0,
+          "stage": "group",
+          "eliminated": false,
+          "points": 0,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Ecuador",
+          "played": 1,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 0,
+          "stage": "group",
+          "eliminated": false,
+          "points": 0,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Iraq",
+          "played": 1,
+          "wins": 0,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 1,
+          "stageLabel": "Group Stage"
+        }
+      ],
+      "rank": 5,
+      "prevRank": 6,
+      "prevPoints": 14
     },
     {
       "name": "Ray",
@@ -547,119 +654,21 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 5,
+      "rank": 6,
       "prevRank": 5,
       "prevPoints": 15
-    },
-    {
-      "name": "Gonz",
-      "tagline": "Portugal + a prayer.",
-      "totalPoints": 14,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Uruguay",
-          "played": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 2,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Portugal",
-          "played": 0,
-          "wins": 0,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 0,
-          "stage": "group",
-          "eliminated": false,
-          "points": 0,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Switzerland",
-          "played": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 2,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Canada",
-          "played": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 2,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Norway",
-          "played": 1,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 4,
-          "stage": "group",
-          "eliminated": false,
-          "points": 7,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Algeria",
-          "played": 1,
-          "wins": 0,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 0,
-          "stage": "group",
-          "eliminated": false,
-          "points": 0,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Ecuador",
-          "played": 1,
-          "wins": 0,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 0,
-          "stage": "group",
-          "eliminated": false,
-          "points": 0,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Iraq",
-          "played": 1,
-          "wins": 0,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 1,
-          "stageLabel": "Group Stage"
-        }
-      ],
-      "rank": 6,
-      "prevRank": 6,
-      "prevPoints": 14
     }
   ],
   "recentMatches": [
+    {
+      "home": "Portugal",
+      "away": "DR Congo",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "stage": "Group Stage",
+      "date": "2026-06-17T17:00:00Z",
+      "scorers": []
+    },
     {
       "home": "Austria",
       "away": "Jordan",
@@ -794,31 +803,15 @@
       "stage": "Group Stage",
       "date": "2026-06-13T22:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Qatar",
-      "away": "Switzerland",
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "stage": "Group Stage",
-      "date": "2026-06-13T19:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Portugal",
-      "away": "DR Congo",
-      "stage": "Group Stage",
-      "date": "2026-06-17T17:00:00Z",
-      "live": true
-    },
     {
       "home": "England",
       "away": "Croatia",
       "stage": "Group Stage",
       "date": "2026-06-17T20:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Ghana",
@@ -902,6 +895,13 @@
       "away": "Cote d'Ivoire",
       "stage": "Group Stage",
       "date": "2026-06-20T20:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Ecuador",
+      "away": "Curacao",
+      "stage": "Group Stage",
+      "date": "2026-06-21T00:00:00Z",
       "live": false
     }
   ]
