@@ -712,7 +712,7 @@
       const g = l.teams.reduce((s,t) => s + t.gf, 0);
       if(!boot || g > boot.goals) boot = { name:l.name, goals:g };
     });
-    // Result of the Day: biggest winning margin among TODAY's matches, grouped by
+    // Match of the Day: biggest winning margin among TODAY's matches, grouped by
     // the host nations' time (US Eastern) so a full World Cup match-day stays
     // together (rather than being split across the Perth calendar). Tie-break by
     // most total goals.
@@ -731,10 +731,10 @@
       <div class="sub">${boot && boot.goals > 0 ? boot.goals + ' goals from their nations' : 'No goals yet'}</div></div>`;
     const rotdCard = rotd
       ? `<div class="hl rotd">
-          <div class="lbl">🔥 Result of the Day</div>
+          <div class="lbl">🔥 Match of the Day</div>
           <div class="big">${rotd.homeGoals}–${rotd.awayGoals}</div>
           <div class="sub">${flag(rotd.home)} ${rotd.home} v ${rotd.away} ${flag(rotd.away)}</div></div>`
-      : `<div class="hl rotd"><div class="lbl">🔥 Result of the Day</div><div class="big">—</div><div class="sub">No matches today yet</div></div>`;
+      : `<div class="hl rotd"><div class="lbl">🔥 Match of the Day</div><div class="big">—</div><div class="sub">No matches today yet</div></div>`;
     el.innerHTML = bootCard + rotdCard;
   }
 

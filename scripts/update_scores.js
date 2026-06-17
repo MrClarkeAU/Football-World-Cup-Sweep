@@ -249,7 +249,7 @@ function buildRecentFeed(finished, out) {
   const sorted = [...finished].sort(
     (a, b) => new Date(b.m.utcDate) - new Date(a.m.utcDate)
   );
-  for (const f of sorted.slice(0, 12)) {
+  for (const f of sorted.slice(0, 16)) {
     out.push({
       home: f.homeName,
       away: f.awayName,
