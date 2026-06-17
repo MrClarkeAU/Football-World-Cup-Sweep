@@ -712,12 +712,15 @@
       const g = l.teams.reduce((s,t) => s + t.gf, 0);
       if(!boot || g > boot.goals) boot = { name:l.name, goals:g };
     });
-    // Result of the Day: biggest winning margin among TODAY's matches (AWST),
-    // tie-break by most total goals.
-    const perthDay = iso => new Date(iso).toLocaleDateString('en-CA', { timeZone:'Australia/Perth' });
-    const todayPerth = new Date().toLocaleDateString('en-CA', { timeZone:'Australia/Perth' });
+    // Result of the Day: biggest winning margin among TODAY's matches, grouped by
+    // the host nations' time (US Eastern) so a full World Cup match-day stays
+    // together (rather than being split across the Perth calendar). Tie-break by
+    // most total goals.
+    const TOURNEY_TZ = 'America/New_York';
+    const matchDay = iso => new Date(iso).toLocaleDateString('en-CA', { timeZone: TOURNEY_TZ });
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: TOURNEY_TZ });
     let rotd = null;
-    (results||[]).filter(m => perthDay(m.date) === todayPerth).forEach(m => {
+    (results||[]).filter(m => matchDay(m.date) === today).forEach(m => {
       const margin = Math.abs(m.homeGoals - m.awayGoals), total = m.homeGoals + m.awayGoals;
       if(!rotd || margin > rotd.margin || (margin === rotd.margin && total > rotd.total))
         rotd = { ...m, margin, total };
