@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-17T22:24:55.849Z",
+  "lastUpdated": "2026-06-18T01:04:23.471Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -120,8 +120,8 @@
         }
       ],
       "rank": 1,
-      "prevRank": 3,
-      "prevPoints": 20
+      "prevRank": 1,
+      "prevPoints": 29
     },
     {
       "name": "Andre",
@@ -227,7 +227,7 @@
         }
       ],
       "rank": 2,
-      "prevRank": 1,
+      "prevRank": 2,
       "prevPoints": 24
     },
     {
@@ -334,7 +334,7 @@
         }
       ],
       "rank": 3,
-      "prevRank": 2,
+      "prevRank": 3,
       "prevPoints": 24
     },
     {
@@ -811,7 +811,7 @@
       "away": "Panama",
       "stage": "Group Stage",
       "date": "2026-06-17T23:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Uzbekistan",
