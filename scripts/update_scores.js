@@ -56,15 +56,32 @@ const STAGE_LABEL = {
 const STAGE_ORDER = ["group", "r32", "r16", "qf", "sf", "final", "winner"];
 
 // ---------------------------------------------------------------------------
-async function apiGet(endpoint) {
-  const res = await fetch(API_BASE + endpoint, {
-    headers: { "X-Auth-Token": API_KEY },
-  });
-  if (!res.ok) {
-    const text = await res.text().catch(() => "");
-    throw new Error(`API ${endpoint} failed: ${res.status} ${res.statusText} ${text}`);
+// Fetch with automatic retry/backoff so a transient network blip or a 429/5xx
+// from the API doesn't fail the whole run (a "fetch failed" self-heals).
+async function apiGet(endpoint, attempt = 1) {
+  const MAX_ATTEMPTS = 4;
+  try {
+    const res = await fetch(API_BASE + endpoint, {
+      headers: { "X-Auth-Token": API_KEY },
+    });
+    if (res.status === 429 || res.status >= 500) {
+      throw new Error(`transient ${res.status} ${res.statusText}`);
+    }
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      throw new Error(`API ${endpoint} failed: ${res.status} ${res.statusText} ${text}`);
+    }
+    return res.json();
+  } catch (err) {
+    const transient = /transient|fetch failed|network|ETIMEDOUT|ECONNRESET|ENOTFOUND|EAI_AGAIN|UND_ERR/i.test(err.message);
+    if (attempt < MAX_ATTEMPTS && transient) {
+      const waitMs = 2000 * 2 ** (attempt - 1); // 2s, 4s, 8s
+      console.warn(`  fetch attempt ${attempt} failed (${err.message}) — retrying in ${waitMs / 1000}s…`);
+      await new Promise((r) => setTimeout(r, waitMs));
+      return apiGet(endpoint, attempt + 1);
+    }
+    throw err;
   }
-  return res.json();
 }
 
 // Map a football-data.org stage string to one of our stage keys.
