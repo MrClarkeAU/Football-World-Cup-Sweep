@@ -268,8 +268,6 @@
 
     .clashbadge{ font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
       padding:2px 8px; border-radius:999px; white-space:nowrap; }
-    .clashbadge.six{ color:var(--gold); background:color-mix(in srgb,var(--gold) 14%,transparent);
-      border:1px solid color-mix(in srgb,var(--gold) 40%,transparent); }
     .clashbadge.civil{ color:var(--live); background:color-mix(in srgb,var(--live) 12%,transparent);
       border:1px solid color-mix(in srgb,var(--live) 40%,transparent); }
     .match.is-clash{ border-color:color-mix(in srgb,var(--gold) 32%,var(--line)); }
@@ -510,15 +508,12 @@
                || (data.recentMatches && data.recentMatches[0] && data.recentMatches[0].stage)
                || "Group Stage";
 
-    const rankOf = {};
-    ranked.forEach((l, i) => rankOf[l.name] = i + 1);
-
     renderStatus(stage, teamsLeft, champion);
     renderPrize(champion, teamsLeft, ranked, alive, stage);
     renderPodium(ranked, alive);
     renderBoard(ranked, alive, champion);
     renderSpoon(ranked, alive, champion);
-    renderUpcoming(data.upcomingMatches || [], ownerOf, rankOf);
+    renderUpcoming(data.upcomingMatches || [], ownerOf);
     renderResults(data.recentMatches || [], ownerOf);
     renderHighlights(ranked, data.recentMatches || []);
     renderScoring(data.scoring || {});
@@ -656,7 +651,7 @@
     return `<div class="owners">${owners.map(o => `<span class="owner">${o}'s</span>`).join('')}</div>`;
   }
 
-  function renderUpcoming(matches, ownerOf, rankOf){
+  function renderUpcoming(matches, ownerOf){
     const el = byId('upcoming'); if(!el) return;
     if(!matches.length){ el.innerHTML = `<div class="empty">No fixtures scheduled right now — check back soon. 📅</div>`; return; }
     el.innerHTML = matches.map(m => {
@@ -664,8 +659,6 @@
       let badge = '', clash = '';
       if(oh && oa && oh === oa){
         badge = `<span class="clashbadge civil">⚔️ ${oh} can't lose</span>`; clash = 'is-clash';
-      } else if(oh && oa && rankOf && rankOf[oh] <= 3 && rankOf[oa] <= 3){
-        badge = `<span class="clashbadge six">🔥 Six-pointer</span>`; clash = 'is-clash';
       }
       return `
       <div class="match ${clash}">
