@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-19T21:11:34.997Z",
+  "lastUpdated": "2026-06-19T23:00:24.659Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -121,7 +121,7 @@
       ],
       "rank": 1,
       "prevRank": 1,
-      "prevPoints": 33
+      "prevPoints": 38
     },
     {
       "name": "Gonz",
@@ -811,7 +811,7 @@
       "away": "Morocco",
       "stage": "Group Stage",
       "date": "2026-06-19T22:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Brazil",
