@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-19T18:00:59.962Z",
+  "lastUpdated": "2026-06-19T21:11:34.997Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,7 +19,7 @@
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 33,
+      "totalPoints": 38,
       "allEliminated": false,
       "teams": [
         {
@@ -48,14 +48,14 @@
         },
         {
           "name": "USA",
-          "played": 1,
-          "wins": 1,
+          "played": 2,
+          "wins": 2,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 4,
+          "goalsFor": 6,
           "stage": "group",
           "eliminated": false,
-          "points": 7,
+          "points": 12,
           "stageLabel": "Group Stage"
         },
         {
@@ -72,10 +72,10 @@
         },
         {
           "name": "Australia",
-          "played": 1,
+          "played": 2,
           "wins": 1,
           "draws": 0,
-          "losses": 0,
+          "losses": 1,
           "goalsFor": 2,
           "stage": "group",
           "eliminated": false,
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "USA",
+      "away": "Australia",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "stage": "Group Stage",
+      "date": "2026-06-19T19:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Mexico",
       "away": "South Korea",
       "homeGoals": 1,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-15T19:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Spain",
-      "away": "Cape Verde",
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "stage": "Group Stage",
-      "date": "2026-06-15T16:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "USA",
-      "away": "Australia",
-      "stage": "Group Stage",
-      "date": "2026-06-19T19:00:00Z",
-      "live": false
-    },
     {
       "home": "Scotland",
       "away": "Morocco",
@@ -902,6 +895,13 @@
       "away": "Iraq",
       "stage": "Group Stage",
       "date": "2026-06-22T21:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Norway",
+      "away": "Senegal",
+      "stage": "Group Stage",
+      "date": "2026-06-23T00:00:00Z",
       "live": false
     }
   ]
