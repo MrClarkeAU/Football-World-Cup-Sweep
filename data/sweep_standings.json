@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-20T14:08:40.583Z",
+  "lastUpdated": "2026-06-20T17:27:41.722Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Sweden",
       "stage": "Group Stage",
       "date": "2026-06-20T17:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Germany",
