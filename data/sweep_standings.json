@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-21T15:54:09.976Z",
+  "lastUpdated": "2026-06-21T17:41:07.315Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Saudi Arabia",
       "stage": "Group Stage",
       "date": "2026-06-21T16:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Belgium",
