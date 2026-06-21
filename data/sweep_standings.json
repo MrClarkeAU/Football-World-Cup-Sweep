@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-21T21:16:58.584Z",
+  "lastUpdated": "2026-06-21T23:16:38.730Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -121,7 +121,7 @@
       ],
       "rank": 1,
       "prevRank": 1,
-      "prevPoints": 44
+      "prevPoints": 45
     },
     {
       "name": "Mark",
@@ -811,7 +811,7 @@
       "away": "Cape Verde",
       "stage": "Group Stage",
       "date": "2026-06-21T22:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "New Zealand",
