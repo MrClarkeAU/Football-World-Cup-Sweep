@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-22T18:12:52.548Z",
+  "lastUpdated": "2026-06-22T22:04:33.033Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -48,10 +48,10 @@
         },
         {
           "name": "Austria",
-          "played": 1,
+          "played": 2,
           "wins": 1,
           "draws": 0,
-          "losses": 0,
+          "losses": 1,
           "goalsFor": 3,
           "stage": "group",
           "eliminated": false,
@@ -338,6 +338,113 @@
       "prevPoints": 38
     },
     {
+      "name": "Ben",
+      "tagline": "Argentina carry merchant.",
+      "totalPoints": 37,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "South Korea",
+          "played": 2,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": false,
+          "points": 5,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Argentina",
+          "played": 2,
+          "wins": 2,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 5,
+          "stage": "group",
+          "eliminated": false,
+          "points": 11,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "DR Congo",
+          "played": 1,
+          "wins": 0,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Czech Republic",
+          "played": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": false,
+          "points": 3,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Scotland",
+          "played": 2,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 4,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Curacao",
+          "played": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Colombia",
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": false,
+          "points": 6,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Ghana",
+          "played": 1,
+          "wins": 1,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 4,
+          "stageLabel": "Group Stage"
+        }
+      ],
+      "rank": 4,
+      "prevRank": 6,
+      "prevPoints": 32
+    },
+    {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
       "totalPoints": 36,
@@ -440,7 +547,7 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 4,
+      "rank": 5,
       "prevRank": 4,
       "prevPoints": 36
     },
@@ -547,119 +654,21 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 5,
+      "rank": 6,
       "prevRank": 5,
       "prevPoints": 36
-    },
-    {
-      "name": "Ben",
-      "tagline": "Argentina carry merchant.",
-      "totalPoints": 32,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "South Korea",
-          "played": 2,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 2,
-          "stage": "group",
-          "eliminated": false,
-          "points": 5,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Argentina",
-          "played": 1,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": false,
-          "points": 6,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "DR Congo",
-          "played": 1,
-          "wins": 0,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 2,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Czech Republic",
-          "played": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 2,
-          "stage": "group",
-          "eliminated": false,
-          "points": 3,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Scotland",
-          "played": 2,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 4,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Curacao",
-          "played": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 2,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Colombia",
-          "played": 1,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": false,
-          "points": 6,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Ghana",
-          "played": 1,
-          "wins": 1,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 4,
-          "stageLabel": "Group Stage"
-        }
-      ],
-      "rank": 6,
-      "prevRank": 6,
-      "prevPoints": 32
     }
   ],
   "recentMatches": [
+    {
+      "home": "Argentina",
+      "away": "Austria",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "stage": "Group Stage",
+      "date": "2026-06-22T17:00:00Z",
+      "scorers": []
+    },
     {
       "home": "New Zealand",
       "away": "Egypt",
@@ -794,31 +803,15 @@
       "stage": "Group Stage",
       "date": "2026-06-18T19:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Czech Republic",
-      "away": "South Africa",
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "stage": "Group Stage",
-      "date": "2026-06-18T16:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Argentina",
-      "away": "Austria",
-      "stage": "Group Stage",
-      "date": "2026-06-22T17:00:00Z",
-      "live": true
-    },
     {
       "home": "France",
       "away": "Iraq",
       "stage": "Group Stage",
       "date": "2026-06-22T21:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Norway",
@@ -902,6 +895,13 @@
       "away": "South Korea",
       "stage": "Group Stage",
       "date": "2026-06-25T01:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Ecuador",
+      "away": "Germany",
+      "stage": "Group Stage",
+      "date": "2026-06-25T20:00:00Z",
       "live": false
     }
   ]
