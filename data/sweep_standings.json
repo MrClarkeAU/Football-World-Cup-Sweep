@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-23T03:03:50.853Z",
+  "lastUpdated": "2026-06-23T03:45:10.673Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -228,7 +228,7 @@
       ],
       "rank": 2,
       "prevRank": 2,
-      "prevPoints": 38
+      "prevPoints": 44
     },
     {
       "name": "Gonz",
@@ -334,8 +334,8 @@
         }
       ],
       "rank": 3,
-      "prevRank": 5,
-      "prevPoints": 36
+      "prevRank": 3,
+      "prevPoints": 42
     },
     {
       "name": "Mark",
@@ -441,8 +441,8 @@
         }
       ],
       "rank": 4,
-      "prevRank": 3,
-      "prevPoints": 38
+      "prevRank": 4,
+      "prevPoints": 40
     },
     {
       "name": "Ben",
@@ -548,7 +548,7 @@
         }
       ],
       "rank": 5,
-      "prevRank": 4,
+      "prevRank": 5,
       "prevPoints": 37
     },
     {
@@ -811,7 +811,7 @@
       "away": "Algeria",
       "stage": "Group Stage",
       "date": "2026-06-23T03:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Portugal",
