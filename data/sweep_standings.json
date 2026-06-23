@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-23T14:53:35.839Z",
+  "lastUpdated": "2026-06-23T17:58:43.078Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Uzbekistan",
       "stage": "Group Stage",
       "date": "2026-06-23T17:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "England",
