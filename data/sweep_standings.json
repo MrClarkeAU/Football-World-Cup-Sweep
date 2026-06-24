@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-24T17:56:17.386Z",
+  "lastUpdated": "2026-06-24T19:53:07.669Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,14 +811,14 @@
       "away": "Canada",
       "stage": "Group Stage",
       "date": "2026-06-24T19:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Bosnia",
       "away": "Qatar",
       "stage": "Group Stage",
       "date": "2026-06-24T19:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Morocco",
