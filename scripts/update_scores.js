@@ -159,6 +159,7 @@ async function main() {
 
   const finished = [];
   const upcoming = [];         // not-yet-played fixtures (for the schedule)
+  const knockout = [];         // all knockout-stage matches (for the bracket)
   const unmatched = new Set(); // fixture teams that match NO participant (spelling check)
   for (const m of matches) {
     const stage = mapStage(m.stage || "");
@@ -173,6 +174,24 @@ async function main() {
     const reachKey = stage === "third" ? "sf" : stage;
     if (home) promote(home, reachKey);
     if (away) promote(away, reachKey);
+
+    // Collect knockout fixtures (Round of 32 → Final) for the bracket. The 3rd-
+    // place play-off isn't on the road to the final, so it's excluded.
+    if (stage !== "group" && stage !== "third") {
+      const done = m.status === "FINISHED";
+      knockout.push({
+        stageKey: stage,
+        stage: STAGE_LABEL[stage],
+        home: homeName || "TBC",
+        away: awayName || "TBC",
+        homeGoals: done ? (m.score?.fullTime?.home ?? null) : null,
+        awayGoals: done ? (m.score?.fullTime?.away ?? null) : null,
+        status: m.status,
+        winner: done ? (m.score?.winner === "HOME_TEAM" ? "home"
+                      : m.score?.winner === "AWAY_TEAM" ? "away" : null) : null,
+        date: m.utcDate,
+      });
+    }
 
     if (m.status !== "FINISHED") {
       if (["SCHEDULED", "TIMED", "IN_PLAY", "PAUSED"].includes(m.status)) {
@@ -239,7 +258,11 @@ async function main() {
   const nextUp = upcoming
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .slice(0, 14);
-  return writeOutput(players, recentMatches, { live: true, unmatched: unmatchedList, upcoming: nextUp });
+  const STAGE_RANK = { r32: 0, r16: 1, qf: 2, sf: 3, final: 4 };
+  knockout.sort((a, b) =>
+    (STAGE_RANK[a.stageKey] - STAGE_RANK[b.stageKey]) || (new Date(a.date) - new Date(b.date)));
+  return writeOutput(players, recentMatches,
+    { live: true, unmatched: unmatchedList, upcoming: nextUp, knockout });
 }
 
 // Knockout loser is out; champion never is.
@@ -279,7 +302,7 @@ function buildRecentFeed(finished, out) {
   }
 }
 
-function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [] }) {
+function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [], knockout = [] }) {
   // Remember the PREVIOUS run's standings so the page can show movers (↑/↓).
   const prev = {};
   try {
@@ -325,6 +348,7 @@ function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming
     participants,
     recentMatches,
     upcomingMatches: upcoming,
+    knockout,
   };
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });

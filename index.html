@@ -285,6 +285,54 @@
     @media (max-width:420px){ .highlights{ grid-template-columns:1fr; } }
 
     /* =========================================================
+       ROAD TO THE FINAL — knockout bracket
+       ========================================================= */
+    .klocked{ border:1px dashed var(--line); border-radius:var(--r-md); background:var(--pitch-2);
+      padding:26px 18px; text-align:center; }
+    .klocked .ico{ font-size:30px; }
+    .klocked h4{ font-family:'Archivo'; font-weight:900; text-transform:uppercase; letter-spacing:-.01em;
+      font-size:16px; margin:8px 0 6px; }
+    .klocked p{ color:var(--sage); font-size:13px; max-width:46ch; margin:0 auto; }
+    .klocked .alive{ margin-top:12px; font-size:12px; color:var(--sage-dim); }
+    .klocked .alive b{ color:var(--live); font-family:'Anton'; font-size:15px; }
+
+    .ktabs{ display:flex; gap:6px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      padding-bottom:4px; margin-bottom:12px; }
+    .ktab{ flex:none; border:1px solid var(--line); background:var(--pitch-2); color:var(--sage);
+      font:inherit; font-weight:800; font-size:12.5px; letter-spacing:.02em; padding:8px 13px;
+      border-radius:999px; cursor:pointer; white-space:nowrap; }
+    .ktab .n{ font-weight:600; color:var(--sage-dim); margin-left:5px; font-size:11px; }
+    .ktab.active{ background:linear-gradient(180deg,#ffe39a,var(--gold) 70%); color:#241a04; border-color:transparent; }
+    .ktab.active .n{ color:#5e4a14; }
+
+    .kround{ display:flex; flex-direction:column; gap:8px; }
+    .kmatch{ border:1px solid var(--line); border-radius:var(--r-md); background:var(--pitch-2);
+      padding:10px 12px; }
+    .kmatch.done{ border-color:color-mix(in srgb,var(--gold) 22%,var(--line)); }
+    .kteam{ display:flex; align-items:center; gap:9px; padding:4px 0; }
+    .kteam + .kteam{ border-top:1px dashed var(--line); }
+    .kteam .fl{ font-size:18px; flex:none; }
+    .kteam .kn{ font-weight:700; font-size:14px; min-width:0; white-space:nowrap; overflow:hidden;
+      text-overflow:ellipsis; }
+    .kteam .kown{ font-size:9px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+      padding:1px 6px; border-radius:999px; flex:none; }
+    .kteam .ksc{ margin-left:auto; font-family:'Anton'; font-size:18px; line-height:1; color:var(--sage); flex:none; }
+    .kteam.win .kn{ color:var(--chalk); }
+    .kteam.win .ksc{ color:var(--gold); }
+    .kteam.win::after{ content:"▶"; color:var(--gold); font-size:9px; flex:none; }
+    .kteam.lose{ opacity:.5; }
+    .kteam.lose .kn{ text-decoration:line-through; text-decoration-color:var(--clay); }
+    .kteam.tbc{ opacity:.45; }
+    .kmeta{ display:flex; justify-content:space-between; align-items:center; margin-top:7px;
+      padding-top:7px; border-top:1px solid var(--line); font-size:11px; color:var(--sage-dim); font-weight:600; }
+    .kmeta .kdate{ color:var(--sage); }
+    .kmeta .klive{ color:var(--live); font-weight:800; }
+    .kchamp{ margin-top:12px; text-align:center; border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);
+      border-radius:var(--r-md); padding:16px; background:radial-gradient(120% 140% at 50% 0%, rgba(244,193,75,.16), transparent 60%), var(--pitch-2); }
+    .kchamp .big{ font-family:'Anton'; font-size:clamp(20px,5vw,26px); color:var(--gold); }
+    .kchamp .sub{ font-size:13px; color:var(--sage); margin-top:4px; }
+
+    /* =========================================================
        WOODEN SPOON
        ========================================================= */
     .spoon{ display:flex; align-items:center; gap:14px; margin-top:14px;
@@ -396,6 +444,9 @@
 
     <section id="spoon"></section>
 
+    <div class="shead"><h2>Road to the Final</h2><span class="hint">the knockout bracket</span></div>
+    <section id="bracket"></section>
+
     <div class="shead"><h2>Stat Attack</h2><span class="hint">goals &amp; thrashings</span></div>
     <section class="highlights" id="highlights"></section>
 
@@ -444,11 +495,14 @@
   };
   const flag = n => FLAGS[n] || "🏳️";
   const shortStage = s => ({ r32:'R32', r16:'R16', qf:'QF', sf:'SF', final:'Final', winner:'🏆 Champs' }[s] || '');
+  const LAD_COLORS = { Clarkey:'#f4c14b', Ben:'#34e29a', Andre:'#5b8cff', Gonz:'#ff7a59', Mark:'#c084fc', Ray:'#22d3ee' };
+  const ladColor = name => LAD_COLORS[name] || '#8fab9f';
   const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
   const byId = id => document.getElementById(id);
   let firstLoad = true;
   let celebrated = false;
   let podiumObserved = false, podiumPopped = false;
+  let bracketRound = null;
 
   /* ---------- time helpers (always Perth / AWST) ---------- */
   function awst(iso){
@@ -513,6 +567,7 @@
     renderPodium(ranked, alive);
     renderBoard(ranked, alive, champion);
     renderSpoon(ranked, alive, champion);
+    renderBracket(data.knockout || [], ownerOf, teamsLeft);
     renderUpcoming(data.upcomingMatches || [], ownerOf);
     renderResults(data.recentMatches || [], ownerOf);
     renderHighlights(ranked, data.recentMatches || []);
@@ -695,6 +750,68 @@
           <div class="score">${m.homeGoals}–${m.awayGoals}</div>
         </div>
       </div>`).join('');
+  }
+
+  // ---- Road to the Final (knockout bracket) ----
+  function kteamHTML(name, isWin, isLose, score, ownerOf){
+    const tbc = !name || name === 'TBC';
+    const owner = tbc ? null : ownerOf[(name||'').toLowerCase()];
+    const chip = owner ? `<span class="kown" style="background:${ladColor(owner)};color:#0b0f0c">${owner}</span>` : '';
+    const cls = tbc ? 'tbc' : (isWin ? 'win' : (isLose ? 'lose' : ''));
+    return `<div class="kteam ${cls}">
+      <span class="fl">${tbc ? '🏳️' : flag(name)}</span>
+      <span class="kn">${tbc ? 'TBC' : name}</span>
+      ${chip}
+      <span class="ksc">${score == null ? '' : score}</span>
+    </div>`;
+  }
+  function kmatchHTML(k, ownerOf){
+    const done = k.status === 'FINISHED';
+    const live = k.status === 'IN_PLAY' || k.status === 'PAUSED';
+    const homeWin = done && k.winner === 'home', awayWin = done && k.winner === 'away';
+    const home = kteamHTML(k.home, homeWin, awayWin, k.homeGoals, ownerOf);
+    const away = kteamHTML(k.away, awayWin, homeWin, k.awayGoals, ownerOf);
+    const meta = done
+      ? `<span>${k.stage}</span><span class="kdate">Full time</span>`
+      : `<span>${k.stage}</span><span class="${live ? 'klive' : 'kdate'}">${live ? 'LIVE' : awst(k.date) + ' AWST'}</span>`;
+    return `<div class="kmatch ${done ? 'done' : ''}">${home}${away}<div class="kmeta">${meta}</div></div>`;
+  }
+  function renderBracket(knockout, ownerOf, teamsLeft){
+    const el = byId('bracket'); if(!el) return;
+    if(!knockout || !knockout.length){
+      el.innerHTML = `<div class="klocked">
+        <div class="ico">🔒</div>
+        <h4>Bracket locked… for now</h4>
+        <p>The Road to the Final unlocks the moment the group stage wraps and the Round of 32 is confirmed. It fills in automatically — no refresh needed.</p>
+        <div class="alive"><b>${teamsLeft}</b> / 48 nations still in it</div>
+      </div>`;
+      return;
+    }
+    const ROUNDS = [['r32','Round of 32'],['r16','Round of 16'],['qf','Quarter-Finals'],['sf','Semi-Finals'],['final','Final']];
+    const SHORT = { r32:'R32', r16:'R16', qf:'QF', sf:'SF', final:'Final' };
+    const byRound = {};
+    knockout.forEach(k => { (byRound[k.stageKey] = byRound[k.stageKey] || []).push(k); });
+    const present = ROUNDS.filter(([key]) => byRound[key] && byRound[key].length);
+    const presentKeys = present.map(([k]) => k);
+    if(!bracketRound || !presentKeys.includes(bracketRound)){
+      const liveRound = present.find(([key]) => byRound[key].some(m => m.status !== 'FINISHED'));
+      bracketRound = liveRound ? liveRound[0] : presentKeys[presentKeys.length - 1];
+    }
+    const tabs = present.map(([key]) =>
+      `<button class="ktab ${key === bracketRound ? 'active' : ''}" data-round="${key}">${SHORT[key]}<span class="n">${byRound[key].length}</span></button>`).join('');
+    const cards = byRound[bracketRound].map(k => kmatchHTML(k, ownerOf)).join('');
+    let champ = '';
+    if(bracketRound === 'final'){
+      const f = byRound['final'].find(m => m.winner);
+      if(f){
+        const wname = f.winner === 'home' ? f.home : f.away;
+        const owner = ownerOf[(wname||'').toLowerCase()];
+        champ = `<div class="kchamp"><div class="big">🏆 ${wname} — World Champions</div>${owner ? `<div class="sub">${owner} wins the sweep 🍻</div>` : ''}</div>`;
+      }
+    }
+    el.innerHTML = `<div class="ktabs">${tabs}</div><div class="kround">${cards}</div>${champ}`;
+    el.querySelectorAll('.ktab').forEach(b =>
+      b.addEventListener('click', () => { bracketRound = b.dataset.round; renderBracket(knockout, ownerOf, teamsLeft); }));
   }
 
   function renderHighlights(lads, results){
