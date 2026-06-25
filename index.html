@@ -285,6 +285,32 @@
     @media (max-width:420px){ .highlights{ grid-template-columns:1fr; } }
 
     /* =========================================================
+       GROUP STANDINGS — who's heading for the knockouts
+       ========================================================= */
+    .groups{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    @media (max-width:520px){ .groups{ grid-template-columns:1fr; } }
+    .grp{ border:1px solid var(--line); border-radius:var(--r-md); background:var(--pitch-2); padding:9px 11px; }
+    .grp h5{ font-family:'Archivo'; font-weight:900; text-transform:uppercase; font-size:12px;
+      letter-spacing:.04em; color:var(--sage); margin-bottom:6px; display:flex; align-items:center; justify-content:space-between; }
+    .grp h5 .done{ font-size:9px; color:var(--live); border:1px solid color-mix(in srgb,var(--live) 40%,transparent);
+      border-radius:999px; padding:1px 7px; letter-spacing:.06em; }
+    .grow{ display:grid; grid-template-columns:15px 1fr 20px 30px 24px; gap:7px; align-items:center;
+      font-size:12px; padding:5px 6px; border-radius:7px; }
+    .grow .gpos{ color:var(--sage-dim); font-weight:800; text-align:center; }
+    .grow .gteam{ display:flex; align-items:center; gap:6px; min-width:0; }
+    .grow .gteam .gdot{ width:7px; height:7px; border-radius:50%; flex:none; }
+    .grow .gteam .fl{ font-size:14px; flex:none; }
+    .grow .gteam .gn{ font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .grow .gthru{ color:var(--live); font-weight:900; flex:none; }
+    .grow .gnum{ color:var(--sage-dim); font-variant-numeric:tabular-nums; text-align:right; }
+    .grow .gpts{ font-family:'Anton'; font-size:14px; text-align:right; color:var(--chalk); }
+    .grow.q-auto{ background:color-mix(in srgb,var(--live) 9%,transparent); }
+    .grow.q-auto .gpos{ color:var(--live); }
+    .grow.q-third{ background:color-mix(in srgb,var(--gold) 9%,transparent); }
+    .grow.q-third .gpos{ color:var(--gold); }
+    .glegend{ margin-top:11px; font-size:11px; color:var(--sage-dim); text-align:center; line-height:1.6; }
+
+    /* =========================================================
        ROAD TO THE FINAL — knockout bracket
        ========================================================= */
     .klocked{ border:1px dashed var(--line); border-radius:var(--r-md); background:var(--pitch-2);
@@ -444,6 +470,9 @@
 
     <section id="spoon"></section>
 
+    <div class="shead"><h2>Group Standings</h2><span class="hint">top 2 + best 8 thirds advance</span></div>
+    <section id="groups"></section>
+
     <div class="shead"><h2>Road to the Final</h2><span class="hint">the knockout bracket</span></div>
     <section id="bracket"></section>
 
@@ -567,6 +596,7 @@
     renderPodium(ranked, alive);
     renderBoard(ranked, alive, champion);
     renderSpoon(ranked, alive, champion);
+    renderGroups(data.groups || [], ownerOf);
     renderBracket(data.knockout || [], ownerOf, teamsLeft);
     renderUpcoming(data.upcomingMatches || [], ownerOf);
     renderResults(data.recentMatches || [], ownerOf);
@@ -750,6 +780,33 @@
           <div class="score">${m.homeGoals}–${m.awayGoals}</div>
         </div>
       </div>`).join('');
+  }
+
+  // ---- Group Standings (who's qualifying) ----
+  function renderGroups(groups, ownerOf){
+    const el = byId('groups'); if(!el) return;
+    if(!groups || !groups.length){
+      el.innerHTML = `<div class="empty">Group tables appear with the next update. 📊</div>`;
+      return;
+    }
+    const card = g => {
+      const rows = (g.table || []).map(r => {
+        const owner = ownerOf[(r.team||'').toLowerCase()];
+        const dot = owner ? `<span class="gdot" style="background:${ladColor(owner)}"></span>` : '';
+        const qcls = r.qual === 'auto' ? 'q-auto' : r.qual === 'third' ? 'q-third' : '';
+        const thru = (r.qual === 'auto' && g.complete) ? ' <span class="gthru">✓</span>' : '';
+        return `<div class="grow ${qcls}">
+          <span class="gpos">${r.position}</span>
+          <span class="gteam">${dot}<span class="fl">${flag(r.team)}</span><span class="gn">${r.team || 'TBC'}</span>${thru}</span>
+          <span class="gnum">${r.played}</span>
+          <span class="gnum">${r.gd > 0 ? '+' : ''}${r.gd}</span>
+          <span class="gpts">${r.points}</span>
+        </div>`;
+      }).join('');
+      return `<div class="grp"><h5>${g.name}${g.complete ? '<span class="done">Final</span>' : ''}</h5>${rows}</div>`;
+    };
+    el.innerHTML = `<div class="groups">${groups.map(card).join('')}</div>
+      <div class="glegend">🟢 Top-2 qualifying · 🟡 Best-3rd race · ✓ Confirmed through &nbsp;·&nbsp; cols: Pld · GD · Pts</div>`;
   }
 
   // ---- Road to the Final (knockout bracket) ----

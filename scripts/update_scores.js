@@ -126,6 +126,37 @@ function promote(team, stage) {
   if (STAGE_ORDER.indexOf(stage) > STAGE_ORDER.indexOf(team.stage)) team.stage = stage;
 }
 
+// Parse the /standings response into group tables + qualification flags.
+// 2026 format: top 2 of each group + the 8 best 3rd-placed teams reach the R32.
+function parseGroups(st) {
+  const tables = (st.standings || []).filter(
+    (s) => s.type === "TOTAL" && /GROUP/i.test(s.group || "")
+  );
+  const groups = tables.map((s) => ({
+    name: (s.group || "").replace(/^GROUP[_ ]?/i, "Group ").replace(/_/g, " ").trim(),
+    table: (s.table || []).map((r) => ({
+      team: canonicalTeamName(r.team?.name),
+      position: r.position,
+      played: r.playedGames ?? 0,
+      won: r.won ?? 0, draw: r.draw ?? 0, lost: r.lost ?? 0,
+      gf: r.goalsFor ?? 0, ga: r.goalsAgainst ?? 0,
+      gd: r.goalDifference ?? ((r.goalsFor ?? 0) - (r.goalsAgainst ?? 0)),
+      points: r.points ?? 0,
+      qual: null,
+    })),
+  }));
+  // top 2 = auto-qualify; a group is "complete" once everyone has played 3.
+  groups.forEach((g) => {
+    g.complete = g.table.length > 0 && g.table.every((r) => r.played >= 3);
+    g.table.forEach((r) => { r.qual = r.position <= 2 ? "auto" : null; });
+  });
+  // best 8 third-placed teams across all groups also qualify.
+  const thirds = groups.map((g) => g.table.find((r) => r.position === 3)).filter(Boolean);
+  thirds.sort((a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf);
+  thirds.slice(0, 8).forEach((r) => { r.qual = "third"; });
+  return groups;
+}
+
 function scoreTeam(team) {
   let pts = 0;
   pts += team.wins * SCORING.groupWin;
@@ -156,6 +187,16 @@ async function main() {
   const data = await apiGet(`/competitions/${TOURNAMENT.competitionCode}/matches`);
   const matches = data.matches || [];
   console.log(`  ${matches.length} matches returned.`);
+
+  // Group tables + qualification (best-effort; the bracket/scoring don't depend on it).
+  let groups = [];
+  try {
+    const st = await apiGet(`/competitions/${TOURNAMENT.competitionCode}/standings`);
+    groups = parseGroups(st);
+    console.log(`  ${groups.length} group tables parsed.`);
+  } catch (e) {
+    console.warn(`  standings unavailable (${e.message}) — skipping group view.`);
+  }
 
   const finished = [];
   const upcoming = [];         // not-yet-played fixtures (for the schedule)
@@ -262,7 +303,7 @@ async function main() {
   knockout.sort((a, b) =>
     (STAGE_RANK[a.stageKey] - STAGE_RANK[b.stageKey]) || (new Date(a.date) - new Date(b.date)));
   return writeOutput(players, recentMatches,
-    { live: true, unmatched: unmatchedList, upcoming: nextUp, knockout });
+    { live: true, unmatched: unmatchedList, upcoming: nextUp, knockout, groups });
 }
 
 // Knockout loser is out; champion never is.
@@ -302,7 +343,7 @@ function buildRecentFeed(finished, out) {
   }
 }
 
-function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [], knockout = [] }) {
+function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [], knockout = [], groups = [] }) {
   // Remember the PREVIOUS run's standings so the page can show movers (↑/↓).
   const prev = {};
   try {
@@ -349,6 +390,7 @@ function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming
     recentMatches,
     upcomingMatches: upcoming,
     knockout,
+    groups,
   };
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
