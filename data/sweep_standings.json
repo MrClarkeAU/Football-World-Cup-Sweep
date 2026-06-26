@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-26T17:50:11.004Z",
+  "lastUpdated": "2026-06-26T19:50:55.788Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -120,8 +120,8 @@
         }
       ],
       "rank": 1,
-      "prevRank": 2,
-      "prevPoints": 76
+      "prevRank": 1,
+      "prevPoints": 66
     },
     {
       "name": "Clarkey",
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 1,
-      "prevPoints": 83
+      "prevRank": 2,
+      "prevPoints": 63
     },
     {
       "name": "Andre",
@@ -334,8 +334,8 @@
         }
       ],
       "rank": 3,
-      "prevRank": 4,
-      "prevPoints": 66
+      "prevRank": 3,
+      "prevPoints": 61
     },
     {
       "name": "Ray",
@@ -441,8 +441,8 @@
         }
       ],
       "rank": 4,
-      "prevRank": 5,
-      "prevPoints": 65
+      "prevRank": 4,
+      "prevPoints": 55
     },
     {
       "name": "Mark",
@@ -548,8 +548,8 @@
         }
       ],
       "rank": 5,
-      "prevRank": 3,
-      "prevPoints": 69
+      "prevRank": 5,
+      "prevPoints": 54
     },
     {
       "name": "Ben",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 47
+      "prevPoints": 42
     }
   ],
   "recentMatches": [
@@ -807,20 +807,6 @@
   ],
   "upcomingMatches": [
     {
-      "home": "Norway",
-      "away": "France",
-      "stage": "Group Stage",
-      "date": "2026-06-26T19:00:00Z",
-      "live": false
-    },
-    {
-      "home": "Senegal",
-      "away": "Iraq",
-      "stage": "Group Stage",
-      "date": "2026-06-26T19:00:00Z",
-      "live": false
-    },
-    {
       "home": "Uruguay",
       "away": "Spain",
       "stage": "Group Stage",
@@ -902,6 +888,20 @@
       "away": "TBC",
       "stage": "Round of 32",
       "date": "2026-06-29T17:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Round of 32",
+      "date": "2026-06-29T20:30:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Round of 32",
+      "date": "2026-06-30T01:00:00Z",
       "live": false
     }
   ],
@@ -1405,7 +1405,7 @@
           "ga": 4,
           "gd": -3,
           "points": 3,
-          "qual": "third"
+          "qual": null
         },
         {
           "team": "Haiti",
@@ -1719,57 +1719,57 @@
         {
           "team": "France",
           "position": 1,
-          "played": 2,
-          "won": 2,
+          "played": 3,
+          "won": 3,
           "draw": 0,
           "lost": 0,
-          "gf": 6,
-          "ga": 1,
-          "gd": 5,
-          "points": 6,
+          "gf": 8,
+          "ga": 2,
+          "gd": 6,
+          "points": 9,
           "qual": "auto"
         },
         {
           "team": "Norway",
           "position": 2,
-          "played": 2,
+          "played": 3,
           "won": 2,
           "draw": 0,
-          "lost": 0,
-          "gf": 7,
-          "ga": 3,
-          "gd": 4,
+          "lost": 1,
+          "gf": 8,
+          "ga": 5,
+          "gd": 3,
           "points": 6,
           "qual": "auto"
         },
         {
           "team": "Senegal",
           "position": 3,
-          "played": 2,
-          "won": 0,
+          "played": 3,
+          "won": 1,
           "draw": 0,
           "lost": 2,
-          "gf": 3,
+          "gf": 4,
           "ga": 6,
-          "gd": -3,
-          "points": 0,
-          "qual": null
+          "gd": -2,
+          "points": 3,
+          "qual": "third"
         },
         {
           "team": "Iraq",
           "position": 4,
-          "played": 2,
+          "played": 3,
           "won": 0,
           "draw": 0,
-          "lost": 2,
+          "lost": 3,
           "gf": 1,
-          "ga": 7,
-          "gd": -6,
+          "ga": 8,
+          "gd": -7,
           "points": 0,
           "qual": null
         }
       ],
-      "complete": false
+      "complete": true
     },
     {
       "name": "Group J",
