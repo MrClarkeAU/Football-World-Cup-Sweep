@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-26T10:56:51.328Z",
+  "lastUpdated": "2026-06-26T14:28:47.660Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -120,8 +120,8 @@
         }
       ],
       "rank": 1,
-      "prevRank": 2,
-      "prevPoints": 63
+      "prevRank": 1,
+      "prevPoints": 83
     },
     {
       "name": "Gonz",
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 1,
-      "prevPoints": 66
+      "prevRank": 2,
+      "prevPoints": 76
     },
     {
       "name": "Mark",
@@ -334,8 +334,8 @@
         }
       ],
       "rank": 3,
-      "prevRank": 5,
-      "prevPoints": 54
+      "prevRank": 3,
+      "prevPoints": 69
     },
     {
       "name": "Andre",
@@ -441,8 +441,8 @@
         }
       ],
       "rank": 4,
-      "prevRank": 3,
-      "prevPoints": 61
+      "prevRank": 4,
+      "prevPoints": 66
     },
     {
       "name": "Ray",
@@ -548,8 +548,8 @@
         }
       ],
       "rank": 5,
-      "prevRank": 4,
-      "prevPoints": 55
+      "prevRank": 5,
+      "prevPoints": 65
     },
     {
       "name": "Ben",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 42
+      "prevPoints": 47
     }
   ],
   "recentMatches": [
