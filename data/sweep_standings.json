@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-25T23:20:24.473Z",
+  "lastUpdated": "2026-06-26T02:38:33.137Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -121,12 +121,12 @@
       ],
       "rank": 1,
       "prevRank": 1,
-      "prevPoints": 61
+      "prevPoints": 66
     },
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 66,
+      "totalPoints": 63,
       "allEliminated": false,
       "teams": [
         {
@@ -136,10 +136,10 @@
           "draws": 0,
           "losses": 1,
           "goalsFor": 10,
-          "stage": "r32",
+          "stage": "group",
           "eliminated": false,
-          "points": 21,
-          "stageLabel": "Round of 32"
+          "points": 16,
+          "stageLabel": "Group Stage"
         },
         {
           "name": "Brazil",
@@ -203,14 +203,14 @@
         },
         {
           "name": "Japan",
-          "played": 2,
+          "played": 3,
           "wins": 1,
-          "draws": 1,
+          "draws": 2,
           "losses": 0,
-          "goalsFor": 6,
+          "goalsFor": 7,
           "stage": "group",
           "eliminated": false,
-          "points": 10,
+          "points": 12,
           "stageLabel": "Group Stage"
         },
         {
@@ -228,114 +228,7 @@
       ],
       "rank": 2,
       "prevRank": 2,
-      "prevPoints": 60
-    },
-    {
-      "name": "Mark",
-      "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 61,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Saudi Arabia",
-          "played": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 2,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "England",
-          "played": 2,
-          "wins": 1,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 4,
-          "stage": "group",
-          "eliminated": false,
-          "points": 8,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "USA",
-          "played": 2,
-          "wins": 2,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 6,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 17,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Mexico",
-          "played": 3,
-          "wins": 3,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 6,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 20,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Australia",
-          "played": 2,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 2,
-          "stage": "group",
-          "eliminated": false,
-          "points": 5,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Panama",
-          "played": 2,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 0,
-          "stage": "group",
-          "eliminated": false,
-          "points": 0,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Croatia",
-          "played": 2,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": false,
-          "points": 6,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Senegal",
-          "played": 2,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": false,
-          "points": 3,
-          "stageLabel": "Group Stage"
-        }
-      ],
-      "rank": 3,
-      "prevRank": 3,
-      "prevPoints": 51
+      "prevPoints": 66
     },
     {
       "name": "Ray",
@@ -440,14 +333,228 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 4,
+      "rank": 3,
       "prevRank": 4,
-      "prevPoints": 50
+      "prevPoints": 55
+    },
+    {
+      "name": "Andre",
+      "tagline": "France or bust.",
+      "totalPoints": 54,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Sweden",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 7,
+          "stage": "group",
+          "eliminated": false,
+          "points": 11,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "France",
+          "played": 2,
+          "wins": 2,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 6,
+          "stage": "group",
+          "eliminated": false,
+          "points": 12,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Turkey",
+          "played": 2,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 0,
+          "stage": "group",
+          "eliminated": false,
+          "points": 0,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Qatar",
+          "played": 3,
+          "wins": 0,
+          "draws": 1,
+          "losses": 2,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": false,
+          "points": 3,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Paraguay",
+          "played": 2,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": false,
+          "points": 5,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Netherlands",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 10,
+          "stage": "group",
+          "eliminated": false,
+          "points": 17,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Tunisia",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "New Zealand",
+          "played": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": false,
+          "points": 4,
+          "stageLabel": "Group Stage"
+        }
+      ],
+      "rank": 4,
+      "prevRank": 6,
+      "prevPoints": 45
+    },
+    {
+      "name": "Mark",
+      "tagline": "England 'it's coming home' Mark.",
+      "totalPoints": 51,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Saudi Arabia",
+          "played": 2,
+          "wins": 0,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "England",
+          "played": 2,
+          "wins": 1,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 4,
+          "stage": "group",
+          "eliminated": false,
+          "points": 8,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "USA",
+          "played": 2,
+          "wins": 2,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 6,
+          "stage": "group",
+          "eliminated": false,
+          "points": 12,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Mexico",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 6,
+          "stage": "group",
+          "eliminated": false,
+          "points": 15,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Australia",
+          "played": 2,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": false,
+          "points": 5,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Panama",
+          "played": 2,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 0,
+          "stage": "group",
+          "eliminated": false,
+          "points": 0,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Croatia",
+          "played": 2,
+          "wins": 1,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": false,
+          "points": 6,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Senegal",
+          "played": 2,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": false,
+          "points": 3,
+          "stageLabel": "Group Stage"
+        }
+      ],
+      "rank": 5,
+      "prevRank": 3,
+      "prevPoints": 61
     },
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 47,
+      "totalPoints": 42,
       "allEliminated": false,
       "teams": [
         {
@@ -469,10 +576,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 5,
-          "stage": "r32",
+          "stage": "group",
           "eliminated": false,
-          "points": 16,
-          "stageLabel": "Round of 32"
+          "points": 11,
+          "stageLabel": "Group Stage"
         },
         {
           "name": "DR Congo",
@@ -547,119 +654,30 @@
           "stageLabel": "Group Stage"
         }
       ],
-      "rank": 5,
-      "prevRank": 6,
-      "prevPoints": 42
-    },
-    {
-      "name": "Andre",
-      "tagline": "France or bust.",
-      "totalPoints": 45,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Sweden",
-          "played": 2,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 6,
-          "stage": "group",
-          "eliminated": false,
-          "points": 9,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "France",
-          "played": 2,
-          "wins": 2,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 6,
-          "stage": "group",
-          "eliminated": false,
-          "points": 12,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Turkey",
-          "played": 2,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 0,
-          "stage": "group",
-          "eliminated": false,
-          "points": 0,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Qatar",
-          "played": 3,
-          "wins": 0,
-          "draws": 1,
-          "losses": 2,
-          "goalsFor": 2,
-          "stage": "group",
-          "eliminated": false,
-          "points": 3,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Paraguay",
-          "played": 2,
-          "wins": 1,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 2,
-          "stage": "group",
-          "eliminated": false,
-          "points": 5,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Netherlands",
-          "played": 2,
-          "wins": 1,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 7,
-          "stage": "group",
-          "eliminated": false,
-          "points": 11,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Tunisia",
-          "played": 2,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 1,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "New Zealand",
-          "played": 2,
-          "wins": 0,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": false,
-          "points": 4,
-          "stageLabel": "Group Stage"
-        }
-      ],
       "rank": 6,
       "prevRank": 5,
-      "prevPoints": 45
+      "prevPoints": 47
     }
   ],
   "recentMatches": [
+    {
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "stage": "Group Stage",
+      "date": "2026-06-25T23:00:00Z",
+      "scorers": []
+    },
+    {
+      "home": "Japan",
+      "away": "Sweden",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "stage": "Group Stage",
+      "date": "2026-06-25T23:00:00Z",
+      "scorers": []
+    },
     {
       "home": "Ecuador",
       "away": "Germany",
@@ -785,54 +803,22 @@
       "stage": "Group Stage",
       "date": "2026-06-23T00:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "France",
-      "away": "Iraq",
-      "homeGoals": 3,
-      "awayGoals": 0,
-      "stage": "Group Stage",
-      "date": "2026-06-22T21:00:00Z",
-      "scorers": []
-    },
-    {
-      "home": "Argentina",
-      "away": "Austria",
-      "homeGoals": 2,
-      "awayGoals": 0,
-      "stage": "Group Stage",
-      "date": "2026-06-22T17:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Tunisia",
-      "away": "Netherlands",
-      "stage": "Group Stage",
-      "date": "2026-06-25T23:00:00Z",
-      "live": true
-    },
-    {
-      "home": "Japan",
-      "away": "Sweden",
-      "stage": "Group Stage",
-      "date": "2026-06-25T23:00:00Z",
-      "live": true
-    },
     {
       "home": "Turkey",
       "away": "USA",
       "stage": "Group Stage",
       "date": "2026-06-26T02:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Paraguay",
       "away": "Australia",
       "stage": "Group Stage",
       "date": "2026-06-26T02:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Norway",
@@ -903,6 +889,20 @@
       "stage": "Group Stage",
       "date": "2026-06-27T23:30:00Z",
       "live": false
+    },
+    {
+      "home": "Jordan",
+      "away": "Argentina",
+      "stage": "Group Stage",
+      "date": "2026-06-28T02:00:00Z",
+      "live": false
+    },
+    {
+      "home": "Algeria",
+      "away": "Austria",
+      "stage": "Group Stage",
+      "date": "2026-06-28T02:00:00Z",
+      "live": false
     }
   ],
   "knockout": [
@@ -931,7 +931,7 @@
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "Germany",
+      "home": "TBC",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
@@ -975,7 +975,7 @@
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "Mexico",
+      "home": "TBC",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
@@ -1008,7 +1008,7 @@
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "USA",
+      "home": "TBC",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
@@ -1063,7 +1063,7 @@
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "Argentina",
+      "home": "TBC",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
@@ -1429,57 +1429,57 @@
         {
           "team": "USA",
           "position": 1,
-          "played": 2,
+          "played": 3,
           "won": 2,
-          "draw": 0,
+          "draw": 1,
           "lost": 0,
-          "gf": 6,
-          "ga": 1,
+          "gf": 7,
+          "ga": 2,
           "gd": 5,
-          "points": 6,
+          "points": 7,
           "qual": "auto"
         },
         {
           "team": "Australia",
           "position": 2,
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
           "gf": 2,
           "ga": 2,
           "gd": 0,
-          "points": 3,
+          "points": 4,
           "qual": "auto"
         },
         {
           "team": "Paraguay",
           "position": 3,
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
           "gf": 2,
           "ga": 4,
           "gd": -2,
-          "points": 3,
+          "points": 4,
           "qual": "third"
         },
         {
           "team": "Turkey",
           "position": 4,
-          "played": 2,
+          "played": 3,
           "won": 0,
-          "draw": 0,
+          "draw": 1,
           "lost": 2,
-          "gf": 0,
-          "ga": 3,
+          "gf": 1,
+          "ga": 4,
           "gd": -3,
-          "points": 0,
+          "points": 1,
           "qual": null
         }
       ],
-      "complete": false
+      "complete": true
     },
     {
       "name": "Group E",
@@ -1546,13 +1546,13 @@
           "team": "Netherlands",
           "position": 1,
           "played": 3,
-          "won": 1,
-          "draw": 2,
+          "won": 2,
+          "draw": 1,
           "lost": 0,
-          "gf": 7,
-          "ga": 3,
-          "gd": 4,
-          "points": 5,
+          "gf": 10,
+          "ga": 4,
+          "gd": 6,
+          "points": 7,
           "qual": "auto"
         },
         {
@@ -1562,8 +1562,8 @@
           "won": 1,
           "draw": 2,
           "lost": 0,
-          "gf": 6,
-          "ga": 2,
+          "gf": 7,
+          "ga": 3,
           "gd": 4,
           "points": 5,
           "qual": "auto"
@@ -1575,8 +1575,8 @@
           "won": 1,
           "draw": 1,
           "lost": 1,
-          "gf": 6,
-          "ga": 6,
+          "gf": 7,
+          "ga": 7,
           "gd": 0,
           "points": 4,
           "qual": "third"
@@ -1586,12 +1586,12 @@
           "position": 4,
           "played": 3,
           "won": 0,
-          "draw": 1,
-          "lost": 2,
-          "gf": 1,
-          "ga": 9,
-          "gd": -8,
-          "points": 1,
+          "draw": 0,
+          "lost": 3,
+          "gf": 2,
+          "ga": 12,
+          "gd": -10,
+          "points": 0,
           "qual": null
         }
       ],
