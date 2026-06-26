@@ -308,6 +308,11 @@
     .grow.q-auto .gpos{ color:var(--live); }
     .grow.q-third{ background:color-mix(in srgb,var(--gold) 9%,transparent); }
     .grow.q-third .gpos{ color:var(--gold); }
+    .grow.q-out{ background:color-mix(in srgb,var(--clay) 10%,transparent); }
+    .grow.q-out .gpos{ color:var(--clay); }
+    .grow.q-out .gn{ text-decoration:line-through; text-decoration-color:var(--clay); opacity:.8; }
+    .grow.q-out .gpts{ color:var(--sage-dim); }
+    .grow .gout{ color:var(--clay); font-weight:900; flex:none; }
     .glegend{ margin-top:11px; font-size:11px; color:var(--sage-dim); text-align:center; line-height:1.6; }
 
     /* =========================================================
@@ -789,15 +794,20 @@
       el.innerHTML = `<div class="empty">Group tables appear with the next update. 📊</div>`;
       return;
     }
+    const allComplete = groups.every(g => g.complete);
     const card = g => {
       const rows = (g.table || []).map(r => {
         const owner = ownerOf[(r.team||'').toLowerCase()];
         const dot = owner ? `<span class="gdot" style="background:${ladColor(owner)}"></span>` : '';
-        const qcls = r.qual === 'auto' ? 'q-auto' : r.qual === 'third' ? 'q-third' : '';
-        const thru = (r.qual === 'auto' && g.complete) ? ' <span class="gthru">✓</span>' : '';
+        // Knocked out: 4th once its group is final; a non-best-8 3rd only once
+        // every group is final (so the best-third race is actually settled).
+        const isOut = r.qual === null && (r.position === 4 ? g.complete : allComplete);
+        const qcls = r.qual === 'auto' ? 'q-auto' : r.qual === 'third' ? 'q-third' : (isOut ? 'q-out' : '');
+        const mark = (r.qual === 'auto' && g.complete) ? ' <span class="gthru">✓</span>'
+                   : isOut ? ' <span class="gout">✗</span>' : '';
         return `<div class="grow ${qcls}">
           <span class="gpos">${r.position}</span>
-          <span class="gteam">${dot}<span class="fl">${flag(r.team)}</span><span class="gn">${r.team || 'TBC'}</span>${thru}</span>
+          <span class="gteam">${dot}<span class="fl">${flag(r.team)}</span><span class="gn">${r.team || 'TBC'}</span>${mark}</span>
           <span class="gnum">${r.played}</span>
           <span class="gnum">${r.gd > 0 ? '+' : ''}${r.gd}</span>
           <span class="gpts">${r.points}</span>
@@ -806,7 +816,7 @@
       return `<div class="grp"><h5>${g.name}${g.complete ? '<span class="done">Final</span>' : ''}</h5>${rows}</div>`;
     };
     el.innerHTML = `<div class="groups">${groups.map(card).join('')}</div>
-      <div class="glegend">🟢 Top-2 qualifying · 🟡 Best-3rd race · ✓ Confirmed through &nbsp;·&nbsp; cols: Pld · GD · Pts</div>`;
+      <div class="glegend">🟢 Top-2 qualifying · 🟡 Best-3rd race · 🔴 Knocked out · ✓ Through &nbsp;·&nbsp; cols: Pld · GD · Pts</div>`;
   }
 
   // ---- Road to the Final (knockout bracket) ----
