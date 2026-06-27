@@ -280,6 +280,7 @@ async function main() {
   }
 
   computeEliminations(players, finished);
+  markGroupEliminations(players, groups);
 
   for (const player of Object.values(players)) {
     player.totalPoints = player.teams.reduce((sum, t) => sum + scoreTeam(t), 0);
@@ -322,6 +323,22 @@ function computeEliminations(players, finished) {
       if (team.stage === "winner") { team.eliminated = false; continue; }
       const key = team.name.toLowerCase();
       if (losers.has(key) && !winners.has(key)) team.eliminated = true;
+    }
+  }
+}
+
+// Mark teams knocked out at the GROUP stage (so "teams left", the wall of
+// shame and alive counts stay correct). Honest timing: a 4th-placed team is
+// out once its group is final; a non-best-8 3rd only once every group is done.
+function markGroupEliminations(players, groups) {
+  if (!groups || !groups.length) return;
+  const allComplete = groups.every((g) => g.complete);
+  for (const g of groups) {
+    for (const r of g.table) {
+      const out = r.qual === null && (r.position === 4 ? g.complete : allComplete);
+      if (!out) continue;
+      const team = findTeam(players, r.team);
+      if (team && team.stage !== "winner") team.eliminated = true;
     }
   }
 }
