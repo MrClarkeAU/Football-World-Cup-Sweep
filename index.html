@@ -845,11 +845,18 @@
   }
   function renderBracket(knockout, ownerOf, teamsLeft){
     const el = byId('bracket'); if(!el) return;
-    if(!knockout || !knockout.length){
+    // The bracket may be posted as all-TBC placeholders before the R32 draw is
+    // finalised — treat that like "forming" rather than rendering rows of blanks.
+    const hasTeams = (knockout || []).some(k =>
+      (k.home && k.home !== 'TBC') || (k.away && k.away !== 'TBC'));
+    if(!knockout || !knockout.length || !hasTeams){
+      const forming = knockout && knockout.length > 0;
       el.innerHTML = `<div class="klocked">
-        <div class="ico">🔒</div>
-        <h4>Bracket locked… for now</h4>
-        <p>The Road to the Final unlocks the moment the group stage wraps and the Round of 32 is confirmed. It fills in automatically — no refresh needed.</p>
+        <div class="ico">${forming ? '🗺️' : '🔒'}</div>
+        <h4>${forming ? 'Bracket forming…' : 'Bracket locked… for now'}</h4>
+        <p>${forming
+          ? 'The knockout fixtures are drawn — nations slot into the bracket as the final groups wrap up. It fills in automatically, no refresh needed.'
+          : 'The Road to the Final unlocks the moment the group stage wraps and the Round of 32 is confirmed. It fills in automatically — no refresh needed.'}</p>
         <div class="alive"><b>${teamsLeft}</b> / 48 nations still in it</div>
       </div>`;
       return;
