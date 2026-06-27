@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-27T05:09:25.882Z",
+  "lastUpdated": "2026-06-27T05:33:22.329Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -114,14 +114,14 @@
           "losses": 3,
           "goalsFor": 2,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 2,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         }
       ],
       "rank": 1,
       "prevRank": 1,
-      "prevPoints": 84
+      "prevPoints": 72
     },
     {
       "name": "Andre",
@@ -161,9 +161,9 @@
           "losses": 2,
           "goalsFor": 3,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 6,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Qatar",
@@ -173,9 +173,9 @@
           "losses": 2,
           "goalsFor": 2,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 3,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Paraguay",
@@ -209,9 +209,9 @@
           "losses": 3,
           "goalsFor": 2,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 2,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "New Zealand",
@@ -221,14 +221,14 @@
           "losses": 2,
           "goalsFor": 4,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 5,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         }
       ],
       "rank": 2,
-      "prevRank": 4,
-      "prevPoints": 73
+      "prevRank": 2,
+      "prevPoints": 69
     },
     {
       "name": "Gonz",
@@ -328,121 +328,14 @@
           "losses": 3,
           "goalsFor": 1,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 1,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         }
       ],
       "rank": 3,
       "prevRank": 3,
-      "prevPoints": 77
-    },
-    {
-      "name": "Ray",
-      "tagline": "Spain and the dark horses.",
-      "totalPoints": 65,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Cote d'Ivoire",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 4,
-          "stage": "group",
-          "eliminated": false,
-          "points": 10,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Spain",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 5,
-          "stage": "group",
-          "eliminated": false,
-          "points": 12,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Morocco",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 6,
-          "stage": "group",
-          "eliminated": false,
-          "points": 13,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Egypt",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "group",
-          "eliminated": false,
-          "points": 9,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Iran",
-          "played": 3,
-          "wins": 1,
-          "draws": 2,
-          "losses": 0,
-          "goalsFor": 4,
-          "stage": "group",
-          "eliminated": false,
-          "points": 9,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Uzbekistan",
-          "played": 2,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": false,
-          "points": 1,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Jordan",
-          "played": 2,
-          "wins": 0,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 2,
-          "stage": "group",
-          "eliminated": false,
-          "points": 2,
-          "stageLabel": "Group Stage"
-        },
-        {
-          "name": "Bosnia",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "group",
-          "eliminated": false,
-          "points": 9,
-          "stageLabel": "Group Stage"
-        }
-      ],
-      "rank": 4,
-      "prevRank": 5,
-      "prevPoints": 69
+      "prevPoints": 67
     },
     {
       "name": "Mark",
@@ -458,9 +351,9 @@
           "losses": 1,
           "goalsFor": 1,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 3,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "England",
@@ -547,9 +440,116 @@
           "stageLabel": "Group Stage"
         }
       ],
+      "rank": 4,
+      "prevRank": 5,
+      "prevPoints": 63
+    },
+    {
+      "name": "Ray",
+      "tagline": "Spain and the dark horses.",
+      "totalPoints": 63,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Cote d'Ivoire",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 4,
+          "stage": "group",
+          "eliminated": false,
+          "points": 10,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Spain",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 5,
+          "stage": "group",
+          "eliminated": false,
+          "points": 12,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Morocco",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 6,
+          "stage": "group",
+          "eliminated": false,
+          "points": 13,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Egypt",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goalsFor": 5,
+          "stage": "group",
+          "eliminated": false,
+          "points": 10,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Iran",
+          "played": 3,
+          "wins": 0,
+          "draws": 3,
+          "losses": 0,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": false,
+          "points": 6,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Uzbekistan",
+          "played": 2,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": false,
+          "points": 1,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Jordan",
+          "played": 2,
+          "wins": 0,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": false,
+          "points": 2,
+          "stageLabel": "Group Stage"
+        },
+        {
+          "name": "Bosnia",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 5,
+          "stage": "group",
+          "eliminated": false,
+          "points": 9,
+          "stageLabel": "Group Stage"
+        }
+      ],
       "rank": 5,
-      "prevRank": 2,
-      "prevPoints": 78
+      "prevRank": 4,
+      "prevPoints": 65
     },
     {
       "name": "Ben",
@@ -601,9 +601,9 @@
           "losses": 2,
           "goalsFor": 2,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 3,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Scotland",
@@ -625,9 +625,9 @@
           "losses": 2,
           "goalsFor": 1,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 2,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Colombia",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 47
+      "prevPoints": 42
     }
   ],
   "recentMatches": [
@@ -673,7 +673,7 @@
       "home": "Egypt",
       "away": "Iran",
       "homeGoals": 1,
-      "awayGoals": 2,
+      "awayGoals": 1,
       "stage": "Group Stage",
       "date": "2026-06-27T03:00:00Z",
       "scorers": []
@@ -1614,29 +1614,29 @@
           "qual": "auto"
         },
         {
-          "team": "Iran",
+          "team": "Egypt",
           "position": 2,
           "played": 3,
           "won": 1,
           "draw": 2,
           "lost": 0,
-          "gf": 4,
+          "gf": 5,
           "ga": 3,
-          "gd": 1,
+          "gd": 2,
           "points": 5,
           "qual": "auto"
         },
         {
-          "team": "Egypt",
+          "team": "Iran",
           "position": 3,
           "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 5,
-          "ga": 4,
-          "gd": 1,
-          "points": 4,
+          "won": 0,
+          "draw": 3,
+          "lost": 0,
+          "gf": 3,
+          "ga": 3,
+          "gd": 0,
+          "points": 3,
           "qual": "third"
         },
         {
