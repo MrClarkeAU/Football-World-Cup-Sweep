@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-28T05:33:20.686Z",
+  "lastUpdated": "2026-06-28T08:55:35.626Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,7 +19,7 @@
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 96,
+      "totalPoints": 111,
       "allEliminated": false,
       "teams": [
         {
@@ -53,10 +53,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 6,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 10,
-          "stageLabel": "Group Stage"
+          "points": 15,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "South Africa",
@@ -77,10 +77,10 @@
           "draws": 2,
           "losses": 0,
           "goalsFor": 6,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 11,
-          "stageLabel": "Group Stage"
+          "points": 16,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Cape Verde",
@@ -89,10 +89,10 @@
           "draws": 3,
           "losses": 0,
           "goalsFor": 2,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 5,
-          "stageLabel": "Group Stage"
+          "points": 10,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Japan",
@@ -126,7 +126,7 @@
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 88,
+      "totalPoints": 103,
       "allEliminated": false,
       "teams": [
         {
@@ -148,10 +148,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 6,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 13,
-          "stageLabel": "Group Stage"
+          "points": 18,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "USA",
@@ -208,10 +208,10 @@
           "draws": 0,
           "losses": 1,
           "goalsFor": 5,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 11,
-          "stageLabel": "Group Stage"
+          "points": 16,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Senegal",
@@ -220,10 +220,10 @@
           "draws": 0,
           "losses": 2,
           "goalsFor": 8,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 11,
-          "stageLabel": "Group Stage"
+          "points": 16,
+          "stageLabel": "Round of 32"
         }
       ],
       "rank": 2,
@@ -233,7 +233,7 @@
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 82,
+      "totalPoints": 102,
       "allEliminated": false,
       "teams": [
         {
@@ -255,10 +255,10 @@
           "draws": 2,
           "losses": 0,
           "goalsFor": 6,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 11,
-          "stageLabel": "Group Stage"
+          "points": 16,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Switzerland",
@@ -291,10 +291,10 @@
           "draws": 0,
           "losses": 1,
           "goalsFor": 8,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 14,
-          "stageLabel": "Group Stage"
+          "points": 19,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Algeria",
@@ -303,10 +303,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 5,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 9,
-          "stageLabel": "Group Stage"
+          "points": 14,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Ecuador",
@@ -315,10 +315,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 2,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 6,
-          "stageLabel": "Group Stage"
+          "points": 11,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Iraq",
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 80,
+      "totalPoints": 90,
       "allEliminated": false,
       "teams": [
         {
@@ -362,10 +362,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 5,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 12,
-          "stageLabel": "Group Stage"
+          "points": 17,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Morocco",
@@ -386,10 +386,10 @@
           "draws": 2,
           "losses": 0,
           "goalsFor": 5,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 10,
-          "stageLabel": "Group Stage"
+          "points": 15,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Iran",
@@ -447,7 +447,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 74,
+      "totalPoints": 89,
       "allEliminated": false,
       "teams": [
         {
@@ -457,10 +457,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 7,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 11,
-          "stageLabel": "Group Stage"
+          "points": 16,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "France",
@@ -469,10 +469,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 10,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 19,
-          "stageLabel": "Group Stage"
+          "points": 24,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Turkey",
@@ -505,10 +505,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 2,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 6,
-          "stageLabel": "Group Stage"
+          "points": 11,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Netherlands",
@@ -554,7 +554,7 @@
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 61,
+      "totalPoints": 76,
       "allEliminated": false,
       "teams": [
         {
@@ -588,10 +588,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 4,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 8,
-          "stageLabel": "Group Stage"
+          "points": 13,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Czech Republic",
@@ -636,10 +636,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 4,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 11,
-          "stageLabel": "Group Stage"
+          "points": 16,
+          "stageLabel": "Round of 32"
         },
         {
           "name": "Ghana",
@@ -648,10 +648,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 2,
-          "stage": "group",
+          "stage": "r32",
           "eliminated": false,
-          "points": 6,
-          "stageLabel": "Group Stage"
+          "points": 11,
+          "stageLabel": "Round of 32"
         }
       ],
       "rank": 6,
@@ -807,6 +807,13 @@
   ],
   "upcomingMatches": [
     {
+      "home": "South Africa",
+      "away": "Canada",
+      "stage": "Round of 32",
+      "date": "2026-06-28T19:00:00Z",
+      "live": false
+    },
+    {
       "home": "Brazil",
       "away": "Japan",
       "stage": "Round of 32",
@@ -815,7 +822,7 @@
     },
     {
       "home": "Germany",
-      "away": "TBC",
+      "away": "Paraguay",
       "stage": "Round of 32",
       "date": "2026-06-29T20:30:00Z",
       "live": false
@@ -829,35 +836,35 @@
     },
     {
       "home": "Cote d'Ivoire",
-      "away": "TBC",
+      "away": "Norway",
       "stage": "Round of 32",
       "date": "2026-06-30T17:00:00Z",
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "France",
+      "away": "Sweden",
       "stage": "Round of 32",
       "date": "2026-06-30T21:00:00Z",
       "live": false
     },
     {
       "home": "Mexico",
-      "away": "TBC",
+      "away": "Ecuador",
       "stage": "Round of 32",
       "date": "2026-07-01T01:00:00Z",
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "England",
+      "away": "DR Congo",
       "stage": "Round of 32",
       "date": "2026-07-01T16:00:00Z",
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Belgium",
+      "away": "Senegal",
       "stage": "Round of 32",
       "date": "2026-07-01T20:00:00Z",
       "live": false
@@ -870,38 +877,31 @@
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Spain",
+      "away": "Austria",
       "stage": "Round of 32",
       "date": "2026-07-02T19:00:00Z",
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Portugal",
+      "away": "Croatia",
       "stage": "Round of 32",
       "date": "2026-07-02T23:00:00Z",
       "live": false
     },
     {
       "home": "Switzerland",
-      "away": "TBC",
+      "away": "Algeria",
       "stage": "Round of 32",
       "date": "2026-07-03T03:00:00Z",
       "live": false
     },
     {
       "home": "Australia",
-      "away": "TBC",
+      "away": "Egypt",
       "stage": "Round of 32",
       "date": "2026-07-03T18:00:00Z",
-      "live": false
-    },
-    {
-      "home": "Argentina",
-      "away": "TBC",
-      "stage": "Round of 32",
-      "date": "2026-07-03T22:00:00Z",
       "live": false
     }
   ],
@@ -913,31 +913,22 @@
       "away": "Canada",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "2026-06-29 19:00:00Z",
-      "winner": null,
-      "date": "2026-06-28T19:00:00Z"
-    },
-    {
-      "stageKey": "r32",
-      "stage": "Round of 32",
-      "home": "Brazil",
-      "away": "Japan",
-      "homeGoals": null,
-      "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-06-29T17:00:00Z"
+      "date": "2026-06-28T19:00:00Z",
+      "day": "Sun 28 Jun"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
       "home": "Germany",
-      "away": "TBC",
+      "away": "Paraguay",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-06-29T20:30:00Z"
+      "date": "2026-06-29T20:30:00Z",
+      "day": "Mon 29 Jun"
     },
     {
       "stageKey": "r32",
@@ -948,62 +939,68 @@
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-06-30T01:00:00Z"
+      "date": "2026-06-30T01:00:00Z",
+      "day": "Mon 29 Jun"
+    },
+    {
+      "stageKey": "r32",
+      "stage": "Round of 32",
+      "home": "Brazil",
+      "away": "Japan",
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "TIMED",
+      "winner": null,
+      "date": "2026-06-29T17:00:00Z",
+      "day": "Mon 29 Jun"
+    },
+    {
+      "stageKey": "r32",
+      "stage": "Round of 32",
+      "home": "France",
+      "away": "Sweden",
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "TIMED",
+      "winner": null,
+      "date": "2026-06-30T21:00:00Z",
+      "day": "Tue 30 Jun"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
       "home": "Cote d'Ivoire",
-      "away": "TBC",
+      "away": "Norway",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-06-30T17:00:00Z"
-    },
-    {
-      "stageKey": "r32",
-      "stage": "Round of 32",
-      "home": "TBC",
-      "away": "TBC",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "TIMED",
-      "winner": null,
-      "date": "2026-06-30T21:00:00Z"
+      "date": "2026-06-30T17:00:00Z",
+      "day": "Tue 30 Jun"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
       "home": "Mexico",
-      "away": "TBC",
+      "away": "Ecuador",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-01T01:00:00Z"
+      "date": "2026-07-01T01:00:00Z",
+      "day": "Tue 30 Jun"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "England",
+      "away": "DR Congo",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-01T16:00:00Z"
-    },
-    {
-      "stageKey": "r32",
-      "stage": "Round of 32",
-      "home": "TBC",
-      "away": "TBC",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "TIMED",
-      "winner": null,
-      "date": "2026-07-01T20:00:00Z"
+      "date": "2026-07-01T16:00:00Z",
+      "day": "Wed 1 Jul"
     },
     {
       "stageKey": "r32",
@@ -1014,73 +1011,92 @@
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-02T00:00:00Z"
+      "date": "2026-07-02T00:00:00Z",
+      "day": "Wed 1 Jul"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Belgium",
+      "away": "Senegal",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-02T19:00:00Z"
+      "date": "2026-07-01T20:00:00Z",
+      "day": "Wed 1 Jul"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Portugal",
+      "away": "Croatia",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-02T23:00:00Z"
+      "date": "2026-07-02T23:00:00Z",
+      "day": "Thu 2 Jul"
+    },
+    {
+      "stageKey": "r32",
+      "stage": "Round of 32",
+      "home": "Spain",
+      "away": "Austria",
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "TIMED",
+      "winner": null,
+      "date": "2026-07-02T19:00:00Z",
+      "day": "Thu 2 Jul"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
       "home": "Switzerland",
-      "away": "TBC",
+      "away": "Algeria",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-03T03:00:00Z"
-    },
-    {
-      "stageKey": "r32",
-      "stage": "Round of 32",
-      "home": "Australia",
-      "away": "TBC",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "TIMED",
-      "winner": null,
-      "date": "2026-07-03T18:00:00Z"
+      "date": "2026-07-03T03:00:00Z",
+      "day": "Thu 2 Jul"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
       "home": "Argentina",
-      "away": "TBC",
+      "away": "Cape Verde",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-03T22:00:00Z"
+      "date": "2026-07-03T22:00:00Z",
+      "day": "Fri 3 Jul"
     },
     {
       "stageKey": "r32",
       "stage": "Round of 32",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Colombia",
+      "away": "Ghana",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
       "winner": null,
-      "date": "2026-07-04T01:30:00Z"
+      "date": "2026-07-04T01:30:00Z",
+      "day": "Fri 3 Jul"
+    },
+    {
+      "stageKey": "r32",
+      "stage": "Round of 32",
+      "home": "Australia",
+      "away": "Egypt",
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "TIMED",
+      "winner": null,
+      "date": "2026-07-03T18:00:00Z",
+      "day": "Fri 3 Jul"
     },
     {
       "stageKey": "r16",
