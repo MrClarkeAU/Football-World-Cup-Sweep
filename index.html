@@ -838,9 +838,13 @@
     const homeWin = done && k.winner === 'home', awayWin = done && k.winner === 'away';
     const home = kteamHTML(k.home, homeWin, awayWin, k.homeGoals, ownerOf);
     const away = kteamHTML(k.away, awayWin, homeWin, k.awayGoals, ownerOf);
-    const meta = done
-      ? `<span>${k.stage}</span><span class="kdate">Full time</span>`
-      : `<span>${k.stage}</span><span class="${live ? 'klive' : 'kdate'}">${live ? 'LIVE' : awst(k.date) + ' AWST'}</span>`;
+    let when, wcls = 'kdate';
+    if(done){ when = 'Full time'; }
+    else if(live){ when = 'LIVE'; wcls = 'klive'; }
+    else if(k.date){ when = awst(k.date) + ' AWST'; }
+    else if(k.day){ when = k.day; }
+    else { when = 'Date TBC'; }
+    const meta = `<span>${k.stage}</span><span class="${wcls}">${when}</span>`;
     return `<div class="kmatch ${done ? 'done' : ''}">${home}${away}<div class="kmeta">${meta}</div></div>`;
   }
   function renderBracket(knockout, ownerOf, teamsLeft){

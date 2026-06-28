@@ -105,11 +105,36 @@ function canonicalTeamName(apiName) {
   return TEAM_ALIASES[key] || apiName.trim();
 }
 
+// --- Round of 32 draw -----------------------------------------------------
+// The free API can lag on the best-third-placed assignments, so the confirmed
+// R32 ties are listed here (OUR canonical names). Live scores/winners are still
+// pulled from the API by matching the teams — this just fixes the matchups + day.
+// Leave empty ([]) to fall back entirely to the API.
+const R32_FIXTURES = [
+  { home: "South Africa",  away: "Canada",     day: "Sun 28 Jun" },
+  { home: "Germany",       away: "Paraguay",   day: "Mon 29 Jun" },
+  { home: "Netherlands",   away: "Morocco",    day: "Mon 29 Jun" },
+  { home: "Brazil",        away: "Japan",      day: "Mon 29 Jun" },
+  { home: "France",        away: "Sweden",     day: "Tue 30 Jun" },
+  { home: "Cote d'Ivoire", away: "Norway",     day: "Tue 30 Jun" },
+  { home: "Mexico",        away: "Ecuador",    day: "Tue 30 Jun" },
+  { home: "England",       away: "DR Congo",   day: "Wed 1 Jul" },
+  { home: "USA",           away: "Bosnia",     day: "Wed 1 Jul" },
+  { home: "Belgium",       away: "Senegal",    day: "Wed 1 Jul" },
+  { home: "Portugal",      away: "Croatia",    day: "Thu 2 Jul" },
+  { home: "Spain",         away: "Austria",    day: "Thu 2 Jul" },
+  { home: "Switzerland",   away: "Algeria",    day: "Thu 2 Jul" },
+  { home: "Argentina",     away: "Cape Verde", day: "Fri 3 Jul" },
+  { home: "Colombia",      away: "Ghana",      day: "Fri 3 Jul" },
+  { home: "Australia",     away: "Egypt",      day: "Fri 3 Jul" },
+];
+
 module.exports = {
   TOURNAMENT,
   SCORING,
   PARTICIPANTS,
   PARTICIPANT_TAGLINES,
   TEAM_ALIASES,
+  R32_FIXTURES,
   canonicalTeamName,
 };

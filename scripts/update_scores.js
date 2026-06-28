@@ -28,6 +28,7 @@ const {
   SCORING,
   PARTICIPANTS,
   PARTICIPANT_TAGLINES,
+  R32_FIXTURES,
   canonicalTeamName,
 } = require("./config");
 
@@ -172,6 +173,46 @@ function scoreTeam(team) {
 }
 
 // ---------------------------------------------------------------------------
+// Find the API knockout match that shares a real team with a manual fixture
+// (each team plays only one R32 tie, so a single shared team is unambiguous).
+function findR32Match(matches, fx) {
+  const hk = (fx.home || "").toLowerCase(), ak = (fx.away || "").toLowerCase();
+  for (const m of matches) {
+    if (mapStage(m.stage || "") !== "r32") continue;
+    const h = (canonicalTeamName(m.homeTeam?.name) || "").toLowerCase();
+    const a = (canonicalTeamName(m.awayTeam?.name) || "").toLowerCase();
+    if ((h && (h === hk || h === ak)) || (a && (a === hk || a === ak))) return m;
+  }
+  return null;
+}
+
+// Build the R32 bracket from the confirmed draw, merging API status/score.
+function buildR32Override(matches) {
+  return R32_FIXTURES.map((fx) => {
+    const m = findR32Match(matches, fx);
+    let homeGoals = null, awayGoals = null, status = "TIMED", winner = null, date = null;
+    if (m) {
+      status = m.status;
+      date = m.utcDate || null;
+      if (m.status === "FINISHED") {
+        const mh = (canonicalTeamName(m.homeTeam?.name) || "").toLowerCase();
+        const sameOrient = mh === (fx.home || "").toLowerCase();
+        const gh = m.score?.fullTime?.home ?? null, ga = m.score?.fullTime?.away ?? null;
+        homeGoals = sameOrient ? gh : ga;
+        awayGoals = sameOrient ? ga : gh;
+        const w = m.score?.winner;
+        if (w === "HOME_TEAM") winner = sameOrient ? "home" : "away";
+        else if (w === "AWAY_TEAM") winner = sameOrient ? "away" : "home";
+      }
+    }
+    return {
+      stageKey: "r32", stage: "Round of 32",
+      home: fx.home, away: fx.away,
+      homeGoals, awayGoals, status, winner, date, day: fx.day,
+    };
+  });
+}
+
 async function main() {
   const players = blankBoard();
   const recentMatches = [];
@@ -268,6 +309,20 @@ async function main() {
     finished.push({ m, stage, homeName, awayName, hg, ag });
   }
 
+  // Fill the Round of 32 from the confirmed draw (the free API can lag on the
+  // best-third-placed assignments). Live results are still merged from the API.
+  if (R32_FIXTURES && R32_FIXTURES.length) {
+    const r32 = buildR32Override(matches);
+    const others = knockout.filter((k) => k.stageKey !== "r32");
+    knockout.length = 0;
+    knockout.push(...r32, ...others);
+    // Everyone in the R32 has reached the knockouts → bank the +5 bonus now.
+    r32.forEach((k) => {
+      const ht = findTeam(players, k.home); if (ht) promote(ht, "r32");
+      const at = findTeam(players, k.away); if (at) promote(at, "r32");
+    });
+  }
+
   // Champion = winner of the FINAL (not the 3rd-place play-off).
   for (const f of finished) {
     if (f.stage !== "final") continue;
@@ -300,9 +355,15 @@ async function main() {
   const nextUp = upcoming
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .slice(0, 14);
+  // Sort other rounds by date, then a stable sort by stage so the R32 keeps the
+  // confirmed-draw order (its overridden fixtures may not all have dates yet).
   const STAGE_RANK = { r32: 0, r16: 1, qf: 2, sf: 3, final: 4 };
-  knockout.sort((a, b) =>
-    (STAGE_RANK[a.stageKey] - STAGE_RANK[b.stageKey]) || (new Date(a.date) - new Date(b.date)));
+  const r32 = knockout.filter((k) => k.stageKey === "r32");
+  const rest = knockout.filter((k) => k.stageKey !== "r32")
+    .sort((a, b) => new Date(a.date || 0) - new Date(b.date || 0));
+  knockout.length = 0;
+  knockout.push(...r32, ...rest);
+  knockout.sort((a, b) => STAGE_RANK[a.stageKey] - STAGE_RANK[b.stageKey]);
   return writeOutput(players, recentMatches,
     { live: true, unmatched: unmatchedList, upcoming: nextUp, knockout, groups });
 }
