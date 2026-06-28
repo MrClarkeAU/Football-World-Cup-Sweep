@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-28T01:52:59.035Z",
+  "lastUpdated": "2026-06-28T04:01:56.412Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -120,8 +120,8 @@
         }
       ],
       "rank": 1,
-      "prevRank": 2,
-      "prevPoints": 88
+      "prevRank": 1,
+      "prevPoints": 73
     },
     {
       "name": "Clarkey",
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 1,
-      "prevPoints": 92
+      "prevRank": 2,
+      "prevPoints": 72
     },
     {
       "name": "Andre",
@@ -334,8 +334,8 @@
         }
       ],
       "rank": 3,
-      "prevRank": 5,
-      "prevPoints": 74
+      "prevRank": 3,
+      "prevPoints": 69
     },
     {
       "name": "Gonz",
@@ -351,9 +351,9 @@
           "losses": 1,
           "goalsFor": 3,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 5,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Portugal",
@@ -442,7 +442,7 @@
       ],
       "rank": 4,
       "prevRank": 4,
-      "prevPoints": 77
+      "prevPoints": 68
     },
     {
       "name": "Ray",
@@ -506,9 +506,9 @@
           "losses": 0,
           "goalsFor": 3,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 6,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Uzbekistan",
@@ -530,9 +530,9 @@
           "losses": 2,
           "goalsFor": 2,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 2,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Bosnia",
@@ -548,8 +548,8 @@
         }
       ],
       "rank": 5,
-      "prevRank": 3,
-      "prevPoints": 78
+      "prevRank": 5,
+      "prevPoints": 64
     },
     {
       "name": "Ben",
@@ -565,9 +565,9 @@
           "losses": 2,
           "goalsFor": 2,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 5,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Argentina",
@@ -613,9 +613,9 @@
           "losses": 2,
           "goalsFor": 1,
           "stage": "group",
-          "eliminated": false,
+          "eliminated": true,
           "points": 4,
-          "stageLabel": "Group Stage"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Curacao",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 48
+      "prevPoints": 50
     }
   ],
   "recentMatches": [
@@ -811,14 +811,14 @@
       "away": "Argentina",
       "stage": "Group Stage",
       "date": "2026-06-28T02:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Algeria",
       "away": "Austria",
       "stage": "Group Stage",
       "date": "2026-06-28T02:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "TBC",
@@ -1637,7 +1637,7 @@
           "ga": 3,
           "gd": 0,
           "points": 3,
-          "qual": "third"
+          "qual": null
         },
         {
           "team": "New Zealand",
@@ -1777,57 +1777,57 @@
         {
           "team": "Argentina",
           "position": 1,
-          "played": 2,
-          "won": 2,
+          "played": 3,
+          "won": 3,
           "draw": 0,
           "lost": 0,
-          "gf": 5,
-          "ga": 0,
-          "gd": 5,
-          "points": 6,
+          "gf": 8,
+          "ga": 1,
+          "gd": 7,
+          "points": 9,
           "qual": "auto"
         },
         {
           "team": "Austria",
           "position": 2,
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "gf": 3,
-          "ga": 3,
+          "gf": 6,
+          "ga": 6,
           "gd": 0,
-          "points": 3,
+          "points": 4,
           "qual": "auto"
         },
         {
           "team": "Algeria",
           "position": 3,
-          "played": 2,
+          "played": 3,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "gf": 2,
-          "ga": 4,
+          "gf": 5,
+          "ga": 7,
           "gd": -2,
-          "points": 3,
-          "qual": null
+          "points": 4,
+          "qual": "third"
         },
         {
           "team": "Jordan",
           "position": 4,
-          "played": 2,
+          "played": 3,
           "won": 0,
           "draw": 0,
-          "lost": 2,
-          "gf": 2,
-          "ga": 5,
-          "gd": -3,
+          "lost": 3,
+          "gf": 3,
+          "ga": 8,
+          "gd": -5,
           "points": 0,
           "qual": null
         }
       ],
-      "complete": false
+      "complete": true
     },
     {
       "name": "Group K",
