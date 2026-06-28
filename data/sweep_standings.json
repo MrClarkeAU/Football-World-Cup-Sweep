@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-28T04:12:52.685Z",
+  "lastUpdated": "2026-06-28T05:33:20.686Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -120,8 +120,8 @@
         }
       ],
       "rank": 1,
-      "prevRank": 2,
-      "prevPoints": 72
+      "prevRank": 1,
+      "prevPoints": 96
     },
     {
       "name": "Mark",
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 1,
-      "prevPoints": 73
+      "prevRank": 2,
+      "prevPoints": 88
     },
     {
       "name": "Gonz",
@@ -334,8 +334,8 @@
         }
       ],
       "rank": 3,
-      "prevRank": 4,
-      "prevPoints": 68
+      "prevRank": 3,
+      "prevPoints": 82
     },
     {
       "name": "Ray",
@@ -441,8 +441,8 @@
         }
       ],
       "rank": 4,
-      "prevRank": 5,
-      "prevPoints": 64
+      "prevRank": 4,
+      "prevPoints": 80
     },
     {
       "name": "Andre",
@@ -548,8 +548,8 @@
         }
       ],
       "rank": 5,
-      "prevRank": 3,
-      "prevPoints": 69
+      "prevRank": 5,
+      "prevPoints": 74
     },
     {
       "name": "Ben",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 50
+      "prevPoints": 61
     }
   ],
   "recentMatches": [
@@ -807,13 +807,6 @@
   ],
   "upcomingMatches": [
     {
-      "home": "South Africa",
-      "away": "Canada",
-      "stage": "Round of 32",
-      "date": "2026-06-28T19:00:00Z",
-      "live": false
-    },
-    {
       "home": "Brazil",
       "away": "Japan",
       "stage": "Round of 32",
@@ -903,6 +896,13 @@
       "stage": "Round of 32",
       "date": "2026-07-03T18:00:00Z",
       "live": false
+    },
+    {
+      "home": "Argentina",
+      "away": "TBC",
+      "stage": "Round of 32",
+      "date": "2026-07-03T22:00:00Z",
+      "live": false
     }
   ],
   "knockout": [
@@ -913,7 +913,7 @@
       "away": "Canada",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "2026-06-29 19:00:00Z",
       "winner": null,
       "date": "2026-06-28T19:00:00Z"
     },
