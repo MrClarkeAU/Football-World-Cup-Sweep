@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-28T19:23:41.023Z",
+  "lastUpdated": "2026-06-28T21:03:49.756Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -66,9 +66,9 @@
           "losses": 1,
           "goalsFor": 2,
           "stage": "r32",
-          "eliminated": false,
+          "eliminated": true,
           "points": 11,
-          "stageLabel": "Round of 32"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Belgium",
@@ -122,6 +122,113 @@
       "rank": 1,
       "prevRank": 1,
       "prevPoints": 111
+    },
+    {
+      "name": "Gonz",
+      "tagline": "Portugal + a prayer.",
+      "totalPoints": 103,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Uruguay",
+          "played": 3,
+          "wins": 0,
+          "draws": 2,
+          "losses": 1,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": true,
+          "points": 5,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Portugal",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goalsFor": 6,
+          "stage": "r32",
+          "eliminated": false,
+          "points": 16,
+          "stageLabel": "Round of 32"
+        },
+        {
+          "name": "Switzerland",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 7,
+          "stage": "r32",
+          "eliminated": false,
+          "points": 19,
+          "stageLabel": "Round of 32"
+        },
+        {
+          "name": "Canada",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 9,
+          "stage": "r32",
+          "eliminated": false,
+          "points": 18,
+          "stageLabel": "Round of 32"
+        },
+        {
+          "name": "Norway",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 8,
+          "stage": "r32",
+          "eliminated": false,
+          "points": 19,
+          "stageLabel": "Round of 32"
+        },
+        {
+          "name": "Algeria",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 5,
+          "stage": "r32",
+          "eliminated": false,
+          "points": 14,
+          "stageLabel": "Round of 32"
+        },
+        {
+          "name": "Ecuador",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 2,
+          "stage": "r32",
+          "eliminated": false,
+          "points": 11,
+          "stageLabel": "Round of 32"
+        },
+        {
+          "name": "Iraq",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": true,
+          "points": 1,
+          "stageLabel": "Eliminated"
+        }
+      ],
+      "rank": 2,
+      "prevRank": 3,
+      "prevPoints": 102
     },
     {
       "name": "Mark",
@@ -226,116 +333,9 @@
           "stageLabel": "Round of 32"
         }
       ],
-      "rank": 2,
+      "rank": 3,
       "prevRank": 2,
       "prevPoints": 103
-    },
-    {
-      "name": "Gonz",
-      "tagline": "Portugal + a prayer.",
-      "totalPoints": 102,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Uruguay",
-          "played": 3,
-          "wins": 0,
-          "draws": 2,
-          "losses": 1,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": true,
-          "points": 5,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Portugal",
-          "played": 3,
-          "wins": 1,
-          "draws": 2,
-          "losses": 0,
-          "goalsFor": 6,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 16,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Switzerland",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 7,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 19,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Canada",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 8,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 17,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Norway",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 8,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 19,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Algeria",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 14,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Ecuador",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 2,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 11,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Iraq",
-          "played": 3,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": true,
-          "points": 1,
-          "stageLabel": "Eliminated"
-        }
-      ],
-      "rank": 3,
-      "prevRank": 3,
-      "prevPoints": 102
     },
     {
       "name": "Ray",
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "South Africa",
+      "away": "Canada",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "stage": "Round of 32",
+      "date": "2026-06-28T19:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Jordan",
       "away": "Argentina",
       "homeGoals": 1,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-25T23:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Japan",
-      "away": "Sweden",
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "stage": "Group Stage",
-      "date": "2026-06-25T23:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "South Africa",
-      "away": "Canada",
-      "stage": "Round of 32",
-      "date": "2026-06-28T19:00:00Z",
-      "live": true
-    },
     {
       "home": "Brazil",
       "away": "Japan",
@@ -903,6 +896,13 @@
       "stage": "Round of 32",
       "date": "2026-07-03T18:00:00Z",
       "live": false
+    },
+    {
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "stage": "Round of 32",
+      "date": "2026-07-03T22:00:00Z",
+      "live": false
     }
   ],
   "knockout": [
@@ -911,10 +911,10 @@
       "stage": "Round of 32",
       "home": "South Africa",
       "away": "Canada",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FINISHED",
+      "winner": "away",
       "date": "2026-06-28T19:00:00Z",
       "day": "Sun 28 Jun"
     },
