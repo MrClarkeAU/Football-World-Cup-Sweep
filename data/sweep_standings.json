@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-29T11:04:13.764Z",
+  "lastUpdated": "2026-06-29T15:50:58.261Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -228,7 +228,7 @@
       ],
       "rank": 2,
       "prevRank": 2,
-      "prevPoints": 103
+      "prevPoints": 106
     },
     {
       "name": "Mark",
