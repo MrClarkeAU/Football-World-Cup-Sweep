@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-29T04:08:41.834Z",
+  "lastUpdated": "2026-06-29T11:04:13.764Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -126,7 +126,7 @@
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 103,
+      "totalPoints": 106,
       "allEliminated": false,
       "teams": [
         {
@@ -172,10 +172,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 9,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 18,
-          "stageLabel": "Round of 32"
+          "points": 21,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Norway",
@@ -1101,7 +1101,7 @@
     {
       "stageKey": "r16",
       "stage": "Round of 16",
-      "home": "TBC",
+      "home": "Canada",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
