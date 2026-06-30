@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-30T17:57:15.107Z",
+  "lastUpdated": "2026-06-30T20:08:25.881Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -126,7 +126,7 @@
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 106,
+      "totalPoints": 108,
       "allEliminated": false,
       "teams": [
         {
@@ -183,10 +183,10 @@
           "wins": 2,
           "draws": 0,
           "losses": 1,
-          "goalsFor": 8,
+          "goalsFor": 10,
           "stage": "r32",
           "eliminated": false,
-          "points": 19,
+          "points": 21,
           "stageLabel": "Round of 32"
         },
         {
@@ -447,7 +447,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 97,
+      "totalPoints": 98,
       "allEliminated": false,
       "teams": [
         {
@@ -456,11 +456,11 @@
           "wins": 2,
           "draws": 0,
           "losses": 1,
-          "goalsFor": 4,
+          "goalsFor": 5,
           "stage": "r32",
-          "eliminated": false,
-          "points": 15,
-          "stageLabel": "Round of 32"
+          "eliminated": true,
+          "points": 16,
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Spain",
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Cote d'Ivoire",
+      "away": "Norway",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "stage": "Round of 32",
+      "date": "2026-06-30T17:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Netherlands",
       "away": "Morocco",
       "homeGoals": 3,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-26T19:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Senegal",
-      "away": "Iraq",
-      "homeGoals": 5,
-      "awayGoals": 0,
-      "stage": "Group Stage",
-      "date": "2026-06-26T19:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Cote d'Ivoire",
-      "away": "Norway",
-      "stage": "Round of 32",
-      "date": "2026-06-30T17:00:00Z",
-      "live": true
-    },
     {
       "home": "France",
       "away": "Sweden",
@@ -903,6 +896,13 @@
       "stage": "Round of 16",
       "date": "2026-07-04T21:00:00Z",
       "live": false
+    },
+    {
+      "home": "Brazil",
+      "away": "TBC",
+      "stage": "Round of 16",
+      "date": "2026-07-05T20:00:00Z",
+      "live": false
     }
   ],
   "knockout": [
@@ -971,10 +971,10 @@
       "stage": "Round of 32",
       "home": "Cote d'Ivoire",
       "away": "Norway",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "PAUSED",
-      "winner": null,
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "status": "FINISHED",
+      "winner": "away",
       "date": "2026-06-30T17:00:00Z",
       "day": "Tue 30 Jun"
     },
