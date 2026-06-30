@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-30T03:51:56.891Z",
+  "lastUpdated": "2026-06-30T07:55:33.486Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,7 +19,7 @@
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 118,
+      "totalPoints": 121,
       "allEliminated": false,
       "teams": [
         {
@@ -41,10 +41,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 9,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 21,
-          "stageLabel": "Round of 32"
+          "points": 24,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Austria",
@@ -340,7 +340,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 98,
+      "totalPoints": 100,
       "allEliminated": false,
       "teams": [
         {
@@ -398,10 +398,10 @@
           "draws": 1,
           "losses": 1,
           "goalsFor": 7,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 16,
-          "stageLabel": "Round of 32"
+          "points": 19,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Netherlands",
@@ -409,11 +409,11 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 14,
+          "goalsFor": 13,
           "stage": "r32",
-          "eliminated": false,
-          "points": 26,
-          "stageLabel": "Round of 32"
+          "eliminated": true,
+          "points": 25,
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Tunisia",
@@ -442,12 +442,12 @@
       ],
       "rank": 4,
       "prevRank": 4,
-      "prevPoints": 94
+      "prevPoints": 98
     },
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 92,
+      "totalPoints": 97,
       "allEliminated": false,
       "teams": [
         {
@@ -480,11 +480,11 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 8,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 20,
-          "stageLabel": "Eliminated"
+          "goalsFor": 10,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 25,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Egypt",
@@ -549,7 +549,7 @@
       ],
       "rank": 5,
       "prevRank": 5,
-      "prevPoints": 90
+      "prevPoints": 92
     },
     {
       "name": "Ben",
@@ -663,8 +663,8 @@
     {
       "home": "Netherlands",
       "away": "Morocco",
-      "homeGoals": 4,
-      "awayGoals": 2,
+      "homeGoals": 3,
+      "awayGoals": 4,
       "stage": "Round of 32",
       "date": "2026-06-30T01:00:00Z",
       "scorers": []
@@ -892,13 +892,13 @@
     },
     {
       "home": "Canada",
-      "away": "TBC",
+      "away": "Morocco",
       "stage": "Round of 16",
       "date": "2026-07-04T17:00:00Z",
       "live": false
     },
     {
-      "home": "TBC",
+      "home": "Paraguay",
       "away": "TBC",
       "stage": "Round of 16",
       "date": "2026-07-04T21:00:00Z",
@@ -926,7 +926,7 @@
       "homeGoals": 4,
       "awayGoals": 5,
       "status": "FINISHED",
-      "winner": null,
+      "winner": "away",
       "date": "2026-06-29T20:30:00Z",
       "day": "Mon 29 Jun"
     },
@@ -935,10 +935,10 @@
       "stage": "Round of 32",
       "home": "Netherlands",
       "away": "Morocco",
-      "homeGoals": 4,
-      "awayGoals": 2,
+      "homeGoals": 3,
+      "awayGoals": 4,
       "status": "FINISHED",
-      "winner": null,
+      "winner": "away",
       "date": "2026-06-30T01:00:00Z",
       "day": "Mon 29 Jun"
     },
@@ -1102,7 +1102,7 @@
       "stageKey": "r16",
       "stage": "Round of 16",
       "home": "Canada",
-      "away": "TBC",
+      "away": "Morocco",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
@@ -1112,7 +1112,7 @@
     {
       "stageKey": "r16",
       "stage": "Round of 16",
-      "home": "TBC",
+      "home": "Paraguay",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
@@ -1123,7 +1123,7 @@
     {
       "stageKey": "r16",
       "stage": "Round of 16",
-      "home": "TBC",
+      "home": "Brazil",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
