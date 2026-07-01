@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-01T04:05:33.387Z",
+  "lastUpdated": "2026-07-01T09:51:47.598Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -126,7 +126,7 @@
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 108,
+      "totalPoints": 111,
       "allEliminated": false,
       "teams": [
         {
@@ -184,10 +184,10 @@
           "draws": 0,
           "losses": 1,
           "goalsFor": 10,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 21,
-          "stageLabel": "Round of 32"
+          "points": 24,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Algeria",
@@ -209,9 +209,9 @@
           "losses": 1,
           "goalsFor": 2,
           "stage": "r32",
-          "eliminated": false,
+          "eliminated": true,
           "points": 11,
-          "stageLabel": "Round of 32"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Iraq",
@@ -233,7 +233,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 103,
+      "totalPoints": 106,
       "allEliminated": false,
       "teams": [
         {
@@ -255,10 +255,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 13,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 27,
-          "stageLabel": "Round of 32"
+          "points": 30,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Turkey",
@@ -340,7 +340,7 @@
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 103,
+      "totalPoints": 105,
       "allEliminated": false,
       "teams": [
         {
@@ -385,10 +385,10 @@
           "wins": 3,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 6,
+          "goalsFor": 8,
           "stage": "r32",
           "eliminated": false,
-          "points": 20,
+          "points": 22,
           "stageLabel": "Round of 32"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Mexico",
+      "away": "Ecuador",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "stage": "Round of 32",
+      "date": "2026-07-01T01:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "France",
       "away": "Sweden",
       "homeGoals": 3,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-27T00:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Cape Verde",
-      "away": "Saudi Arabia",
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "stage": "Group Stage",
-      "date": "2026-06-27T00:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Mexico",
-      "away": "Ecuador",
-      "stage": "Round of 32",
-      "date": "2026-07-01T01:00:00Z",
-      "live": true
-    },
     {
       "home": "England",
       "away": "DR Congo",
@@ -885,14 +878,14 @@
     },
     {
       "home": "Paraguay",
-      "away": "TBC",
+      "away": "France",
       "stage": "Round of 16",
       "date": "2026-07-04T21:00:00Z",
       "live": false
     },
     {
       "home": "Brazil",
-      "away": "TBC",
+      "away": "Norway",
       "stage": "Round of 16",
       "date": "2026-07-05T20:00:00Z",
       "live": false
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Round of 16",
       "date": "2026-07-06T00:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Round of 16",
+      "date": "2026-07-06T19:00:00Z",
       "live": false
     }
   ],
@@ -983,10 +983,10 @@
       "stage": "Round of 32",
       "home": "Mexico",
       "away": "Ecuador",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-01T01:00:00Z",
       "day": "Tue 30 Jun"
     },
@@ -1113,7 +1113,7 @@
       "stageKey": "r16",
       "stage": "Round of 16",
       "home": "Paraguay",
-      "away": "TBC",
+      "away": "France",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
@@ -1124,7 +1124,7 @@
       "stageKey": "r16",
       "stage": "Round of 16",
       "home": "Brazil",
-      "away": "TBC",
+      "away": "Norway",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
@@ -1262,704 +1262,6 @@
       "status": "TIMED",
       "winner": null,
       "date": "2026-07-19T19:00:00Z"
-    }
-  ],
-  "groups": [
-    {
-      "name": "Group A",
-      "table": [
-        {
-          "team": "Mexico",
-          "position": 1,
-          "played": 3,
-          "won": 3,
-          "draw": 0,
-          "lost": 0,
-          "gf": 6,
-          "ga": 0,
-          "gd": 6,
-          "points": 9,
-          "qual": "auto"
-        },
-        {
-          "team": "South Africa",
-          "position": 2,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 2,
-          "ga": 3,
-          "gd": -1,
-          "points": 4,
-          "qual": "auto"
-        },
-        {
-          "team": "South Korea",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 0,
-          "lost": 2,
-          "gf": 2,
-          "ga": 3,
-          "gd": -1,
-          "points": 3,
-          "qual": null
-        },
-        {
-          "team": "Czech Republic",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 1,
-          "lost": 2,
-          "gf": 2,
-          "ga": 6,
-          "gd": -4,
-          "points": 1,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group B",
-      "table": [
-        {
-          "team": "Switzerland",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "gf": 7,
-          "ga": 3,
-          "gd": 4,
-          "points": 7,
-          "qual": "auto"
-        },
-        {
-          "team": "Canada",
-          "position": 2,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 8,
-          "ga": 3,
-          "gd": 5,
-          "points": 4,
-          "qual": "auto"
-        },
-        {
-          "team": "Bosnia",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 5,
-          "ga": 6,
-          "gd": -1,
-          "points": 4,
-          "qual": "third"
-        },
-        {
-          "team": "Qatar",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 1,
-          "lost": 2,
-          "gf": 2,
-          "ga": 10,
-          "gd": -8,
-          "points": 1,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group C",
-      "table": [
-        {
-          "team": "Brazil",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "gf": 7,
-          "ga": 1,
-          "gd": 6,
-          "points": 7,
-          "qual": "auto"
-        },
-        {
-          "team": "Morocco",
-          "position": 2,
-          "played": 3,
-          "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "gf": 6,
-          "ga": 3,
-          "gd": 3,
-          "points": 7,
-          "qual": "auto"
-        },
-        {
-          "team": "Scotland",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 0,
-          "lost": 2,
-          "gf": 1,
-          "ga": 4,
-          "gd": -3,
-          "points": 3,
-          "qual": null
-        },
-        {
-          "team": "Haiti",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 0,
-          "lost": 3,
-          "gf": 2,
-          "ga": 8,
-          "gd": -6,
-          "points": 0,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group D",
-      "table": [
-        {
-          "team": "USA",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 0,
-          "lost": 1,
-          "gf": 8,
-          "ga": 4,
-          "gd": 4,
-          "points": 6,
-          "qual": "auto"
-        },
-        {
-          "team": "Australia",
-          "position": 2,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 4,
-          "qual": "auto"
-        },
-        {
-          "team": "Paraguay",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 2,
-          "ga": 4,
-          "gd": -2,
-          "points": 4,
-          "qual": "third"
-        },
-        {
-          "team": "Turkey",
-          "position": 4,
-          "played": 3,
-          "won": 1,
-          "draw": 0,
-          "lost": 2,
-          "gf": 3,
-          "ga": 5,
-          "gd": -2,
-          "points": 3,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group E",
-      "table": [
-        {
-          "team": "Germany",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 0,
-          "lost": 1,
-          "gf": 10,
-          "ga": 4,
-          "gd": 6,
-          "points": 6,
-          "qual": "auto"
-        },
-        {
-          "team": "Cote d'Ivoire",
-          "position": 2,
-          "played": 3,
-          "won": 2,
-          "draw": 0,
-          "lost": 1,
-          "gf": 4,
-          "ga": 2,
-          "gd": 2,
-          "points": 6,
-          "qual": "auto"
-        },
-        {
-          "team": "Ecuador",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 4,
-          "qual": "third"
-        },
-        {
-          "team": "Curacao",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 1,
-          "lost": 2,
-          "gf": 1,
-          "ga": 9,
-          "gd": -8,
-          "points": 1,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group F",
-      "table": [
-        {
-          "team": "Netherlands",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "gf": 10,
-          "ga": 4,
-          "gd": 6,
-          "points": 7,
-          "qual": "auto"
-        },
-        {
-          "team": "Japan",
-          "position": 2,
-          "played": 3,
-          "won": 1,
-          "draw": 2,
-          "lost": 0,
-          "gf": 7,
-          "ga": 3,
-          "gd": 4,
-          "points": 5,
-          "qual": "auto"
-        },
-        {
-          "team": "Sweden",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 7,
-          "ga": 7,
-          "gd": 0,
-          "points": 4,
-          "qual": "third"
-        },
-        {
-          "team": "Tunisia",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 0,
-          "lost": 3,
-          "gf": 2,
-          "ga": 12,
-          "gd": -10,
-          "points": 0,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group G",
-      "table": [
-        {
-          "team": "Belgium",
-          "position": 1,
-          "played": 3,
-          "won": 1,
-          "draw": 2,
-          "lost": 0,
-          "gf": 6,
-          "ga": 2,
-          "gd": 4,
-          "points": 5,
-          "qual": "auto"
-        },
-        {
-          "team": "Egypt",
-          "position": 2,
-          "played": 3,
-          "won": 1,
-          "draw": 2,
-          "lost": 0,
-          "gf": 5,
-          "ga": 3,
-          "gd": 2,
-          "points": 5,
-          "qual": "auto"
-        },
-        {
-          "team": "Iran",
-          "position": 3,
-          "played": 3,
-          "won": 0,
-          "draw": 3,
-          "lost": 0,
-          "gf": 3,
-          "ga": 3,
-          "gd": 0,
-          "points": 3,
-          "qual": null
-        },
-        {
-          "team": "New Zealand",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 1,
-          "lost": 2,
-          "gf": 4,
-          "ga": 10,
-          "gd": -6,
-          "points": 1,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group H",
-      "table": [
-        {
-          "team": "Spain",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "gf": 5,
-          "ga": 0,
-          "gd": 5,
-          "points": 7,
-          "qual": "auto"
-        },
-        {
-          "team": "Cape Verde",
-          "position": 2,
-          "played": 3,
-          "won": 0,
-          "draw": 3,
-          "lost": 0,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 3,
-          "qual": "auto"
-        },
-        {
-          "team": "Uruguay",
-          "position": 3,
-          "played": 3,
-          "won": 0,
-          "draw": 2,
-          "lost": 1,
-          "gf": 3,
-          "ga": 4,
-          "gd": -1,
-          "points": 2,
-          "qual": null
-        },
-        {
-          "team": "Saudi Arabia",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 2,
-          "lost": 1,
-          "gf": 1,
-          "ga": 5,
-          "gd": -4,
-          "points": 2,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group I",
-      "table": [
-        {
-          "team": "France",
-          "position": 1,
-          "played": 3,
-          "won": 3,
-          "draw": 0,
-          "lost": 0,
-          "gf": 10,
-          "ga": 2,
-          "gd": 8,
-          "points": 9,
-          "qual": "auto"
-        },
-        {
-          "team": "Norway",
-          "position": 2,
-          "played": 3,
-          "won": 2,
-          "draw": 0,
-          "lost": 1,
-          "gf": 8,
-          "ga": 7,
-          "gd": 1,
-          "points": 6,
-          "qual": "auto"
-        },
-        {
-          "team": "Senegal",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 0,
-          "lost": 2,
-          "gf": 8,
-          "ga": 6,
-          "gd": 2,
-          "points": 3,
-          "qual": "third"
-        },
-        {
-          "team": "Iraq",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 0,
-          "lost": 3,
-          "gf": 1,
-          "ga": 12,
-          "gd": -11,
-          "points": 0,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group J",
-      "table": [
-        {
-          "team": "Argentina",
-          "position": 1,
-          "played": 3,
-          "won": 3,
-          "draw": 0,
-          "lost": 0,
-          "gf": 8,
-          "ga": 1,
-          "gd": 7,
-          "points": 9,
-          "qual": "auto"
-        },
-        {
-          "team": "Austria",
-          "position": 2,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 6,
-          "ga": 6,
-          "gd": 0,
-          "points": 4,
-          "qual": "auto"
-        },
-        {
-          "team": "Algeria",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 5,
-          "ga": 7,
-          "gd": -2,
-          "points": 4,
-          "qual": "third"
-        },
-        {
-          "team": "Jordan",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 0,
-          "lost": 3,
-          "gf": 3,
-          "ga": 8,
-          "gd": -5,
-          "points": 0,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group K",
-      "table": [
-        {
-          "team": "Colombia",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "gf": 4,
-          "ga": 1,
-          "gd": 3,
-          "points": 7,
-          "qual": "auto"
-        },
-        {
-          "team": "Portugal",
-          "position": 2,
-          "played": 3,
-          "won": 1,
-          "draw": 2,
-          "lost": 0,
-          "gf": 6,
-          "ga": 1,
-          "gd": 5,
-          "points": 5,
-          "qual": "auto"
-        },
-        {
-          "team": "DR Congo",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 4,
-          "ga": 3,
-          "gd": 1,
-          "points": 4,
-          "qual": "third"
-        },
-        {
-          "team": "Uzbekistan",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 0,
-          "lost": 3,
-          "gf": 2,
-          "ga": 11,
-          "gd": -9,
-          "points": 0,
-          "qual": null
-        }
-      ],
-      "complete": true
-    },
-    {
-      "name": "Group L",
-      "table": [
-        {
-          "team": "England",
-          "position": 1,
-          "played": 3,
-          "won": 2,
-          "draw": 1,
-          "lost": 0,
-          "gf": 6,
-          "ga": 2,
-          "gd": 4,
-          "points": 7,
-          "qual": "auto"
-        },
-        {
-          "team": "Croatia",
-          "position": 2,
-          "played": 3,
-          "won": 2,
-          "draw": 0,
-          "lost": 1,
-          "gf": 5,
-          "ga": 5,
-          "gd": 0,
-          "points": 6,
-          "qual": "auto"
-        },
-        {
-          "team": "Ghana",
-          "position": 3,
-          "played": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "gf": 2,
-          "ga": 2,
-          "gd": 0,
-          "points": 4,
-          "qual": "third"
-        },
-        {
-          "team": "Panama",
-          "position": 4,
-          "played": 3,
-          "won": 0,
-          "draw": 0,
-          "lost": 3,
-          "gf": 0,
-          "ga": 4,
-          "gd": -4,
-          "points": 0,
-          "qual": null
-        }
-      ],
-      "complete": true
     }
   ]
 }
