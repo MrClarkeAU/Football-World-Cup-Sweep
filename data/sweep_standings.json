@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-01T19:59:00.367Z",
+  "lastUpdated": "2026-07-01T21:43:26.802Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -334,8 +334,8 @@
         }
       ],
       "rank": 3,
-      "prevRank": 4,
-      "prevPoints": 105
+      "prevRank": 3,
+      "prevPoints": 107
     },
     {
       "name": "Andre",
@@ -441,7 +441,7 @@
         }
       ],
       "rank": 4,
-      "prevRank": 3,
+      "prevRank": 4,
       "prevPoints": 106
     },
     {
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 76
+      "prevPoints": 77
     }
   ],
   "recentMatches": [
@@ -811,7 +811,7 @@
       "away": "Senegal",
       "stage": "Round of 32",
       "date": "2026-07-01T20:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "USA",
@@ -1021,7 +1021,7 @@
       "away": "Senegal",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-01T20:00:00Z",
       "day": "Wed 1 Jul"
