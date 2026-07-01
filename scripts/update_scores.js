@@ -365,7 +365,7 @@ async function main() {
   knockout.push(...r32, ...rest);
   knockout.sort((a, b) => STAGE_RANK[a.stageKey] - STAGE_RANK[b.stageKey]);
   return writeOutput(players, recentMatches,
-    { live: true, unmatched: unmatchedList, upcoming: nextUp, knockout, groups });
+    { live: true, unmatched: unmatchedList, upcoming: nextUp, knockout });
 }
 
 // Knockout loser is out; champion never is.
@@ -421,7 +421,7 @@ function buildRecentFeed(finished, out) {
   }
 }
 
-function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [], knockout = [], groups = [] }) {
+function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming = [], knockout = [] }) {
   // Remember the PREVIOUS run's standings so the page can show movers (↑/↓).
   const prev = {};
   try {
@@ -468,7 +468,6 @@ function writeOutput(playersObj, recentMatches, { live, unmatched = [], upcoming
     recentMatches,
     upcomingMatches: upcoming,
     knockout,
-    groups,
   };
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
