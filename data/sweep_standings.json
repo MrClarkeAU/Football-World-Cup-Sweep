@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-01T12:34:59.338Z",
+  "lastUpdated": "2026-07-01T16:27:59.521Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -807,13 +807,6 @@
   ],
   "upcomingMatches": [
     {
-      "home": "England",
-      "away": "DR Congo",
-      "stage": "Round of 32",
-      "date": "2026-07-01T16:00:00Z",
-      "live": false
-    },
-    {
       "home": "Belgium",
       "away": "Senegal",
       "stage": "Round of 32",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Round of 16",
       "date": "2026-07-06T19:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Round of 16",
+      "date": "2026-07-07T00:00:00Z",
       "live": false
     }
   ],
@@ -997,7 +997,7 @@
       "away": "DR Congo",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "LIVE",
       "winner": null,
       "date": "2026-07-01T16:00:00Z",
       "day": "Wed 1 Jul"
