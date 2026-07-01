@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-06-30T23:15:32.195Z",
+  "lastUpdated": "2026-07-01T04:05:33.387Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -334,8 +334,8 @@
         }
       ],
       "rank": 3,
-      "prevRank": 4,
-      "prevPoints": 100
+      "prevRank": 3,
+      "prevPoints": 103
     },
     {
       "name": "Mark",
@@ -441,7 +441,7 @@
         }
       ],
       "rank": 4,
-      "prevRank": 3,
+      "prevRank": 4,
       "prevPoints": 103
     },
     {
@@ -811,7 +811,7 @@
       "away": "Ecuador",
       "stage": "Round of 32",
       "date": "2026-07-01T01:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "England",
@@ -985,7 +985,7 @@
       "away": "Ecuador",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-01T01:00:00Z",
       "day": "Tue 30 Jun"
