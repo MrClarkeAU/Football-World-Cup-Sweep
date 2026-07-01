@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-01T21:43:26.802Z",
+  "lastUpdated": "2026-07-01T23:18:05.240Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,7 +19,7 @@
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 121,
+      "totalPoints": 124,
       "allEliminated": false,
       "teams": [
         {
@@ -76,10 +76,10 @@
           "wins": 1,
           "draws": 2,
           "losses": 0,
-          "goalsFor": 6,
+          "goalsFor": 9,
           "stage": "r32",
           "eliminated": false,
-          "points": 16,
+          "points": 19,
           "stageLabel": "Round of 32"
         },
         {
@@ -233,7 +233,7 @@
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 107,
+      "totalPoints": 109,
       "allEliminated": false,
       "teams": [
         {
@@ -326,11 +326,11 @@
           "wins": 1,
           "draws": 0,
           "losses": 2,
-          "goalsFor": 8,
+          "goalsFor": 10,
           "stage": "r32",
-          "eliminated": false,
-          "points": 16,
-          "stageLabel": "Round of 32"
+          "eliminated": true,
+          "points": 18,
+          "stageLabel": "Eliminated"
         }
       ],
       "rank": 3,
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Belgium",
+      "away": "Senegal",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "stage": "Round of 32",
+      "date": "2026-07-01T20:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "England",
       "away": "DR Congo",
       "homeGoals": 2,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-27T03:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Egypt",
-      "away": "Iran",
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "stage": "Group Stage",
-      "date": "2026-06-27T03:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Belgium",
-      "away": "Senegal",
-      "stage": "Round of 32",
-      "date": "2026-07-01T20:00:00Z",
-      "live": true
-    },
     {
       "home": "USA",
       "away": "Bosnia",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Round of 16",
       "date": "2026-07-07T00:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Round of 16",
+      "date": "2026-07-07T16:00:00Z",
       "live": false
     }
   ],
@@ -1019,10 +1019,10 @@
       "stage": "Round of 32",
       "home": "Belgium",
       "away": "Senegal",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-01T20:00:00Z",
       "day": "Wed 1 Jul"
     },
