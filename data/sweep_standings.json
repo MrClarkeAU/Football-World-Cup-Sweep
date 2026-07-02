@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-02T21:09:27.080Z",
+  "lastUpdated": "2026-07-02T23:09:46.371Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -549,7 +549,7 @@
       ],
       "rank": 5,
       "prevRank": 5,
-      "prevPoints": 98
+      "prevPoints": 101
     },
     {
       "name": "Ben",
@@ -811,7 +811,7 @@
       "away": "Croatia",
       "stage": "Round of 32",
       "date": "2026-07-02T23:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Switzerland",
@@ -1033,7 +1033,7 @@
       "away": "Croatia",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-02T23:00:00Z",
       "day": "Thu 2 Jul"
