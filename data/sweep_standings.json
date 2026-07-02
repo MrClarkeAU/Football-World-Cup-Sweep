@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-02T03:27:21.846Z",
+  "lastUpdated": "2026-07-02T03:46:56.703Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 3,
-      "prevPoints": 109
+      "prevRank": 2,
+      "prevPoints": 111
     },
     {
       "name": "Gonz",
@@ -334,7 +334,7 @@
         }
       ],
       "rank": 3,
-      "prevRank": 2,
+      "prevRank": 3,
       "prevPoints": 111
     },
     {
