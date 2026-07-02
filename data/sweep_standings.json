@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-02T19:27:07.870Z",
+  "lastUpdated": "2026-07-02T21:09:27.080Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -54,9 +54,9 @@
           "losses": 1,
           "goalsFor": 6,
           "stage": "r32",
-          "eliminated": false,
+          "eliminated": true,
           "points": 15,
-          "stageLabel": "Round of 32"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "South Africa",
@@ -447,7 +447,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 98,
+      "totalPoints": 101,
       "allEliminated": false,
       "teams": [
         {
@@ -468,10 +468,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 5,
+          "goalsFor": 8,
           "stage": "r32",
           "eliminated": false,
-          "points": 17,
+          "points": 20,
           "stageLabel": "Round of 32"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Spain",
+      "away": "Austria",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "stage": "Round of 32",
+      "date": "2026-07-02T19:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "USA",
       "away": "Bosnia",
       "homeGoals": 2,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-27T21:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Croatia",
-      "away": "Ghana",
-      "homeGoals": 2,
-      "awayGoals": 1,
-      "stage": "Group Stage",
-      "date": "2026-06-27T21:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Spain",
-      "away": "Austria",
-      "stage": "Round of 32",
-      "date": "2026-07-02T19:00:00Z",
-      "live": false
-    },
     {
       "home": "Portugal",
       "away": "Croatia",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Round of 16",
       "date": "2026-07-07T20:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Quarter-Final",
+      "date": "2026-07-09T20:00:00Z",
       "live": false
     }
   ],
@@ -1043,10 +1043,10 @@
       "stage": "Round of 32",
       "home": "Spain",
       "away": "Austria",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "TIMED",
-      "winner": null,
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-02T19:00:00Z",
       "day": "Thu 2 Jul"
     },
