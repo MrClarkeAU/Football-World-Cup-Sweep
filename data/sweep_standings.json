@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-03T21:09:23.967Z",
+  "lastUpdated": "2026-07-03T23:06:16.056Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -228,7 +228,7 @@
       ],
       "rank": 2,
       "prevRank": 2,
-      "prevPoints": 121
+      "prevPoints": 124
     },
     {
       "name": "Gonz",
@@ -549,7 +549,7 @@
       ],
       "rank": 5,
       "prevRank": 5,
-      "prevPoints": 101
+      "prevPoints": 106
     },
     {
       "name": "Ben",
@@ -811,7 +811,7 @@
       "away": "Cape Verde",
       "stage": "Round of 32",
       "date": "2026-07-03T22:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Colombia",
@@ -1069,7 +1069,7 @@
       "away": "Cape Verde",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "PAUSED",
       "winner": null,
       "date": "2026-07-03T22:00:00Z",
       "day": "Fri 3 Jul"
