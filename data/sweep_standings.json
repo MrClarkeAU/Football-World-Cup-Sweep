@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-03T01:50:20.903Z",
+  "lastUpdated": "2026-07-03T03:27:56.827Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -228,7 +228,7 @@
       ],
       "rank": 2,
       "prevRank": 2,
-      "prevPoints": 120
+      "prevPoints": 121
     },
     {
       "name": "Gonz",
@@ -335,7 +335,7 @@
       ],
       "rank": 3,
       "prevRank": 3,
-      "prevPoints": 111
+      "prevPoints": 113
     },
     {
       "name": "Andre",
@@ -811,7 +811,7 @@
       "away": "Algeria",
       "stage": "Round of 32",
       "date": "2026-07-03T03:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Australia",
@@ -1057,7 +1057,7 @@
       "away": "Algeria",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-03T03:00:00Z",
       "day": "Thu 2 Jul"
