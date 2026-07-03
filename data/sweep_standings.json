@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-03T19:25:38.945Z",
+  "lastUpdated": "2026-07-03T21:09:23.967Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -126,7 +126,7 @@
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 121,
+      "totalPoints": 124,
       "allEliminated": false,
       "teams": [
         {
@@ -183,11 +183,11 @@
           "wins": 1,
           "draws": 1,
           "losses": 1,
-          "goalsFor": 2,
+          "goalsFor": 5,
           "stage": "r32",
-          "eliminated": false,
-          "points": 11,
-          "stageLabel": "Round of 32"
+          "eliminated": true,
+          "points": 14,
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Panama",
@@ -447,7 +447,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 101,
+      "totalPoints": 106,
       "allEliminated": false,
       "teams": [
         {
@@ -492,10 +492,10 @@
           "wins": 1,
           "draws": 2,
           "losses": 0,
-          "goalsFor": 5,
+          "goalsFor": 10,
           "stage": "r32",
           "eliminated": false,
-          "points": 15,
+          "points": 20,
           "stageLabel": "Round of 32"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Australia",
+      "away": "Egypt",
+      "homeGoals": 3,
+      "awayGoals": 5,
+      "stage": "Round of 32",
+      "date": "2026-07-03T18:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Switzerland",
       "away": "Algeria",
       "homeGoals": 2,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-28T02:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Colombia",
-      "away": "Portugal",
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "stage": "Group Stage",
-      "date": "2026-06-27T23:30:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Australia",
-      "away": "Egypt",
-      "stage": "Round of 32",
-      "date": "2026-07-03T18:00:00Z",
-      "live": true
-    },
     {
       "home": "Argentina",
       "away": "Cape Verde",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Quarter-Final",
       "date": "2026-07-11T21:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Quarter-Final",
+      "date": "2026-07-12T01:00:00Z",
       "live": false
     }
   ],
@@ -1091,9 +1091,9 @@
       "stage": "Round of 32",
       "home": "Australia",
       "away": "Egypt",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
+      "homeGoals": 3,
+      "awayGoals": 5,
+      "status": "FINISHED",
       "winner": null,
       "date": "2026-07-03T18:00:00Z",
       "day": "Fri 3 Jul"
