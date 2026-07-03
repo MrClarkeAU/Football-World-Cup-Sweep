@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-03T17:27:45.217Z",
+  "lastUpdated": "2026-07-03T19:25:38.945Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Egypt",
       "stage": "Round of 32",
       "date": "2026-07-03T18:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Argentina",
@@ -1093,7 +1093,7 @@
       "away": "Egypt",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-03T18:00:00Z",
       "day": "Fri 3 Jul"
