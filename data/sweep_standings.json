@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-02T23:09:46.371Z",
+  "lastUpdated": "2026-07-03T01:50:20.903Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -126,7 +126,7 @@
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 120,
+      "totalPoints": 121,
       "allEliminated": false,
       "teams": [
         {
@@ -207,11 +207,11 @@
           "wins": 2,
           "draws": 0,
           "losses": 1,
-          "goalsFor": 5,
+          "goalsFor": 6,
           "stage": "r32",
-          "eliminated": false,
-          "points": 16,
-          "stageLabel": "Round of 32"
+          "eliminated": true,
+          "points": 17,
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Senegal",
@@ -233,7 +233,7 @@
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 111,
+      "totalPoints": 113,
       "allEliminated": false,
       "teams": [
         {
@@ -254,10 +254,10 @@
           "wins": 1,
           "draws": 2,
           "losses": 0,
-          "goalsFor": 6,
+          "goalsFor": 8,
           "stage": "r32",
           "eliminated": false,
-          "points": 16,
+          "points": 18,
           "stageLabel": "Round of 32"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Portugal",
+      "away": "Croatia",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "stage": "Round of 32",
+      "date": "2026-07-02T23:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Spain",
       "away": "Austria",
       "homeGoals": 3,
@@ -794,25 +803,9 @@
       "stage": "Group Stage",
       "date": "2026-06-27T23:30:00Z",
       "scorers": []
-    },
-    {
-      "home": "Panama",
-      "away": "England",
-      "homeGoals": 0,
-      "awayGoals": 2,
-      "stage": "Group Stage",
-      "date": "2026-06-27T21:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Portugal",
-      "away": "Croatia",
-      "stage": "Round of 32",
-      "date": "2026-07-02T23:00:00Z",
-      "live": true
-    },
     {
       "home": "Switzerland",
       "away": "Algeria",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Quarter-Final",
       "date": "2026-07-09T20:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Quarter-Final",
+      "date": "2026-07-10T19:00:00Z",
       "live": false
     }
   ],
@@ -1031,10 +1031,10 @@
       "stage": "Round of 32",
       "home": "Portugal",
       "away": "Croatia",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-02T23:00:00Z",
       "day": "Thu 2 Jul"
     },
