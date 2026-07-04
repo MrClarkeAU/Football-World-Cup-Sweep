@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-04T03:20:44.255Z",
+  "lastUpdated": "2026-07-04T06:48:28.521Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -121,7 +121,7 @@
       ],
       "rank": 1,
       "prevRank": 1,
-      "prevPoints": 127
+      "prevPoints": 129
     },
     {
       "name": "Mark",
@@ -233,7 +233,7 @@
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 115,
+      "totalPoints": 121,
       "allEliminated": false,
       "teams": [
         {
@@ -255,10 +255,10 @@
           "draws": 2,
           "losses": 0,
           "goalsFor": 8,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 18,
-          "stageLabel": "Round of 32"
+          "points": 21,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Switzerland",
@@ -267,10 +267,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 9,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 21,
-          "stageLabel": "Round of 32"
+          "points": 24,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Canada",
@@ -336,6 +336,113 @@
       "rank": 3,
       "prevRank": 3,
       "prevPoints": 115
+    },
+    {
+      "name": "Ray",
+      "tagline": "Spain and the dark horses.",
+      "totalPoints": 112,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Cote d'Ivoire",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 5,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 16,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Spain",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 8,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 23,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Morocco",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 10,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 25,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Egypt",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goalsFor": 10,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 23,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Iran",
+          "played": 3,
+          "wins": 0,
+          "draws": 3,
+          "losses": 0,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": true,
+          "points": 6,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Uzbekistan",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goalsFor": 2,
+          "stage": "group",
+          "eliminated": true,
+          "points": 2,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Jordan",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": true,
+          "points": 3,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Bosnia",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 5,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 14,
+          "stageLabel": "Eliminated"
+        }
+      ],
+      "rank": 4,
+      "prevRank": 5,
+      "prevPoints": 106
     },
     {
       "name": "Andre",
@@ -440,121 +547,14 @@
           "stageLabel": "Eliminated"
         }
       ],
-      "rank": 4,
-      "prevRank": 4,
-      "prevPoints": 106
-    },
-    {
-      "name": "Ray",
-      "tagline": "Spain and the dark horses.",
-      "totalPoints": 106,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Cote d'Ivoire",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 16,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Spain",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 8,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 20,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Morocco",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 10,
-          "stage": "r16",
-          "eliminated": false,
-          "points": 25,
-          "stageLabel": "Round of 16"
-        },
-        {
-          "name": "Egypt",
-          "played": 3,
-          "wins": 1,
-          "draws": 2,
-          "losses": 0,
-          "goalsFor": 10,
-          "stage": "r32",
-          "eliminated": false,
-          "points": 20,
-          "stageLabel": "Round of 32"
-        },
-        {
-          "name": "Iran",
-          "played": 3,
-          "wins": 0,
-          "draws": 3,
-          "losses": 0,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": true,
-          "points": 6,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Uzbekistan",
-          "played": 3,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 2,
-          "stage": "group",
-          "eliminated": true,
-          "points": 2,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Jordan",
-          "played": 3,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": true,
-          "points": 3,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Bosnia",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 14,
-          "stageLabel": "Eliminated"
-        }
-      ],
       "rank": 5,
-      "prevRank": 5,
+      "prevRank": 4,
       "prevPoints": 106
     },
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 80,
+      "totalPoints": 87,
       "allEliminated": false,
       "teams": [
         {
@@ -576,10 +576,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 11,
-          "stage": "r32",
+          "stage": "r16",
           "eliminated": false,
-          "points": 25,
-          "stageLabel": "Round of 32"
+          "points": 28,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "DR Congo",
@@ -635,11 +635,11 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 4,
-          "stage": "r32",
+          "goalsFor": 5,
+          "stage": "r16",
           "eliminated": false,
-          "points": 16,
-          "stageLabel": "Round of 32"
+          "points": 20,
+          "stageLabel": "Round of 16"
         },
         {
           "name": "Ghana",
@@ -649,17 +649,26 @@
           "losses": 1,
           "goalsFor": 2,
           "stage": "r32",
-          "eliminated": false,
+          "eliminated": true,
           "points": 11,
-          "stageLabel": "Round of 32"
+          "stageLabel": "Eliminated"
         }
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 77
+      "prevPoints": 80
     }
   ],
   "recentMatches": [
+    {
+      "home": "Colombia",
+      "away": "Ghana",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "stage": "Round of 32",
+      "date": "2026-07-04T01:30:00Z",
+      "scorers": []
+    },
     {
       "home": "Argentina",
       "away": "Cape Verde",
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-06-28T19:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Jordan",
-      "away": "Argentina",
-      "homeGoals": 1,
-      "awayGoals": 3,
-      "stage": "Group Stage",
-      "date": "2026-06-28T02:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Colombia",
-      "away": "Ghana",
-      "stage": "Round of 32",
-      "date": "2026-07-04T01:30:00Z",
-      "live": true
-    },
     {
       "home": "Canada",
       "away": "Morocco",
@@ -842,8 +835,8 @@
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Portugal",
+      "away": "Spain",
       "stage": "Round of 16",
       "date": "2026-07-06T19:00:00Z",
       "live": false
@@ -856,15 +849,15 @@
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Argentina",
+      "away": "Egypt",
       "stage": "Round of 16",
       "date": "2026-07-07T16:00:00Z",
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Switzerland",
+      "away": "Colombia",
       "stage": "Round of 16",
       "date": "2026-07-07T20:00:00Z",
       "live": false
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Semi-Final",
       "date": "2026-07-14T19:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Semi-Final",
+      "date": "2026-07-15T19:00:00Z",
       "live": false
     }
   ],
@@ -1079,10 +1079,10 @@
       "stage": "Round of 32",
       "home": "Colombia",
       "away": "Ghana",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-04T01:30:00Z",
       "day": "Fri 3 Jul"
     },
@@ -1094,7 +1094,7 @@
       "homeGoals": 3,
       "awayGoals": 5,
       "status": "FINISHED",
-      "winner": null,
+      "winner": "away",
       "date": "2026-07-03T18:00:00Z",
       "day": "Fri 3 Jul"
     },
@@ -1145,8 +1145,8 @@
     {
       "stageKey": "r16",
       "stage": "Round of 16",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Portugal",
+      "away": "Spain",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
@@ -1167,8 +1167,8 @@
     {
       "stageKey": "r16",
       "stage": "Round of 16",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Argentina",
+      "away": "Egypt",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
@@ -1178,8 +1178,8 @@
     {
       "stageKey": "r16",
       "stage": "Round of 16",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Switzerland",
+      "away": "Colombia",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
