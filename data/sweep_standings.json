@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-04T17:08:00.219Z",
+  "lastUpdated": "2026-07-04T19:16:45.903Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 112,
+      "totalPoints": 115,
       "allEliminated": false,
       "teams": [
         {
@@ -373,10 +373,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 10,
+          "goalsFor": 13,
           "stage": "r16",
           "eliminated": false,
-          "points": 25,
+          "points": 28,
           "stageLabel": "Round of 16"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Canada",
+      "away": "Morocco",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "stage": "Round of 16",
+      "date": "2026-07-04T17:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Colombia",
       "away": "Ghana",
       "homeGoals": 1,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-06-29T17:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "South Africa",
-      "away": "Canada",
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "stage": "Round of 32",
-      "date": "2026-06-28T19:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Canada",
-      "away": "Morocco",
-      "stage": "Round of 16",
-      "date": "2026-07-04T17:00:00Z",
-      "live": true
-    },
     {
       "home": "Paraguay",
       "away": "France",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Semi-Final",
       "date": "2026-07-15T19:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "3rd-Place Play-off",
+      "date": "2026-07-18T21:00:00Z",
       "live": false
     }
   ],
@@ -1103,10 +1103,10 @@
       "stage": "Round of 16",
       "home": "Canada",
       "away": "Morocco",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "status": "FINISHED",
+      "winner": "away",
       "date": "2026-07-04T17:00:00Z"
     },
     {
