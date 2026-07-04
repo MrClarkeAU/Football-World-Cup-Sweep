@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-04T20:59:44.927Z",
+  "lastUpdated": "2026-07-04T22:59:21.125Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "France",
       "stage": "Round of 16",
       "date": "2026-07-04T21:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Brazil",
@@ -1116,7 +1116,7 @@
       "away": "France",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-04T21:00:00Z"
     },
