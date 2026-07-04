@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-03T23:06:16.056Z",
+  "lastUpdated": "2026-07-04T03:20:44.255Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,7 +19,7 @@
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 127,
+      "totalPoints": 129,
       "allEliminated": false,
       "teams": [
         {
@@ -88,11 +88,11 @@
           "wins": 0,
           "draws": 3,
           "losses": 0,
-          "goalsFor": 2,
+          "goalsFor": 4,
           "stage": "r32",
-          "eliminated": false,
-          "points": 10,
-          "stageLabel": "Round of 32"
+          "eliminated": true,
+          "points": 12,
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Japan",
@@ -554,7 +554,7 @@
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 77,
+      "totalPoints": 80,
       "allEliminated": false,
       "teams": [
         {
@@ -575,10 +575,10 @@
           "wins": 3,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 8,
+          "goalsFor": 11,
           "stage": "r32",
           "eliminated": false,
-          "points": 22,
+          "points": 25,
           "stageLabel": "Round of 32"
         },
         {
@@ -660,6 +660,15 @@
     }
   ],
   "recentMatches": [
+    {
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "stage": "Round of 32",
+      "date": "2026-07-03T22:00:00Z",
+      "scorers": []
+    },
     {
       "home": "Australia",
       "away": "Egypt",
@@ -794,31 +803,15 @@
       "stage": "Group Stage",
       "date": "2026-06-28T02:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Algeria",
-      "away": "Austria",
-      "homeGoals": 3,
-      "awayGoals": 3,
-      "stage": "Group Stage",
-      "date": "2026-06-28T02:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Argentina",
-      "away": "Cape Verde",
-      "stage": "Round of 32",
-      "date": "2026-07-03T22:00:00Z",
-      "live": true
-    },
     {
       "home": "Colombia",
       "away": "Ghana",
       "stage": "Round of 32",
       "date": "2026-07-04T01:30:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Canada",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "Quarter-Final",
       "date": "2026-07-12T01:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Semi-Final",
+      "date": "2026-07-14T19:00:00Z",
       "live": false
     }
   ],
@@ -1067,10 +1067,10 @@
       "stage": "Round of 32",
       "home": "Argentina",
       "away": "Cape Verde",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "PAUSED",
-      "winner": null,
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-03T22:00:00Z",
       "day": "Fri 3 Jul"
     },
@@ -1081,7 +1081,7 @@
       "away": "Ghana",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-04T01:30:00Z",
       "day": "Fri 3 Jul"
