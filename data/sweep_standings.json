@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-04T22:59:21.125Z",
+  "lastUpdated": "2026-07-05T03:37:10.085Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -447,7 +447,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 106,
+      "totalPoints": 107,
       "allEliminated": false,
       "teams": [
         {
@@ -468,10 +468,10 @@
           "wins": 3,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 13,
+          "goalsFor": 14,
           "stage": "r16",
           "eliminated": false,
-          "points": 30,
+          "points": 31,
           "stageLabel": "Round of 16"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Paraguay",
+      "away": "France",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "stage": "Round of 16",
+      "date": "2026-07-04T21:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Canada",
       "away": "Morocco",
       "homeGoals": 0,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-06-29T20:30:00Z",
       "scorers": []
-    },
-    {
-      "home": "Brazil",
-      "away": "Japan",
-      "homeGoals": 2,
-      "awayGoals": 1,
-      "stage": "Round of 32",
-      "date": "2026-06-29T17:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Paraguay",
-      "away": "France",
-      "stage": "Round of 16",
-      "date": "2026-07-04T21:00:00Z",
-      "live": true
-    },
     {
       "home": "Brazil",
       "away": "Norway",
@@ -902,6 +895,13 @@
       "away": "TBC",
       "stage": "3rd-Place Play-off",
       "date": "2026-07-18T21:00:00Z",
+      "live": false
+    },
+    {
+      "home": "TBC",
+      "away": "TBC",
+      "stage": "Final",
+      "date": "2026-07-19T19:00:00Z",
       "live": false
     }
   ],
@@ -1114,10 +1114,10 @@
       "stage": "Round of 16",
       "home": "Paraguay",
       "away": "France",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FINISHED",
+      "winner": "away",
       "date": "2026-07-04T21:00:00Z"
     },
     {
