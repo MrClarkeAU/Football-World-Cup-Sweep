@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-05T03:37:10.085Z",
+  "lastUpdated": "2026-07-05T07:28:30.938Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 115,
+      "totalPoints": 119,
       "allEliminated": false,
       "teams": [
         {
@@ -374,10 +374,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 13,
-          "stage": "r16",
+          "stage": "qf",
           "eliminated": false,
-          "points": 28,
-          "stageLabel": "Round of 16"
+          "points": 32,
+          "stageLabel": "Quarter-Final"
         },
         {
           "name": "Egypt",
@@ -447,7 +447,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 107,
+      "totalPoints": 111,
       "allEliminated": false,
       "teams": [
         {
@@ -469,10 +469,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 14,
-          "stage": "r16",
+          "stage": "qf",
           "eliminated": false,
-          "points": 31,
-          "stageLabel": "Round of 16"
+          "points": 35,
+          "stageLabel": "Quarter-Final"
         },
         {
           "name": "Turkey",
@@ -549,7 +549,7 @@
       ],
       "rank": 5,
       "prevRank": 5,
-      "prevPoints": 106
+      "prevPoints": 107
     },
     {
       "name": "Ben",
@@ -849,8 +849,8 @@
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "France",
+      "away": "Morocco",
       "stage": "Quarter-Final",
       "date": "2026-07-09T20:00:00Z",
       "live": false
@@ -1189,8 +1189,8 @@
     {
       "stageKey": "qf",
       "stage": "Quarter-Final",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "France",
+      "away": "Morocco",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
