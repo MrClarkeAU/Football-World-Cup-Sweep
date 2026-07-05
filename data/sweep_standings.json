@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-05T19:20:40.461Z",
+  "lastUpdated": "2026-07-05T21:03:00.164Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Norway",
       "stage": "Round of 16",
       "date": "2026-07-05T20:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Mexico",
@@ -1127,7 +1127,7 @@
       "away": "Norway",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "PAUSED",
       "winner": null,
       "date": "2026-07-05T20:00:00Z"
     },
