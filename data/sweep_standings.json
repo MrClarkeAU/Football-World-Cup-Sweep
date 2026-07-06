@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-05T23:02:33.876Z",
+  "lastUpdated": "2026-07-06T03:44:46.698Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -121,12 +121,12 @@
       ],
       "rank": 1,
       "prevRank": 1,
-      "prevPoints": 129
+      "prevPoints": 130
     },
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 124,
+      "totalPoints": 129,
       "allEliminated": false,
       "teams": [
         {
@@ -147,10 +147,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 8,
+          "goalsFor": 11,
           "stage": "r16",
           "eliminated": false,
-          "points": 23,
+          "points": 26,
           "stageLabel": "Round of 16"
         },
         {
@@ -171,10 +171,10 @@
           "wins": 3,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 8,
+          "goalsFor": 10,
           "stage": "r16",
           "eliminated": false,
-          "points": 25,
+          "points": 27,
           "stageLabel": "Round of 16"
         },
         {
@@ -335,7 +335,7 @@
       ],
       "rank": 3,
       "prevRank": 3,
-      "prevPoints": 121
+      "prevPoints": 123
     },
     {
       "name": "Ray",
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Mexico",
+      "away": "England",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "stage": "Round of 16",
+      "date": "2026-07-06T01:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Brazil",
       "away": "Norway",
       "homeGoals": 1,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-06-30T17:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Netherlands",
-      "away": "Morocco",
-      "homeGoals": 3,
-      "awayGoals": 4,
-      "stage": "Round of 32",
-      "date": "2026-06-30T01:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Mexico",
-      "away": "England",
-      "stage": "Round of 16",
-      "date": "2026-07-06T00:00:00Z",
-      "live": false
-    },
     {
       "home": "Portugal",
       "away": "Spain",
@@ -1129,11 +1122,11 @@
       "stage": "Round of 16",
       "home": "Mexico",
       "away": "England",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "TIMED",
-      "winner": null,
-      "date": "2026-07-06T00:00:00Z"
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "status": "FINISHED",
+      "winner": "away",
+      "date": "2026-07-06T01:00:00Z"
     },
     {
       "stageKey": "r16",
