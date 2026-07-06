@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-06T20:00:42.753Z",
+  "lastUpdated": "2026-07-06T23:10:13.199Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 119,
+      "totalPoints": 120,
       "allEliminated": false,
       "teams": [
         {
@@ -361,10 +361,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 8,
+          "goalsFor": 9,
           "stage": "r16",
           "eliminated": false,
-          "points": 23,
+          "points": 24,
           "stageLabel": "Round of 16"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Portugal",
+      "away": "Spain",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "stage": "Round of 16",
+      "date": "2026-07-06T19:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Mexico",
       "away": "England",
       "homeGoals": 2,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-06-30T21:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Cote d'Ivoire",
-      "away": "Norway",
-      "homeGoals": 1,
-      "awayGoals": 2,
-      "stage": "Round of 32",
-      "date": "2026-06-30T17:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Portugal",
-      "away": "Spain",
-      "stage": "Round of 16",
-      "date": "2026-07-06T19:00:00Z",
-      "live": true
-    },
     {
       "home": "USA",
       "away": "Belgium",
@@ -1133,10 +1126,10 @@
       "stage": "Round of 16",
       "home": "Portugal",
       "away": "Spain",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "PAUSED",
-      "winner": null,
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "status": "FINISHED",
+      "winner": "away",
       "date": "2026-07-06T19:00:00Z"
     },
     {
