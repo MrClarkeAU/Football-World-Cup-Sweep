@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-06T03:44:46.698Z",
+  "lastUpdated": "2026-07-06T06:22:08.248Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -16,6 +16,113 @@
     "winTournament": 20
   },
   "participants": [
+    {
+      "name": "Mark",
+      "tagline": "England 'it's coming home' Mark.",
+      "totalPoints": 133,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Saudi Arabia",
+          "played": 3,
+          "wins": 0,
+          "draws": 2,
+          "losses": 1,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": true,
+          "points": 3,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "England",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 11,
+          "stage": "qf",
+          "eliminated": false,
+          "points": 30,
+          "stageLabel": "Quarter-Final"
+        },
+        {
+          "name": "USA",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 10,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 24,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Mexico",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 10,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 27,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Australia",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 5,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 14,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Panama",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goalsFor": 0,
+          "stage": "group",
+          "eliminated": true,
+          "points": 0,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Croatia",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 6,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 17,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Senegal",
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 10,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 18,
+          "stageLabel": "Eliminated"
+        }
+      ],
+      "rank": 1,
+      "prevRank": 2,
+      "prevPoints": 129
+    },
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
@@ -119,121 +226,14 @@
           "stageLabel": "Eliminated"
         }
       ],
-      "rank": 1,
+      "rank": 2,
       "prevRank": 1,
       "prevPoints": 130
     },
     {
-      "name": "Mark",
-      "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 129,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Saudi Arabia",
-          "played": 3,
-          "wins": 0,
-          "draws": 2,
-          "losses": 1,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": true,
-          "points": 3,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "England",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 11,
-          "stage": "r16",
-          "eliminated": false,
-          "points": 26,
-          "stageLabel": "Round of 16"
-        },
-        {
-          "name": "USA",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 10,
-          "stage": "r16",
-          "eliminated": false,
-          "points": 24,
-          "stageLabel": "Round of 16"
-        },
-        {
-          "name": "Mexico",
-          "played": 3,
-          "wins": 3,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 10,
-          "stage": "r16",
-          "eliminated": false,
-          "points": 27,
-          "stageLabel": "Round of 16"
-        },
-        {
-          "name": "Australia",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 14,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Panama",
-          "played": 3,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 0,
-          "stage": "group",
-          "eliminated": true,
-          "points": 0,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Croatia",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 6,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 17,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Senegal",
-          "played": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 10,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 18,
-          "stageLabel": "Eliminated"
-        }
-      ],
-      "rank": 2,
-      "prevRank": 2,
-      "prevPoints": 124
-    },
-    {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 123,
+      "totalPoints": 127,
       "allEliminated": false,
       "teams": [
         {
@@ -291,10 +291,10 @@
           "draws": 0,
           "losses": 1,
           "goalsFor": 12,
-          "stage": "r16",
+          "stage": "qf",
           "eliminated": false,
-          "points": 26,
-          "stageLabel": "Round of 16"
+          "points": 30,
+          "stageLabel": "Quarter-Final"
         },
         {
           "name": "Algeria",
@@ -849,8 +849,8 @@
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Norway",
+      "away": "England",
       "stage": "Quarter-Final",
       "date": "2026-07-11T21:00:00Z",
       "live": false
@@ -1197,8 +1197,8 @@
     {
       "stageKey": "qf",
       "stage": "Quarter-Final",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Norway",
+      "away": "England",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
