@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-07T21:26:08.841Z",
+  "lastUpdated": "2026-07-07T23:03:47.697Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -233,7 +233,7 @@
     {
       "name": "Gonz",
       "tagline": "Portugal + a prayer.",
-      "totalPoints": 127,
+      "totalPoints": 131,
       "allEliminated": false,
       "teams": [
         {
@@ -266,10 +266,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 9,
+          "goalsFor": 13,
           "stage": "r16",
           "eliminated": false,
-          "points": 24,
+          "points": 28,
           "stageLabel": "Round of 16"
         },
         {
@@ -442,7 +442,7 @@
       ],
       "rank": 4,
       "prevRank": 4,
-      "prevPoints": 124
+      "prevPoints": 126
     },
     {
       "name": "Andre",
@@ -554,7 +554,7 @@
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 90,
+      "totalPoints": 93,
       "allEliminated": false,
       "teams": [
         {
@@ -635,10 +635,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 5,
+          "goalsFor": 8,
           "stage": "r16",
           "eliminated": false,
-          "points": 20,
+          "points": 23,
           "stageLabel": "Round of 16"
         },
         {
@@ -656,10 +656,19 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 87
+      "prevPoints": 90
     }
   ],
   "recentMatches": [
+    {
+      "home": "Switzerland",
+      "away": "Colombia",
+      "homeGoals": 4,
+      "awayGoals": 3,
+      "stage": "Round of 16",
+      "date": "2026-07-07T20:00:00Z",
+      "scorers": []
+    },
     {
       "home": "Argentina",
       "away": "Egypt",
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-07-01T20:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "England",
-      "away": "DR Congo",
-      "homeGoals": 2,
-      "awayGoals": 1,
-      "stage": "Round of 32",
-      "date": "2026-07-01T16:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Switzerland",
-      "away": "Colombia",
-      "stage": "Round of 16",
-      "date": "2026-07-07T20:00:00Z",
-      "live": true
-    },
     {
       "home": "France",
       "away": "Morocco",
@@ -1145,9 +1138,9 @@
       "stage": "Round of 16",
       "home": "Switzerland",
       "away": "Colombia",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
+      "homeGoals": 4,
+      "awayGoals": 3,
+      "status": "FINISHED",
       "winner": null,
       "date": "2026-07-07T20:00:00Z"
     },
