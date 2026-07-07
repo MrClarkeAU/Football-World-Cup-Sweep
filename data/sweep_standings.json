@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-07T14:39:28.395Z",
+  "lastUpdated": "2026-07-07T18:01:32.796Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Egypt",
       "stage": "Round of 16",
       "date": "2026-07-07T16:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Switzerland",
@@ -1143,7 +1143,7 @@
       "away": "Egypt",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-07T16:00:00Z"
     },
