@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-07T03:35:53.965Z",
+  "lastUpdated": "2026-07-07T07:41:04.636Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,7 +19,7 @@
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 134,
+      "totalPoints": 138,
       "allEliminated": false,
       "teams": [
         {
@@ -77,10 +77,10 @@
           "draws": 2,
           "losses": 0,
           "goalsFor": 13,
-          "stage": "r16",
+          "stage": "qf",
           "eliminated": false,
-          "points": 26,
-          "stageLabel": "Round of 16"
+          "points": 30,
+          "stageLabel": "Quarter-Final"
         },
         {
           "name": "Cape Verde",
@@ -120,8 +120,8 @@
         }
       ],
       "rank": 1,
-      "prevRank": 2,
-      "prevPoints": 130
+      "prevRank": 1,
+      "prevPoints": 134
     },
     {
       "name": "Mark",
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 1,
-      "prevPoints": 133
+      "prevRank": 2,
+      "prevPoints": 134
     },
     {
       "name": "Gonz",
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 120,
+      "totalPoints": 124,
       "allEliminated": false,
       "teams": [
         {
@@ -362,10 +362,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 9,
-          "stage": "r16",
+          "stage": "qf",
           "eliminated": false,
-          "points": 24,
-          "stageLabel": "Round of 16"
+          "points": 28,
+          "stageLabel": "Quarter-Final"
         },
         {
           "name": "Morocco",
@@ -828,8 +828,8 @@
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Spain",
+      "away": "Belgium",
       "stage": "Quarter-Final",
       "date": "2026-07-10T19:00:00Z",
       "live": false
@@ -1172,8 +1172,8 @@
     {
       "stageKey": "qf",
       "stage": "Quarter-Final",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Spain",
+      "away": "Belgium",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
