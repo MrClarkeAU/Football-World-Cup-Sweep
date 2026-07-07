@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-07T18:01:32.796Z",
+  "lastUpdated": "2026-07-07T21:26:08.841Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 124,
+      "totalPoints": 126,
       "allEliminated": false,
       "teams": [
         {
@@ -385,10 +385,10 @@
           "wins": 1,
           "draws": 2,
           "losses": 0,
-          "goalsFor": 10,
+          "goalsFor": 12,
           "stage": "r16",
           "eliminated": false,
-          "points": 23,
+          "points": 25,
           "stageLabel": "Round of 16"
         },
         {
@@ -554,7 +554,7 @@
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 87,
+      "totalPoints": 90,
       "allEliminated": false,
       "teams": [
         {
@@ -575,10 +575,10 @@
           "wins": 3,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 11,
+          "goalsFor": 14,
           "stage": "r16",
           "eliminated": false,
-          "points": 28,
+          "points": 31,
           "stageLabel": "Round of 16"
         },
         {
@@ -660,6 +660,15 @@
     }
   ],
   "recentMatches": [
+    {
+      "home": "Argentina",
+      "away": "Egypt",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "stage": "Round of 16",
+      "date": "2026-07-07T16:00:00Z",
+      "scorers": []
+    },
     {
       "home": "USA",
       "away": "Belgium",
@@ -794,31 +803,15 @@
       "stage": "Round of 32",
       "date": "2026-07-01T16:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Mexico",
-      "away": "Ecuador",
-      "homeGoals": 2,
-      "awayGoals": 0,
-      "stage": "Round of 32",
-      "date": "2026-07-01T02:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Argentina",
-      "away": "Egypt",
-      "stage": "Round of 16",
-      "date": "2026-07-07T16:00:00Z",
-      "live": true
-    },
     {
       "home": "Switzerland",
       "away": "Colombia",
       "stage": "Round of 16",
       "date": "2026-07-07T20:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "France",
@@ -1141,10 +1134,10 @@
       "stage": "Round of 16",
       "home": "Argentina",
       "away": "Egypt",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-07T16:00:00Z"
     },
     {
@@ -1154,7 +1147,7 @@
       "away": "Colombia",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-07T20:00:00Z"
     },
