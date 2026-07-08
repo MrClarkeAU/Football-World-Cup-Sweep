@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-08T02:51:25.511Z",
+  "lastUpdated": "2026-07-08T06:29:35.345Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -124,6 +124,113 @@
       "prevPoints": 138
     },
     {
+      "name": "Gonz",
+      "tagline": "Portugal + a prayer.",
+      "totalPoints": 135,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Uruguay",
+          "played": 3,
+          "wins": 0,
+          "draws": 2,
+          "losses": 1,
+          "goalsFor": 3,
+          "stage": "group",
+          "eliminated": true,
+          "points": 5,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Portugal",
+          "played": 3,
+          "wins": 1,
+          "draws": 2,
+          "losses": 0,
+          "goalsFor": 8,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 21,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Switzerland",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 13,
+          "stage": "qf",
+          "eliminated": false,
+          "points": 32,
+          "stageLabel": "Quarter-Final"
+        },
+        {
+          "name": "Canada",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 9,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 21,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Norway",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 12,
+          "stage": "qf",
+          "eliminated": false,
+          "points": 30,
+          "stageLabel": "Quarter-Final"
+        },
+        {
+          "name": "Algeria",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 5,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 14,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Ecuador",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 2,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 11,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Iraq",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": true,
+          "points": 1,
+          "stageLabel": "Eliminated"
+        }
+      ],
+      "rank": 2,
+      "prevRank": 3,
+      "prevPoints": 131
+    },
+    {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
       "totalPoints": 134,
@@ -226,116 +333,9 @@
           "stageLabel": "Eliminated"
         }
       ],
-      "rank": 2,
+      "rank": 3,
       "prevRank": 2,
       "prevPoints": 134
-    },
-    {
-      "name": "Gonz",
-      "tagline": "Portugal + a prayer.",
-      "totalPoints": 131,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Uruguay",
-          "played": 3,
-          "wins": 0,
-          "draws": 2,
-          "losses": 1,
-          "goalsFor": 3,
-          "stage": "group",
-          "eliminated": true,
-          "points": 5,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Portugal",
-          "played": 3,
-          "wins": 1,
-          "draws": 2,
-          "losses": 0,
-          "goalsFor": 8,
-          "stage": "r16",
-          "eliminated": false,
-          "points": 21,
-          "stageLabel": "Round of 16"
-        },
-        {
-          "name": "Switzerland",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 13,
-          "stage": "r16",
-          "eliminated": false,
-          "points": 28,
-          "stageLabel": "Round of 16"
-        },
-        {
-          "name": "Canada",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 9,
-          "stage": "r16",
-          "eliminated": false,
-          "points": 21,
-          "stageLabel": "Round of 16"
-        },
-        {
-          "name": "Norway",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 12,
-          "stage": "qf",
-          "eliminated": false,
-          "points": 30,
-          "stageLabel": "Quarter-Final"
-        },
-        {
-          "name": "Algeria",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 14,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Ecuador",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 2,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 11,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Iraq",
-          "played": 3,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": true,
-          "points": 1,
-          "stageLabel": "Eliminated"
-        }
-      ],
-      "rank": 3,
-      "prevRank": 3,
-      "prevPoints": 131
     },
     {
       "name": "Ray",
@@ -554,7 +554,7 @@
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 93,
+      "totalPoints": 97,
       "allEliminated": false,
       "teams": [
         {
@@ -576,10 +576,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 14,
-          "stage": "r16",
+          "stage": "qf",
           "eliminated": false,
-          "points": 31,
-          "stageLabel": "Round of 16"
+          "points": 35,
+          "stageLabel": "Quarter-Final"
         },
         {
           "name": "DR Congo",
@@ -828,8 +828,8 @@
       "live": false
     },
     {
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Argentina",
+      "away": "Switzerland",
       "stage": "Quarter-Final",
       "date": "2026-07-12T01:00:00Z",
       "live": false
@@ -1141,7 +1141,7 @@
       "homeGoals": 4,
       "awayGoals": 3,
       "status": "FINISHED",
-      "winner": null,
+      "winner": "home",
       "date": "2026-07-07T20:00:00Z"
     },
     {
@@ -1180,8 +1180,8 @@
     {
       "stageKey": "qf",
       "stage": "Quarter-Final",
-      "home": "TBC",
-      "away": "TBC",
+      "home": "Argentina",
+      "away": "Switzerland",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
