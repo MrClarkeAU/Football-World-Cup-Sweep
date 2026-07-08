@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-08T06:29:35.345Z",
+  "lastUpdated": "2026-07-08T10:20:40.192Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -42,9 +42,9 @@
           "losses": 0,
           "goalsFor": 10,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 25,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Austria",
@@ -149,9 +149,9 @@
           "losses": 0,
           "goalsFor": 8,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 21,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Switzerland",
@@ -173,9 +173,9 @@
           "losses": 1,
           "goalsFor": 9,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 21,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Norway",
@@ -227,8 +227,8 @@
         }
       ],
       "rank": 2,
-      "prevRank": 3,
-      "prevPoints": 131
+      "prevRank": 2,
+      "prevPoints": 135
     },
     {
       "name": "Mark",
@@ -268,9 +268,9 @@
           "losses": 1,
           "goalsFor": 11,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 25,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Mexico",
@@ -280,9 +280,9 @@
           "losses": 0,
           "goalsFor": 10,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 27,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Australia",
@@ -334,7 +334,7 @@
         }
       ],
       "rank": 3,
-      "prevRank": 2,
+      "prevRank": 3,
       "prevPoints": 134
     },
     {
@@ -387,9 +387,9 @@
           "losses": 0,
           "goalsFor": 12,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 25,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Iran",
@@ -506,9 +506,9 @@
           "losses": 1,
           "goalsFor": 7,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 19,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Netherlands",
@@ -637,9 +637,9 @@
           "losses": 0,
           "goalsFor": 8,
           "stage": "r16",
-          "eliminated": false,
+          "eliminated": true,
           "points": 23,
-          "stageLabel": "Round of 16"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Ghana",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 93
+      "prevPoints": 97
     }
   ],
   "recentMatches": [
