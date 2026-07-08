@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-07T23:03:47.697Z",
+  "lastUpdated": "2026-07-08T02:51:25.511Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -335,7 +335,7 @@
       ],
       "rank": 3,
       "prevRank": 3,
-      "prevPoints": 127
+      "prevPoints": 131
     },
     {
       "name": "Ray",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 90
+      "prevPoints": 93
     }
   ],
   "recentMatches": [
