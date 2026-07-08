@@ -368,22 +368,20 @@ async function main() {
     { live: true, unmatched: unmatchedList, upcoming: nextUp, knockout });
 }
 
-// Knockout loser is out; champion never is.
+// Knockout loser is out; champion never is. (Losing ANY knockout tie eliminates
+// you — even if you won earlier rounds, which is why we don't exclude winners.)
 function computeEliminations(players, finished) {
   const losers = new Set();
-  const winners = new Set();
   for (const f of finished) {
     if (f.stage === "group" || f.stage === "third") continue;
     const w = f.m.score?.winner;
     const homeWon = w === "HOME_TEAM" || (w == null && f.hg > f.ag);
-    winners.add((homeWon ? f.homeName : f.awayName)?.toLowerCase());
     losers.add((homeWon ? f.awayName : f.homeName)?.toLowerCase());
   }
   for (const player of Object.values(players)) {
     for (const team of player.teams) {
       if (team.stage === "winner") { team.eliminated = false; continue; }
-      const key = team.name.toLowerCase();
-      if (losers.has(key) && !winners.has(key)) team.eliminated = true;
+      if (losers.has(team.name.toLowerCase())) team.eliminated = true;
     }
   }
 }
