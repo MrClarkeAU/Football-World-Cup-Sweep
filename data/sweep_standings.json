@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-09T19:57:53.527Z",
+  "lastUpdated": "2026-07-09T21:36:13.258Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Morocco",
       "stage": "Quarter-Final",
       "date": "2026-07-09T20:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Spain",
@@ -1151,7 +1151,7 @@
       "away": "Morocco",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-09T20:00:00Z"
     },
