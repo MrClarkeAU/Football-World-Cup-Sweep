@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-09T21:36:13.258Z",
+  "lastUpdated": "2026-07-09T23:13:38.784Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -375,9 +375,9 @@
           "losses": 0,
           "goalsFor": 13,
           "stage": "qf",
-          "eliminated": false,
+          "eliminated": true,
           "points": 32,
-          "stageLabel": "Quarter-Final"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Egypt",
@@ -447,7 +447,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 111,
+      "totalPoints": 113,
       "allEliminated": false,
       "teams": [
         {
@@ -468,10 +468,10 @@
           "wins": 3,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 14,
+          "goalsFor": 16,
           "stage": "qf",
           "eliminated": false,
-          "points": 35,
+          "points": 37,
           "stageLabel": "Quarter-Final"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "France",
+      "away": "Morocco",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "stage": "Quarter-Final",
+      "date": "2026-07-09T20:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Switzerland",
       "away": "Colombia",
       "homeGoals": 4,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-07-02T00:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Belgium",
-      "away": "Senegal",
-      "homeGoals": 3,
-      "awayGoals": 2,
-      "stage": "Round of 32",
-      "date": "2026-07-01T20:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "France",
-      "away": "Morocco",
-      "stage": "Quarter-Final",
-      "date": "2026-07-09T20:00:00Z",
-      "live": true
-    },
     {
       "home": "Spain",
       "away": "Belgium",
@@ -1149,10 +1142,10 @@
       "stage": "Quarter-Final",
       "home": "France",
       "away": "Morocco",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-09T20:00:00Z"
     },
     {
