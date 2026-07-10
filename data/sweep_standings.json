@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-09T23:13:38.784Z",
+  "lastUpdated": "2026-07-10T03:31:31.651Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -549,7 +549,7 @@
       ],
       "rank": 5,
       "prevRank": 5,
-      "prevPoints": 111
+      "prevPoints": 113
     },
     {
       "name": "Ben",
