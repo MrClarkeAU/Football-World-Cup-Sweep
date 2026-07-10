@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-10T19:35:40.611Z",
+  "lastUpdated": "2026-07-10T21:07:15.582Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,8 +19,8 @@
     {
       "name": "Clarkey",
       "tagline": "Drew Germany & Brazil, reckons it's already won.",
-      "totalPoints": 138,
-      "allEliminated": false,
+      "totalPoints": 139,
+      "allEliminated": true,
       "teams": [
         {
           "name": "Germany",
@@ -76,11 +76,11 @@
           "wins": 1,
           "draws": 2,
           "losses": 0,
-          "goalsFor": 13,
+          "goalsFor": 14,
           "stage": "qf",
-          "eliminated": false,
-          "points": 30,
-          "stageLabel": "Quarter-Final"
+          "eliminated": true,
+          "points": 31,
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Cape Verde",
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 126,
+      "totalPoints": 128,
       "allEliminated": false,
       "teams": [
         {
@@ -361,10 +361,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 9,
+          "goalsFor": 11,
           "stage": "qf",
           "eliminated": false,
-          "points": 28,
+          "points": 30,
           "stageLabel": "Quarter-Final"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "Spain",
+      "away": "Belgium",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "stage": "Quarter-Final",
+      "date": "2026-07-10T19:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "France",
       "away": "Morocco",
       "homeGoals": 2,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-07-02T19:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "USA",
-      "away": "Bosnia",
-      "homeGoals": 2,
-      "awayGoals": 0,
-      "stage": "Round of 32",
-      "date": "2026-07-02T00:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "Spain",
-      "away": "Belgium",
-      "stage": "Quarter-Final",
-      "date": "2026-07-10T19:00:00Z",
-      "live": true
-    },
     {
       "home": "Norway",
       "away": "England",
@@ -1153,10 +1146,10 @@
       "stage": "Quarter-Final",
       "home": "Spain",
       "away": "Belgium",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "status": "FINISHED",
+      "winner": "home",
       "date": "2026-07-10T19:00:00Z"
     },
     {
