@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-10T03:31:31.651Z",
+  "lastUpdated": "2026-07-10T07:37:58.560Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -447,7 +447,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 113,
+      "totalPoints": 117,
       "allEliminated": false,
       "teams": [
         {
@@ -469,10 +469,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 16,
-          "stage": "qf",
+          "stage": "sf",
           "eliminated": false,
-          "points": 37,
-          "stageLabel": "Quarter-Final"
+          "points": 41,
+          "stageLabel": "Semi-Final"
         },
         {
           "name": "Turkey",
@@ -828,7 +828,7 @@
       "live": false
     },
     {
-      "home": "TBC",
+      "home": "France",
       "away": "TBC",
       "stage": "Semi-Final",
       "date": "2026-07-14T19:00:00Z",
@@ -1184,7 +1184,7 @@
     {
       "stageKey": "sf",
       "stage": "Semi-Final",
-      "home": "TBC",
+      "home": "France",
       "away": "TBC",
       "homeGoals": null,
       "awayGoals": null,
