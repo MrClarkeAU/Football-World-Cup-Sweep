@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-11T02:47:28.478Z",
+  "lastUpdated": "2026-07-11T06:14:58.520Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 128,
+      "totalPoints": 132,
       "allEliminated": false,
       "teams": [
         {
@@ -362,10 +362,10 @@
           "draws": 1,
           "losses": 0,
           "goalsFor": 11,
-          "stage": "qf",
+          "stage": "sf",
           "eliminated": false,
-          "points": 30,
-          "stageLabel": "Quarter-Final"
+          "points": 34,
+          "stageLabel": "Semi-Final"
         },
         {
           "name": "Morocco",
@@ -822,7 +822,7 @@
     },
     {
       "home": "France",
-      "away": "TBC",
+      "away": "Spain",
       "stage": "Semi-Final",
       "date": "2026-07-14T19:00:00Z",
       "live": false
@@ -1178,7 +1178,7 @@
       "stageKey": "sf",
       "stage": "Semi-Final",
       "home": "France",
-      "away": "TBC",
+      "away": "Spain",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
