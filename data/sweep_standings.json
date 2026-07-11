@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-11T20:51:08.143Z",
+  "lastUpdated": "2026-07-11T22:51:35.229Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -231,113 +231,6 @@
       "prevPoints": 135
     },
     {
-      "name": "Mark",
-      "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 134,
-      "allEliminated": false,
-      "teams": [
-        {
-          "name": "Saudi Arabia",
-          "played": 3,
-          "wins": 0,
-          "draws": 2,
-          "losses": 1,
-          "goalsFor": 1,
-          "stage": "group",
-          "eliminated": true,
-          "points": 3,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "England",
-          "played": 3,
-          "wins": 2,
-          "draws": 1,
-          "losses": 0,
-          "goalsFor": 11,
-          "stage": "qf",
-          "eliminated": false,
-          "points": 30,
-          "stageLabel": "Quarter-Final"
-        },
-        {
-          "name": "USA",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 11,
-          "stage": "r16",
-          "eliminated": true,
-          "points": 25,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Mexico",
-          "played": 3,
-          "wins": 3,
-          "draws": 0,
-          "losses": 0,
-          "goalsFor": 10,
-          "stage": "r16",
-          "eliminated": true,
-          "points": 27,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Australia",
-          "played": 3,
-          "wins": 1,
-          "draws": 1,
-          "losses": 1,
-          "goalsFor": 5,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 14,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Panama",
-          "played": 3,
-          "wins": 0,
-          "draws": 0,
-          "losses": 3,
-          "goalsFor": 0,
-          "stage": "group",
-          "eliminated": true,
-          "points": 0,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Croatia",
-          "played": 3,
-          "wins": 2,
-          "draws": 0,
-          "losses": 1,
-          "goalsFor": 6,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 17,
-          "stageLabel": "Eliminated"
-        },
-        {
-          "name": "Senegal",
-          "played": 3,
-          "wins": 1,
-          "draws": 0,
-          "losses": 2,
-          "goalsFor": 10,
-          "stage": "r32",
-          "eliminated": true,
-          "points": 18,
-          "stageLabel": "Eliminated"
-        }
-      ],
-      "rank": 3,
-      "prevRank": 3,
-      "prevPoints": 134
-    },
-    {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
       "totalPoints": 132,
@@ -440,9 +333,116 @@
           "stageLabel": "Eliminated"
         }
       ],
-      "rank": 4,
+      "rank": 3,
       "prevRank": 4,
       "prevPoints": 132
+    },
+    {
+      "name": "Mark",
+      "tagline": "England 'it's coming home' Mark.",
+      "totalPoints": 129,
+      "allEliminated": false,
+      "teams": [
+        {
+          "name": "Saudi Arabia",
+          "played": 3,
+          "wins": 0,
+          "draws": 2,
+          "losses": 1,
+          "goalsFor": 1,
+          "stage": "group",
+          "eliminated": true,
+          "points": 3,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "England",
+          "played": 3,
+          "wins": 2,
+          "draws": 1,
+          "losses": 0,
+          "goalsFor": 8,
+          "stage": "qf",
+          "eliminated": false,
+          "points": 27,
+          "stageLabel": "Quarter-Final"
+        },
+        {
+          "name": "USA",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 11,
+          "stage": "r16",
+          "eliminated": true,
+          "points": 25,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Mexico",
+          "played": 3,
+          "wins": 3,
+          "draws": 0,
+          "losses": 0,
+          "goalsFor": 8,
+          "stage": "r16",
+          "eliminated": false,
+          "points": 25,
+          "stageLabel": "Round of 16"
+        },
+        {
+          "name": "Australia",
+          "played": 3,
+          "wins": 1,
+          "draws": 1,
+          "losses": 1,
+          "goalsFor": 5,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 14,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Panama",
+          "played": 3,
+          "wins": 0,
+          "draws": 0,
+          "losses": 3,
+          "goalsFor": 0,
+          "stage": "group",
+          "eliminated": true,
+          "points": 0,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Croatia",
+          "played": 3,
+          "wins": 2,
+          "draws": 0,
+          "losses": 1,
+          "goalsFor": 6,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 17,
+          "stageLabel": "Eliminated"
+        },
+        {
+          "name": "Senegal",
+          "played": 3,
+          "wins": 1,
+          "draws": 0,
+          "losses": 2,
+          "goalsFor": 10,
+          "stage": "r32",
+          "eliminated": true,
+          "points": 18,
+          "stageLabel": "Eliminated"
+        }
+      ],
+      "rank": 4,
+      "prevRank": 3,
+      "prevPoints": 134
     },
     {
       "name": "Andre",
@@ -715,15 +715,6 @@
       "scorers": []
     },
     {
-      "home": "Mexico",
-      "away": "England",
-      "homeGoals": 2,
-      "awayGoals": 3,
-      "stage": "Round of 16",
-      "date": "2026-07-06T01:00:00Z",
-      "scorers": []
-    },
-    {
       "home": "Brazil",
       "away": "Norway",
       "homeGoals": 1,
@@ -803,6 +794,15 @@
       "stage": "Round of 32",
       "date": "2026-07-02T19:00:00Z",
       "scorers": []
+    },
+    {
+      "home": "USA",
+      "away": "Bosnia",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "stage": "Round of 32",
+      "date": "2026-07-02T00:00:00Z",
+      "scorers": []
     }
   ],
   "upcomingMatches": [
@@ -811,7 +811,7 @@
       "away": "England",
       "stage": "Quarter-Final",
       "date": "2026-07-11T21:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Argentina",
@@ -1080,10 +1080,10 @@
       "stage": "Round of 16",
       "home": "Mexico",
       "away": "England",
-      "homeGoals": 2,
-      "awayGoals": 3,
-      "status": "FINISHED",
-      "winner": "away",
+      "homeGoals": null,
+      "awayGoals": null,
+      "status": "2026-07-06 01:00:00Z",
+      "winner": null,
       "date": "2026-07-06T01:00:00Z"
     },
     {
@@ -1159,7 +1159,7 @@
       "away": "England",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-11T21:00:00Z"
     },
