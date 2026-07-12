@@ -265,6 +265,12 @@
     .mover.down{ color:var(--clay); }
     .row__gap{ display:block; font-size:11px; color:var(--sage-dim); margin-top:6px; font-weight:600; }
     .row__gap.lead{ color:var(--gold); }
+    .ko-tag{ font-size:10px; font-weight:800; letter-spacing:.05em; color:var(--clay);
+      border:1px solid color-mix(in srgb,var(--clay) 45%,transparent);
+      background:color-mix(in srgb,var(--clay) 12%,transparent); border-radius:999px; padding:1px 7px; vertical-align:middle; }
+    .row--dead{ opacity:.6; }
+    .row--dead .row__rank{ color:var(--clay); }
+    .row__alive.zero b{ color:var(--clay); }
 
     .clashbadge{ font-size:10px; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
       padding:2px 8px; border-radius:999px; white-space:nowrap; }
@@ -638,6 +644,7 @@
     el.innerHTML = ranked.map((l,i) => {
       const lead = i === 0;
       const isChamp = champion && champion.owner === l.name;
+      const dead = alive(l) === 0 && !isChamp;   // all their nations knocked out
       const squad = l.teams.map(t => `<span class="${t.status==='out'?'out':''}">${t.flag}</span>`).join('');
       const rows = l.teams.slice().sort((a,b) => b.pts - a.pts).map(t => {
         const out = t.status === 'out', champ = t.status === 'champ';
@@ -667,16 +674,17 @@
         const b = ranked[0].pts - l.pts;
         gap = `<span class="row__gap">${b} pt${b===1?'':'s'} behind the leader</span>`;
       }
-      return `<details class="row ${lead?'row--lead':''}" style="animation-delay:${i*60}ms">
+      const koTag = dead ? ' <span class="ko-tag">🪦 OUT</span>' : '';
+      return `<details class="row ${lead?'row--lead':''} ${dead?'row--dead':''}" style="animation-delay:${i*60}ms">
         <summary class="row__btn">
           <span class="row__rank">${i+1}</span>
           <span class="row__id">
-            <span class="row__name">${l.name} ${crown}${mover}</span>
+            <span class="row__name">${l.name} ${crown}${mover}${koTag}</span>
             <span class="row__squad">${squad}</span>
             ${gap}
           </span>
           <span class="row__right">
-            <span class="row__alive"><b>${alive(l)}</b>/${l.teams.length} alive</span>
+            <span class="row__alive ${dead?'zero':''}"><b>${alive(l)}</b>/${l.teams.length} alive</span>
             <span class="row__pts" data-count="${l.pts}">0<small>PTS</small></span>
             <span class="row__chev">▾</span>
           </span>

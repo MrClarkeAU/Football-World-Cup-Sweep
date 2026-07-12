@@ -173,6 +173,29 @@ function scoreTeam(team) {
 }
 
 // ---------------------------------------------------------------------------
+// Order-independent key for a team pair (for carry-forward result matching).
+function pairKey(a, b) {
+  return [(a || "").toLowerCase(), (b || "").toLowerCase()].sort().join("|");
+}
+
+// Read the previous output's FINISHED knockout results so we can carry them
+// forward if the API later returns a tie as unfinished/null (a source glitch).
+function loadPrevResults() {
+  const map = {};
+  try {
+    const prev = JSON.parse(fs.readFileSync(OUTPUT_PATH, "utf8"));
+    (prev.knockout || []).forEach((k) => {
+      if (k.status === "FINISHED" && k.homeGoals != null && k.awayGoals != null &&
+          k.home !== "TBC" && k.away !== "TBC") {
+        map[pairKey(k.home, k.away)] = {
+          home: k.home, away: k.away, homeGoals: k.homeGoals, awayGoals: k.awayGoals,
+        };
+      }
+    });
+  } catch (e) { /* first run / no file */ }
+  return map;
+}
+
 // Find the API knockout match that shares a real team with a manual fixture
 // (each team plays only one R32 tie, so a single shared team is unambiguous).
 function findR32Match(matches, fx) {
@@ -186,23 +209,33 @@ function findR32Match(matches, fx) {
   return null;
 }
 
-// Build the R32 bracket from the confirmed draw, merging API status/score.
-function buildR32Override(matches) {
+// Build the R32 bracket from the confirmed draw, merging API status/score
+// (falling back to a previously-known result if the API drops one).
+function buildR32Override(matches, prevResults = {}) {
   return R32_FIXTURES.map((fx) => {
     const m = findR32Match(matches, fx);
     let homeGoals = null, awayGoals = null, status = "TIMED", winner = null, date = null;
-    if (m) {
-      status = m.status;
-      date = m.utcDate || null;
-      if (m.status === "FINISHED") {
-        const mh = (canonicalTeamName(m.homeTeam?.name) || "").toLowerCase();
-        const sameOrient = mh === (fx.home || "").toLowerCase();
-        const gh = m.score?.fullTime?.home ?? null, ga = m.score?.fullTime?.away ?? null;
-        homeGoals = sameOrient ? gh : ga;
-        awayGoals = sameOrient ? ga : gh;
-        const w = m.score?.winner;
-        if (w === "HOME_TEAM") winner = sameOrient ? "home" : "away";
-        else if (w === "AWAY_TEAM") winner = sameOrient ? "away" : "home";
+    if (m) { status = m.status; date = m.utcDate || null; }
+    const apiOk = m && m.status === "FINISHED" &&
+                  m.score?.fullTime?.home != null && m.score?.fullTime?.away != null;
+    if (apiOk) {
+      const mh = (canonicalTeamName(m.homeTeam?.name) || "").toLowerCase();
+      const sameOrient = mh === (fx.home || "").toLowerCase();
+      const gh = m.score.fullTime.home, ga = m.score.fullTime.away;
+      homeGoals = sameOrient ? gh : ga;
+      awayGoals = sameOrient ? ga : gh;
+      const w = m.score?.winner;
+      if (w === "HOME_TEAM") winner = sameOrient ? "home" : "away";
+      else if (w === "AWAY_TEAM") winner = sameOrient ? "away" : "home";
+      else winner = homeGoals > awayGoals ? "home" : awayGoals > homeGoals ? "away" : null;
+    } else {
+      const pk = prevResults[pairKey(fx.home, fx.away)];
+      if (pk) {
+        status = "FINISHED";
+        const same = (pk.home || "").toLowerCase() === (fx.home || "").toLowerCase();
+        homeGoals = same ? pk.homeGoals : pk.awayGoals;
+        awayGoals = same ? pk.awayGoals : pk.homeGoals;
+        winner = homeGoals > awayGoals ? "home" : awayGoals > homeGoals ? "away" : null;
       }
     }
     return {
@@ -239,6 +272,7 @@ async function main() {
     console.warn(`  standings unavailable (${e.message}) — skipping group view.`);
   }
 
+  const prevResults = loadPrevResults(); // for carrying finished ties forward
   const finished = [];
   const upcoming = [];         // not-yet-played fixtures (for the schedule)
   const knockout = [];         // all knockout-stage matches (for the bracket)
@@ -257,25 +291,43 @@ async function main() {
     if (home) promote(home, reachKey);
     if (away) promote(away, reachKey);
 
+    // Resolve the result — prefer a valid API FINISHED score; otherwise carry a
+    // previously-known finished knockout result forward (guards against the API
+    // corrupting/dropping a result we'd already recorded, e.g. a bad status field).
+    const apiHg = m.score?.fullTime?.home, apiAg = m.score?.fullTime?.away;
+    let done = m.status === "FINISHED" && apiHg != null && apiAg != null;
+    let hg = apiHg ?? 0, ag = apiAg ?? 0;
+    let winnerSide = m.score?.winner === "HOME_TEAM" ? "home"
+                   : m.score?.winner === "AWAY_TEAM" ? "away" : null;
+    if (!done && stage !== "group" && stage !== "third" && homeName && awayName) {
+      const pk = prevResults[pairKey(homeName, awayName)];
+      if (pk) {
+        done = true;
+        const same = (pk.home || "").toLowerCase() === homeName.toLowerCase();
+        hg = same ? pk.homeGoals : pk.awayGoals;
+        ag = same ? pk.awayGoals : pk.homeGoals;
+        winnerSide = hg > ag ? "home" : ag > hg ? "away" : null;
+        console.warn(`  carried forward last-known result: ${homeName} ${hg}-${ag} ${awayName}`);
+      }
+    }
+
     // Collect knockout fixtures (Round of 32 → Final) for the bracket. The 3rd-
     // place play-off isn't on the road to the final, so it's excluded.
     if (stage !== "group" && stage !== "third") {
-      const done = m.status === "FINISHED";
       knockout.push({
         stageKey: stage,
         stage: STAGE_LABEL[stage],
         home: homeName || "TBC",
         away: awayName || "TBC",
-        homeGoals: done ? (m.score?.fullTime?.home ?? null) : null,
-        awayGoals: done ? (m.score?.fullTime?.away ?? null) : null,
-        status: m.status,
-        winner: done ? (m.score?.winner === "HOME_TEAM" ? "home"
-                      : m.score?.winner === "AWAY_TEAM" ? "away" : null) : null,
+        homeGoals: done ? hg : null,
+        awayGoals: done ? ag : null,
+        status: done ? "FINISHED" : m.status,
+        winner: done ? winnerSide : null,
         date: m.utcDate,
       });
     }
 
-    if (m.status !== "FINISHED") {
+    if (!done) {
       if (["SCHEDULED", "TIMED", "IN_PLAY", "PAUSED"].includes(m.status)) {
         upcoming.push({
           home: homeName || "TBC",
@@ -287,9 +339,6 @@ async function main() {
       }
       continue;
     }
-
-    const hg = m.score?.fullTime?.home ?? 0;
-    const ag = m.score?.fullTime?.away ?? 0;
 
     if (stage === "group") {
       if (home) {
@@ -312,7 +361,7 @@ async function main() {
   // Fill the Round of 32 from the confirmed draw (the free API can lag on the
   // best-third-placed assignments). Live results are still merged from the API.
   if (R32_FIXTURES && R32_FIXTURES.length) {
-    const r32 = buildR32Override(matches);
+    const r32 = buildR32Override(matches, prevResults);
     const others = knockout.filter((k) => k.stageKey !== "r32");
     knockout.length = 0;
     knockout.push(...r32, ...others);
