@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-14T21:01:51.873Z",
+  "lastUpdated": "2026-07-14T22:57:51.168Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -340,7 +340,7 @@
     {
       "name": "Ray",
       "tagline": "Spain and the dark horses.",
-      "totalPoints": 132,
+      "totalPoints": 134,
       "allEliminated": false,
       "teams": [
         {
@@ -361,10 +361,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 11,
+          "goalsFor": 13,
           "stage": "sf",
           "eliminated": false,
-          "points": 34,
+          "points": 36,
           "stageLabel": "Semi-Final"
         },
         {
@@ -448,7 +448,7 @@
       "name": "Andre",
       "tagline": "France or bust.",
       "totalPoints": 117,
-      "allEliminated": false,
+      "allEliminated": true,
       "teams": [
         {
           "name": "Sweden",
@@ -470,9 +470,9 @@
           "losses": 0,
           "goalsFor": 16,
           "stage": "sf",
-          "eliminated": false,
+          "eliminated": true,
           "points": 41,
-          "stageLabel": "Semi-Final"
+          "stageLabel": "Eliminated"
         },
         {
           "name": "Turkey",
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "France",
+      "away": "Spain",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "stage": "Semi-Final",
+      "date": "2026-07-14T19:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "Argentina",
       "away": "Switzerland",
       "homeGoals": 3,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-07-03T18:00:00Z",
       "scorers": []
-    },
-    {
-      "home": "Switzerland",
-      "away": "Algeria",
-      "homeGoals": 2,
-      "awayGoals": 0,
-      "stage": "Round of 32",
-      "date": "2026-07-03T03:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "France",
-      "away": "Spain",
-      "stage": "Semi-Final",
-      "date": "2026-07-14T19:00:00Z",
-      "live": true
-    },
     {
       "home": "England",
       "away": "Argentina",
@@ -1165,10 +1158,10 @@
       "stage": "Semi-Final",
       "home": "France",
       "away": "Spain",
-      "homeGoals": null,
-      "awayGoals": null,
-      "status": "IN_PLAY",
-      "winner": null,
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "status": "FINISHED",
+      "winner": "away",
       "date": "2026-07-14T19:00:00Z"
     },
     {
