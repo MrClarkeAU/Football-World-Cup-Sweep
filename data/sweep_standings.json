@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-14T22:57:51.168Z",
+  "lastUpdated": "2026-07-15T02:36:22.048Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -442,7 +442,7 @@
       ],
       "rank": 4,
       "prevRank": 4,
-      "prevPoints": 132
+      "prevPoints": 134
     },
     {
       "name": "Andre",
