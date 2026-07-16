@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-16T02:44:29.370Z",
+  "lastUpdated": "2026-07-16T06:20:25.456Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -554,7 +554,7 @@
     {
       "name": "Ben",
       "tagline": "Argentina carry merchant.",
-      "totalPoints": 106,
+      "totalPoints": 108,
       "allEliminated": false,
       "teams": [
         {
@@ -576,10 +576,10 @@
           "draws": 0,
           "losses": 0,
           "goalsFor": 19,
-          "stage": "sf",
+          "stage": "final",
           "eliminated": false,
-          "points": 44,
-          "stageLabel": "Semi-Final"
+          "points": 46,
+          "stageLabel": "Final"
         },
         {
           "name": "DR Congo",
@@ -808,14 +808,14 @@
   "upcomingMatches": [
     {
       "home": "France",
-      "away": "TBC",
+      "away": "England",
       "stage": "3rd-Place Play-off",
       "date": "2026-07-18T21:00:00Z",
       "live": false
     },
     {
       "home": "Spain",
-      "away": "TBC",
+      "away": "Argentina",
       "stage": "Final",
       "date": "2026-07-19T19:00:00Z",
       "live": false
@@ -1172,7 +1172,7 @@
       "stageKey": "final",
       "stage": "Final",
       "home": "Spain",
-      "away": "TBC",
+      "away": "Argentina",
       "homeGoals": null,
       "awayGoals": null,
       "status": "TIMED",
