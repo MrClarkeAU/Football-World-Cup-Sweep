@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-15T22:59:11.737Z",
+  "lastUpdated": "2026-07-16T02:44:29.370Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -121,7 +121,7 @@
       ],
       "rank": 1,
       "prevRank": 1,
-      "prevPoints": 140
+      "prevPoints": 141
     },
     {
       "name": "Clarkey",
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 104
+      "prevPoints": 106
     }
   ],
   "recentMatches": [
