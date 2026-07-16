@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-16T06:20:25.456Z",
+  "lastUpdated": "2026-07-16T10:10:16.351Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -656,7 +656,7 @@
       ],
       "rank": 6,
       "prevRank": 6,
-      "prevPoints": 106
+      "prevPoints": 108
     }
   ],
   "recentMatches": [
