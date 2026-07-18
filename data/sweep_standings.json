@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-18T20:51:40.950Z",
+  "lastUpdated": "2026-07-18T22:52:16.746Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "England",
       "stage": "3rd-Place Play-off",
       "date": "2026-07-18T21:00:00Z",
-      "live": false
+      "live": true
     },
     {
       "home": "Spain",
