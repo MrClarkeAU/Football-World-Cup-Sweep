@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-18T22:52:16.746Z",
+  "lastUpdated": "2026-07-19T02:53:01.746Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -19,7 +19,7 @@
     {
       "name": "Mark",
       "tagline": "England 'it's coming home' Mark.",
-      "totalPoints": 141,
+      "totalPoints": 147,
       "allEliminated": true,
       "teams": [
         {
@@ -40,10 +40,10 @@
           "wins": 2,
           "draws": 1,
           "losses": 0,
-          "goalsFor": 14,
+          "goalsFor": 20,
           "stage": "sf",
           "eliminated": true,
-          "points": 37,
+          "points": 43,
           "stageLabel": "Eliminated"
         },
         {
@@ -447,7 +447,7 @@
     {
       "name": "Andre",
       "tagline": "France or bust.",
-      "totalPoints": 117,
+      "totalPoints": 121,
       "allEliminated": true,
       "teams": [
         {
@@ -468,10 +468,10 @@
           "wins": 3,
           "draws": 0,
           "losses": 0,
-          "goalsFor": 16,
+          "goalsFor": 20,
           "stage": "sf",
           "eliminated": true,
-          "points": 41,
+          "points": 45,
           "stageLabel": "Eliminated"
         },
         {
@@ -661,6 +661,15 @@
   ],
   "recentMatches": [
     {
+      "home": "France",
+      "away": "England",
+      "homeGoals": 4,
+      "awayGoals": 6,
+      "stage": "3rd-Place Play-off",
+      "date": "2026-07-18T21:00:00Z",
+      "scorers": []
+    },
+    {
       "home": "England",
       "away": "Argentina",
       "homeGoals": 1,
@@ -794,25 +803,9 @@
       "stage": "Round of 32",
       "date": "2026-07-04T01:30:00Z",
       "scorers": []
-    },
-    {
-      "home": "Argentina",
-      "away": "Cape Verde",
-      "homeGoals": 3,
-      "awayGoals": 2,
-      "stage": "Round of 32",
-      "date": "2026-07-03T22:00:00Z",
-      "scorers": []
     }
   ],
   "upcomingMatches": [
-    {
-      "home": "France",
-      "away": "England",
-      "stage": "3rd-Place Play-off",
-      "date": "2026-07-18T21:00:00Z",
-      "live": true
-    },
     {
       "home": "Spain",
       "away": "Argentina",
