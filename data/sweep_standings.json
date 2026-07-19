@@ -1,6 +1,6 @@
 {
   "tournament": "FIFA World Cup 2026",
-  "lastUpdated": "2026-07-19T16:59:38.626Z",
+  "lastUpdated": "2026-07-19T19:08:50.691Z",
   "live": true,
   "source": "football-data.org",
   "unmatchedTeams": [],
@@ -811,7 +811,7 @@
       "away": "Argentina",
       "stage": "Final",
       "date": "2026-07-19T19:00:00Z",
-      "live": false
+      "live": true
     }
   ],
   "knockout": [
@@ -1168,7 +1168,7 @@
       "away": "Argentina",
       "homeGoals": null,
       "awayGoals": null,
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "winner": null,
       "date": "2026-07-19T19:00:00Z"
     }
